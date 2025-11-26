@@ -1,101 +1,112 @@
-# PatagoniaWebFactory
+# Patagonia Web Factory - Quick Start
 
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
+## 🚀 Desarrollo
 
-✨ Your new, shiny [Nx workspace](https://nx.dev) is ready ✨.
+### Comando Recomendado
 
-[Learn more about this workspace setup and its capabilities](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
-
-## Run tasks
-
-To run the dev server for your app, use:
-
-```sh
+```bash
+cd patagonia-web-factory
 npx nx dev landing-template
 ```
 
-To create a production bundle:
+**Dev Server**: http://localhost:3000
 
-```sh
-npx nx build landing-template
+### Versión de Next.js
+
+- **Actual**: Next.js 15.5.6
+- **Nota**: Downgradeamos desde v16 debido a incompatibilidad de Turbopack con Nx monorepo
+
+## 📂 Estructura del Proyecto
+
+```
+patagonia-web-factory/
+├── apps/
+│   └── landing-template/      # App Next.js de ejemplo
+├── libs/
+│   └── shared/
+│       ├── ui-kit/            # Componentes (Button, HeroSection)
+│       └── content/           # Lógica Sanity (Types, Queries)
+├── docs/
+│   ├── LOVABLE_WORKFLOW.md    # Workflow Lovable → Producción
+│   └── TROUBLESHOOTING.md     # Soluciones a problemas comunes
+└── tailwind-workspace-preset.js # Colores de marca compartidos
 ```
 
-To see all available targets to run for a project, run:
+## 🎨 Componentes Compartidos
 
-```sh
-npx nx show project landing-template
+```tsx
+// En cualquier app Next.js
+import { Button, HeroSection } from '@patagonia-web-factory/ui-kit';
+
+export default function Page() {
+  return (
+    <>
+      <HeroSection title="Mi Título" subtitle="Subtítulo" ctaText="Comenzar" onCtaClick={() => console.log('Clicked!')} />
+      <Button variant="primary">Click me</Button>
+    </>
+  );
+}
 ```
 
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
+## 🔧 Comandos Útiles
 
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+```bash
+# Laboratorios Katz
+npm run dev:katz          # Servidor de desarrollo
+npm run build:katz        # Build de producción
+npm run start:katz        # Servidor de producción
+npm run share:katz        # Compartir con ngrok (automático)
 
-## Add new projects
+# Build librerías compartidas
+npx nx build shared-ui-kit
+npx nx build shared-content
 
-While you could add new projects to your workspace manually, you might want to leverage [Nx plugins](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) and their [code generation](https://nx.dev/features/generate-code?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) feature.
+# Linting
+npx nx lint landing-template
 
-Use the plugin's generator to create new projects.
+# Reset caché de Nx
+npx nx reset
 
-To generate a new application, use:
-
-```sh
-npx nx g @nx/next:app demo
+# Ver graph de dependencias
+npx nx graph
 ```
 
-To generate a new library, use:
+## 🌐 Compartir con Cliente (ngrok)
 
-```sh
-npx nx g @nx/react:lib mylib
+### Opción 1: Automático
+```bash
+npm run share:katz
 ```
 
-You can use `npx nx list` to get a list of installed plugins. Then, run `npx nx list <plugin-name>` to learn about more specific capabilities of a particular plugin. Alternatively, [install Nx Console](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) to browse plugins and generators in your IDE.
+### Opción 2: Manual
+```bash
+# Terminal 1: Inicia el servidor
+npm run dev:katz
 
-[Learn more about Nx plugins &raquo;](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) | [Browse the plugin registry &raquo;](https://nx.dev/plugin-registry?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Set up CI!
-
-### Step 1
-
-To connect to Nx Cloud, run the following command:
-
-```sh
-npx nx connect
+# Terminal 2: Inicia ngrok
+./scripts/ngrok-quick.sh
+# o simplemente: ngrok http 3000
 ```
 
-Connecting to Nx Cloud ensures a [fast and scalable CI](https://nx.dev/ci/intro/why-nx-cloud?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) pipeline. It includes features such as:
+**📋 Más información**: Ver [docs/NGROK_SETUP.md](./docs/NGROK_SETUP.md)
 
-- [Remote caching](https://nx.dev/ci/features/remote-cache?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task distribution across multiple machines](https://nx.dev/ci/features/distribute-task-execution?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Automated e2e test splitting](https://nx.dev/ci/features/split-e2e-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Task flakiness detection and rerunning](https://nx.dev/ci/features/flaky-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 📖 Documentación
 
-### Step 2
+- [Lovable Workflow](./docs/LOVABLE_WORKFLOW.md) - Cómo integrar código de Lovable
+- [Troubleshooting](./docs/TROUBLESHOOTING.md) - Soluciones a problemas comunes
+- [ngrok Setup](./docs/NGROK_SETUP.md) - Compartir tu web con clientes usando ngrok
 
-Use the following command to configure a CI workflow for your workspace:
+## ⚠️ Problemas Resueltos
 
-```sh
-npx nx g ci-workflow
-```
+1. **Next.js 16 + Turbopack + Nx**: ✅ RESUELTO - Downgradeado a Next.js 15
+2. **Module not found (Angular DevKit)**: ✅ RESUELTO - Dependencias instaladas
+3. **'use client' missing**: ✅ RESUELTO - Directivas agregadas a componentes
 
-[Learn more about Nx on CI](https://nx.dev/ci/intro/ci-with-nx#ready-get-started-with-your-provider?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+## 🤝 Workflow Recomendado
 
-## Install Nx Console
-
-Nx Console is an editor extension that enriches your developer experience. It lets you run tasks, generate code, and improves code autocompletion in your IDE. It is available for VSCode and IntelliJ.
-
-[Install Nx Console &raquo;](https://nx.dev/getting-started/editor-setup?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-## Useful links
-
-Learn more:
-
-- [Learn more about this workspace setup](https://nx.dev/nx-api/next?utm_source=nx_project&amp;utm_medium=readme&amp;utm_campaign=nx_projects)
-- [Learn about Nx on CI](https://nx.dev/ci/intro/ci-with-nx?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [Releasing Packages with Nx release](https://nx.dev/features/manage-releases?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-- [What are Nx plugins?](https://nx.dev/concepts/nx-plugins?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
-
-And join the Nx community:
-- [Discord](https://go.nx.dev/community)
-- [Follow us on X](https://twitter.com/nxdevtools) or [LinkedIn](https://www.linkedin.com/company/nrwl)
-- [Our Youtube channel](https://www.youtube.com/@nxdevtools)
-- [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
+1. Diseña en **Lovable**
+2. Pega el código en `libs/shared/ui-kit/src/lib/staging/`
+3. Prueba localmente
+4. Refactoriza a componentes atómicos
+5. Exporta en `libs/shared/ui-kit/src/index.ts`
+6. Usa en cualquier app con `import { Component } from '@patagonia-web-factory/ui-kit'`

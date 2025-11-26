@@ -8,6 +8,18 @@
     },
     {
       "path": "./apps/landing-template"
+    },
+    {
+      "path": "./libs/shared/ui-kit"
+    },
+    {
+      "path": "./libs/shared/content"
+    },
+    {
+      "path": "./apps/laboratorios-katz-e2e"
+    },
+    {
+      "path": "./apps/laboratorios-katz"
     }
   ]
 }

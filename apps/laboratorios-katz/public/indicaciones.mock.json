@@ -1,0 +1,951 @@
+{
+    "data": [
+      {
+        "id": 58,
+        "documentId": "x9x7q33qky64v8x2nc1mp576",
+        "title": "ANÁLISIS DE SANGRE",
+        "createdAt": "2025-03-28T16:12:51.742Z",
+        "updatedAt": "2025-04-11T14:27:34.112Z",
+        "publishedAt": "2025-04-11T14:27:34.128Z",
+        "text": null,
+        "notes": "Pacientes con medicación de levotiroxina, tomar la medicación luego de la toma de muestra.",
+        "categoria": "SANGRE",
+        "description": [
+          {
+            "order": 1,
+            "id": 237,
+            "text": "Recurrir al laboratorio con 8 horas de ayuno mínimo (sin ingerir alimentos ni líquidos azucarados). Solo beber agua a demanda. Cena liviana la noche anterior."
+          }
+        ]
+      },
+      {
+        "id": 59,
+        "documentId": "tulyl0gg9nhtlmkis742staj",
+        "title": "ORINA COMPLETA",
+        "createdAt": "2025-03-28T16:13:27.270Z",
+        "updatedAt": "2025-04-11T14:27:40.818Z",
+        "publishedAt": "2025-04-11T14:27:40.828Z",
+        "text": null,
+        "notes": " en caso de corresponder, utilice tampones internos para evitar contaminación por secreción vaginal.",
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 238,
+            "text": " En un frasco de orina (comprar en farmacia) junte la primera orina de la mañana, descartando el primer chorro, recolectando el chorro medio. No es necesario llenar el frasco"
+          }
+        ]
+      },
+      {
+        "id": 60,
+        "documentId": "ha0apxh2yfj8w76gopf40ssa",
+        "title": "   PRUEBA DE TOLERANCIA A LA GLUCOSA",
+        "createdAt": "2025-03-28T16:14:29.907Z",
+        "updatedAt": "2025-04-11T14:28:03.155Z",
+        "publishedAt": "2025-04-11T14:28:03.164Z",
+        "text": null,
+        "notes": null,
+        "categoria": "SANGRE",
+        "description": [
+          {
+            "order": 1,
+            "id": 239,
+            "text": " Recurrir al laboratorio entre 7:30 a 9 am con 8hs de ayuno mínimo (sin ingerir alimentos ni líquidos azucarados). Solo beber agua a demanda. Cena liviana la noche anterior."
+          },
+          {
+            "order": 2,
+            "id": 240,
+            "text": " Se realizará una primera extracción de sangre."
+          },
+          {
+            "order": 3,
+            "id": 241,
+            "text": "En el laboratorio se dará a beber una solución de glucosa. Todo el volumen se debe tomar en aprox. 10 minutos."
+          },
+          {
+            "order": 4,
+            "id": 242,
+            "text": " Se realizará una segunda extracción a las 2 horas de haber terminado de tomar la solución con glucosa."
+          },
+          {
+            "order": 5,
+            "id": 243,
+            "text": "Durante la espera se debe permanecer sentado y no se podrá ingerir alimentos, ni líquidos, ni fumar."
+          }
+        ]
+      },
+      {
+        "id": 61,
+        "documentId": "ffevnn7hep27293991r5qipg",
+        "title": "RECOLECCIÓN DE ORINA DE 24hs",
+        "createdAt": "2025-03-28T16:15:44.961Z",
+        "updatedAt": "2025-04-11T14:28:10.583Z",
+        "publishedAt": "2025-04-11T14:28:10.597Z",
+        "text": null,
+          "notes": [
+    {
+      "order": 1,
+      "id": 1,
+      "text": "Se recomienda no recolectar orina durante periodo menstrual. Si no es posible, las muestras deben juntarse previa higiene y colocación de tampón vaginal."
+    },
+        {
+      "order": 1,
+      "id": 1,
+      "text": "Para poder valorar correctamente los resultados de los análisis es necesario que la recolección de orina sea completa. Es muy importante no perder ni siquiera una pequeña porción, aunque implique llevar varias botellas al laboratorio."
+    }
+  ],
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 244,
+            "text": "Conseguir recipiente para la recolección (botellas o bidones de agua)."
+          },
+          {
+            "order": 2,
+            "id": 245,
+            "text": " A la mañana la primera orina del día se descarta en inodoro."
+          },
+          {
+            "order": 3,
+            "id": 246,
+            "text": "Recoger orinas siguientes a lo largo del día y de noche, sin descartar nada."
+          },
+          {
+            "order": 4,
+            "id": 247,
+            "text": "Mantener la orina recolectada en heladera o lugar fresco."
+          },
+          {
+            "order": 5,
+            "id": 248,
+            "text": " A la mañana siguiente recolectar la primera orina e incluirla al recipiente."
+          },
+          {
+            "order": 6,
+            "id": 249,
+            "text": "Enviar recipientes al laboratorio lo antes posible."
+          }
+        ]
+      },
+      {
+        "id": 63,
+        "documentId": "fvvfe0fnaanygcnfb1b6yzml",
+        "title": "RECOLECCIÓN DE ORINA y UROCULTIVO - adultos y niños que controlan esfínteres",
+        "createdAt": "2025-03-28T16:19:18.965Z",
+        "updatedAt": "2025-04-11T14:28:52.621Z",
+        "publishedAt": "2025-04-11T14:28:52.628Z",
+        "text": null,
+          "notes": [
+    {
+      "order": 1,
+      "id": 1,
+      "text": "Para UROCULTIVO mantener y transportar refrigerado."
+    },
+        {
+      "order": 1,
+      "id": 1,
+      "text": "Se debe estar sin tratamiento antibiótico 72hs. antes, excepto en pacientes con quimioprofilaxis, que no deben suspender el tratamiento."
+    }
+  ],
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 255,
+            "text": " Higiene previa: no usar desinfectantes:",
+            "subitems":[
+              "Hombres: retraer prepucio y lavar glande con agua y jabón, enjuagar con abundante agua.",
+              "Mujeres: lavar los genitales externos con agua y jabón neutro, enjuagar con abundante agua y colocar un tampón vaginal."
+            ]
+          },
+          {
+            "order": 2,
+            "id": 257,
+            "text": "Recolectar la primera orina de la mañana, o con una retención mínima de 3hs.  Descarte primer chorro de orina en inodoro, recolectando chorro medio. No es necesario llenar el frasco."
+          },
+          {
+            "order":3,
+            "id": 258,
+            "text": " Entregar en el laboratorio inmediatamente"
+          }
+        ]
+      },
+      {
+        "id": 64,
+        "documentId": "b1ihokw95r2jsvbmd7eftorw",
+        "title": "RECOLECCION DE ORINA - Bebés y niños que NO controlan esfínteres",
+        "createdAt": "2025-03-28T16:20:14.758Z",
+        "updatedAt": "2025-04-11T14:28:59.654Z",
+        "publishedAt": "2025-04-11T14:28:59.666Z",
+        "text": null,
+        "notes": null,
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 259,
+            "text": "Solicitar en farmacia frasco plástico estéril para la recolección de orina."
+          },
+          {
+            "order": 2,
+            "id": 260,
+            "text": "Evaluar hábitos del bebé. La micción se puede estimular con la ingesta de una mamadera."
+          },
+          {
+            "order": 3,
+            "id": 261,
+            "text": "Higienizar la zona genital con agua y jabón, y enjuagar con abundante agua. En varones retraer el prepucio. Secar con gasa."
+          },
+          {
+            "order": 3,
+            "id": 262,
+            "text": "Esperar que bebé orine, descartar las primeras gotas y recoger la orina directamente en el frasco estéril. Este debe abrirse en el momento de la recolección. Tapar correctamente."
+          },
+          {
+            "order": 4,
+            "id": 263,
+            "text": "Mantener y transportar refrigerado. Entregar en el laboratorio inmediatamente."
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "documentId": "jfnh9ujf5srj4cnqw2t9avmp",
+        "title": "RECOLECCIÓN DE ORINA DE PRIMER CHORRO",
+        "createdAt": "2025-03-28T16:21:23.401Z",
+        "updatedAt": "2025-04-11T14:29:06.268Z",
+        "publishedAt": "2025-04-11T14:29:06.276Z",
+        "text": null,
+        "notes": null,
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 264,
+            "text": "Solicitar en farmacia frasco plástico estéril para la recolección de orina."
+          },
+          {
+            "order": 2,
+            "id": 265,
+            "text": " Contar con una retención urinaria mínima de 3 horas."
+          },
+          {
+            "order": 3,
+            "id": 266,
+            "text": "Higiene previa: no usar desinfectantes: ",
+                        "subitems":[
+              "Hombres: retraer prepucio y lavar glande con agua y  jabón. Enjuagar.",
+              "Mujeres: lavar genitales externos con agua y jabón neutro, enjuagar con abundante agua y colocar un tampón vaginal."
+            ]
+          },
+          {
+            "order": 4,
+            "id": 267,
+            "text": "Luego de la higiene, recolectar el primer chorro de orina, (aprox. 1 cm de líquido). Cerrarlo perfectamente."
+          },
+          {
+            "order": 5,
+            "id": 268,
+            "text": "Mantener a temperatura ambiente. Enviar al laboratorio inmediatamente."
+          }
+        ]
+      },
+      {
+        "id": 66,
+        "documentId": "gfghpx1s3ourn0nwj5mjfwfw",
+        "title": " RECOLECCIÓN DE ORINA DE 24hs (Ácido clorhídrico HCI)",
+        "createdAt": "2025-03-28T16:22:42.320Z",
+        "updatedAt": "2025-04-11T14:29:18.588Z",
+        "publishedAt": "2025-04-11T14:29:18.596Z",
+        "text": null,
+        "notes": "Se recomienda no recolectar orina durante periodo menstrual. Si no es posible, las muestras deben juntarse previa higiene y colocación de tampón vaginal.\n\nPara poder valorar correctamente los resultados de los análisis es necesario que la recolección de orina sea completa. Es muy importante no perder ni siquiera una pequeña porción, aunque implique llevar varias botellas al laboratorio.\n",
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 269,
+            "text": "Solicitar en laboratorio frasco con conservante (HCI). El ácido clorhídrico es altamente corrosivo. Evitar derrames y contacto con la piel. Mantener fuera del alcance de los niños"
+          },
+          {
+            "order": 2,
+            "id": 270,
+            "text": "Preparar recipientes para recolección: botellas de vidrio o plástico limpias y secas. Colocar el conservante en botella de recolección y recoger toda la orina eliminada a lo largo del día y noche sin descartar ninguna porción."
+          },
+          {
+            "order": 3,
+            "id": 271,
+            "text": " A la mañana descartar la primera orina en su totalidad en el inodoro. Si un recipiente no es suficiente para todo el volumen de orina, trasvasar la mitad (del que ya tiene HCI) a otro recipiente y seguir recogiendo alternadamente en ambos o los que fuesen necesarios. Todas las micciones deben estar en contacto con el conservante."
+          },
+          {
+            "order": 4,
+            "id": 272,
+            "text": " A la mañana siguiente, a la misma hora, recolectar última orina e incluirla. Enviar recipientes al laboratorio lo antes posible."
+          }
+        ]
+      },
+      {
+        "id": 67,
+        "documentId": "p7wt0nm261p8q5znptb0zqcy",
+        "title": "PREPARACION PARA VAINILLIN MANDELICO Y 5-HIDROXIINDOLACETICO",
+        "createdAt": "2025-03-28T16:24:53.569Z",
+        "updatedAt": "2025-04-11T14:29:23.654Z",
+        "publishedAt": "2025-04-11T14:29:23.661Z",
+        "text": " Durante 4 días:",
+        "notes": "Al cuarto día, siguiendo el régimen, recolectar la orina de 24 horas con ácido clorhídrico.",
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 273,
+            "text": "No tomar té ni café."
+          },
+          {
+            "order": 2,
+            "id": 274,
+            "text": "No tomar aspirina."
+          },
+          {
+            "order": 3,
+            "id": 275,
+            "text": "No comer ningún alimento que contenga vainilla o esencia de vainilla, incluidos chocolates, postres y helados."
+          },
+          {
+            "order": 4,
+            "id": 276,
+            "text": "No comer bananas, tomates, ananá, palta, ciruela, nueces ni berenjenas."
+          }
+        ]
+      },
+      {
+        "id": 68,
+        "documentId": "k4knel6ah8socjol713gco00",
+        "title": "PREPARACIÓN PARA CHLAMYDIAS EN ORINA",
+        "createdAt": "2025-03-28T16:25:51.364Z",
+        "updatedAt": "2025-04-11T14:29:36.133Z",
+        "publishedAt": "2025-04-11T14:29:36.140Z",
+        "text": null,
+        "notes": null,
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 277,
+            "text": "Solicitar en farmacia frasco plástico estéril para la recolección de orina."
+          },
+          {
+            "order": 2,
+            "id": 278,
+            "text": "Higiene previa: no usar desinfectantes:",
+                                    "subitems":[
+              "Hombres: retraer prepucio y lavar el glande con agua y jabón. Enjuagar.",
+              "Mujeres: lavar los genitales externos con agua y jabón neutro, enjuagar con abundante agua y colocar un tampón vaginal."
+            ]
+          },
+          {
+            "order": 3,
+            "id": 279,
+            "text": "Recolectar el primer chorro de la mañana, o con una retención mínima de 3 horas. No superar 1 cm de líquido."
+          },
+          {
+            "order": 4,
+            "id": 280,
+            "text": " Entregar al laboratorio correctamente cerrado."
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "documentId": "qnsk6qpklfegmi34ywu4m8oo",
+        "title": "PREPARACIÓN PARA CATECOLAMINAS EN ORINA",
+        "createdAt": "2025-03-28T16:28:05.038Z",
+        "updatedAt": "2025-04-11T14:29:48.221Z",
+        "publishedAt": "2025-04-11T14:29:48.230Z",
+        "text": null,
+        "notes": null,
+        "categoria": "ORINA",
+        "description": [
+          {
+            "order": 1,
+            "id": 283,
+            "text": "Suspender por 15 días la siguiente medicación (Previa consulta con médico):",
+            "subitems": [
+              "Agonistas adrenérgicos",
+              "Anfetaminas",
+              "Antidepresivos tricíclicos",
+              "Aspirina",
+              "Buspirona",
+              "Carbidopa",
+              "Diuréticos",
+              "Labetalol",
+              "Levodopa",
+              "Metildopa",
+              "Proclorperazina",
+              "Reserpina"
+            ]
+          },
+          {
+            "order": 2,
+            "id": 284,
+            "text": "Durante 4 días no tomar alcohol, café, té, mate ni productos que contengan cafeína."
+          },
+          {
+            "order": 3,
+            "id": 285,
+            "text": "Desde el día anterior no fumar."
+          },
+          {
+            "order": 4,
+            "id": 286,
+            "text": "Recolectar la orina de 24hs con ácido clorhídrico."
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "documentId": "is24gdrhoeahcf9k0xlacyhm",
+        "title": " PREPARACIÓN PARA CATECOLAMINAS EN PLASMA",
+        "createdAt": "2025-03-28T16:29:32.213Z",
+        "updatedAt": "2025-04-11T14:29:54.989Z",
+        "publishedAt": "2025-04-11T14:29:54.997Z",
+        "text": null,
+        "notes": null,
+        "categoria": "SANGRE",
+        "description": [
+          {
+            "order": 1,
+            "id": 287,
+            "text": "Ayuno 8 horas."
+          },
+          {
+            "order": 2,
+            "id": 288,
+            "text": "Durante los 3 días previos a la toma de muestra no ingerir banana, tomate, chocolate, cacao, cremas, tortas, helados o cualquier alimento que pueda contener vainilla."
+          },
+          {
+            "order": 3,
+            "id": 289,
+            "text": "No ingerir aspirinas."
+          },
+          {
+            "order": 4,
+            "id": 290,
+            "text": "Evitar la ingesta de té, café y mate la noche anterior."
+          },
+          {
+            "order": 5,
+            "id": 291,
+            "text": "Evitar el stress, ejercicio y el dolor"
+          },
+          {
+            "order": 6,
+            "id": 292,
+            "text": "Suspender por 10 días la sig. medicación (previa consulta con el médico):",
+            "subitems": [
+              "\nGotas nasales, antihistamínicos, broncodilatadores, supresores del apetito, nitroglicerina, nitroprusiato de sodio, teofilina, alfa2-simpaticomiméticos, antagonistas del calcio, inhibidores de la ECA, alfa metil dopa, inhibidores de la MAO, fenotiazinas, antidepresivos tricíclicos, L-dopa y bloqueantes adrenérgicos alfa y beta"
+            ]
+          },
+          {
+            "order": 7,
+            "id": 293,
+            "text": "La toma de muestra se realiza con el paciente acostado 20 a 30 min."
+          }
+        ]
+      },
+      {
+        "id": 72,
+        "documentId": "cyvh8ybk7ukbqepsne9tr33b",
+        "title": "RECOLECCIÓN DE MUESTRA- Coprocultivo y directa materia fecal",
+        "createdAt": "2025-03-28T16:31:23.713Z",
+        "updatedAt": "2025-04-11T14:30:16.669Z",
+        "publishedAt": "2025-04-11T14:30:16.677Z",
+        "text": null,
+        "notes": "Solo muestras semilíquidas y líquidas son aptas para el cultivo.",
+        "categoria": "MATERIA FECAL",
+        "description": [
+          {
+            "order": 1,
+            "id": 294,
+            "text": "Solicitar en farmacia frasco plástico estéril para la recolección.\n"
+          },
+          {
+            "order": 2,
+            "id": 295,
+            "text": " Cualquier deposición del día es válida."
+          },
+          {
+            "order": 3,
+            "id": 296,
+            "text": "Efectuar una pequeña deposición en un recipiente limpio y seco."
+          },
+          {
+            "order": 4,
+            "id": 297,
+            "text": " Recoger una cantidad semejante a una cucharita de té de las zonas más representativas, que presentan aspecto sanguinolento, mucoso o con consistencia diarreica"
+          },
+          {
+            "order": 5,
+            "id": 298,
+            "text": "Entregar al laboratorio inmediatamente. Si no fuera posible, mantener la muestra, no más de 2hs, a temperatura ambiente."
+          },
+          {
+            "order": 6,
+            "id": 299,
+            "text": "En bebés y niños que no controlan esfínteres, recoger la muestra lo más rápido posible para evitar el efecto nocivo de la orina y que la materia fecal sea absorbida por pañal. No enviar el pañal al laboratorio."
+          }
+        ]
+      },
+      {
+        "id": 73,
+        "documentId": "swsrb95ohuzv99kqgjvxsmn9",
+        "title": "RECOLECCIÓN DE MUESTRA - Parasitológico de materia fecal",
+        "createdAt": "2025-03-28T16:32:54.296Z",
+        "updatedAt": "2025-04-11T14:30:28.287Z",
+        "publishedAt": "2025-04-11T14:30:28.294Z",
+        "text": null,
+        "notes": "Si en las deposiciones se observan formas compatibles con parásitos, colocarlas en otro frasco con agua o solución fisiológica y remitir inmediatamente al laboratorio.",
+        "categoria": "MATERIA FECAL",
+        "description": [
+          {
+            "order": 1,
+            "id": 300,
+            "text": "Solicitar en laboratorio recipiente para recolección: frasco con conservante. Mantener fuera del alcance de los niños"
+          },
+          {
+            "order": 2,
+            "id": 301,
+            "text": "Preparación durante los días de recolección de materia fecal (3 días):",
+            "subitems": [
+"Suprimir la toma de antiparasitarios, aceites minerales y compuestos que contienen bario, bismuto o carbón.",
+"Evitar exceso de verdura de hoja, frutas con semilla, apio, garbanzos, porotos, lentejas, choclo y grasas crudas.",
+"No usar talco en la zona inguinal y perianal."
+            ]
+          },
+          {
+            "order": 3,
+            "id": 302,
+            "text": "Colocar en el mismo frasco una porción de materia fecal de cada deposición diaria, no mayor al de una lenteja. No contaminar la muestra con orina."
+          },
+          {
+            "order": 4,
+            "id": 303,
+            "text": " Repetir este procedimiento durante 3 días en el mismo frasco. El volumen de materia fecal recolectado NO debe superar la mitad del frasco."
+          },
+          {
+            "order": 5,
+            "id": 304,
+            "text": "Mantener frasco a temperatura ambiente. Al cuarto día entregar al laboratorio."
+          }
+        ]
+      },
+      {
+        "id": 74,
+        "documentId": "imbweifkl0ekkwx8xlkhe2d9",
+        "title": "RECOLECCIÓN DE MUESTRAS PARA TEST DE GRAHAM",
+        "createdAt": "2025-03-28T16:34:01.501Z",
+        "updatedAt": "2025-04-11T14:31:02.193Z",
+        "publishedAt": "2025-04-11T14:31:02.202Z",
+        "text": null,
+          "notes": [
+    {
+      "order": 1,
+      "id": 1,
+      "text": "El material no debe presentar contaminación con materia fecal."
+    },
+        {
+      "order": 1,
+      "id": 1,
+      "text": "Dejar el frasco con las gasas a temperatura ambiente en un lugar fresco."
+    }
+  ],
+        "categoria": "OTROS",
+        "description": [
+          {
+            "order": 1,
+            "id": 305,
+            "text": "Solicitar en farmacia frasco plástico estéril y gasas estériles."
+          },
+          {
+            "order": 2,
+            "id": 306,
+            "text": "Durante los 3 días de recolección, no usar talco, cremas, oleos en la zona inguinal perianal."
+          },
+          {
+            "order": 3,
+            "id": 307,
+            "text": "Todas las mañanas, inmediatamente después de levantarse y sin haberse higienizado, con una gasa humedecida en agua pasarla por los márgenes anales 5 veces."
+          },
+          {
+            "order": 4,
+            "id": 308,
+            "text": "Al finalizar coloque la gasa en el frasco."
+          },
+          {
+            "order": 5,
+            "id": 309,
+            "text": "Repetir el procedimiento durante 3 días consecutivos, utilizando una gasa nueva cada día."
+          }
+        ]
+      },
+      {
+        "id": 75,
+        "documentId": "x2nq62ihk8da98wv2p924su2",
+        "title": "PREPARACIÓN PARA TOMA DE MUESTRA: MICOLÓGICO",
+        "createdAt": "2025-03-29T18:30:19.433Z",
+        "updatedAt": "2025-04-11T14:31:45.331Z",
+        "publishedAt": "2025-04-11T14:31:45.341Z",
+        "text": null,
+        "notes": "El seguimiento estricto de estas instrucciones garantiza la confiabilidad del diagnóstico informado por el laboratorio.",
+        "categoria": "OTROS",
+        "description": [
+          {
+            "order": 1,
+            "id": 310,
+            "text": "Suspender tratamientos antifúngicos, inclusive de aplicación local y remedios caseros, al menos 5 días antes de la toma de muestra."
+          },
+          {
+            "order": 2,
+            "id": 311,
+            "text": "Preparación:",
+            "subitems":[
+              "Piel y/o pelos: no aplicar pomadas, cremas ni polvos. El día de la toma de muestra, higienizar la zona afectada con agua y jabón neutro (de glicerina o blanco) y hacer baño de agua y sal en la zona afectada. Si la lesión de la piel sangra, colocar una gasa estéril con cinta adhesiva.",
+              "Uñas: no cortar, ni esmaltar uñas la semana antes de la toma de muestra. Cepillar las uñas con agua y jabón neutro. Hacer baños de agua y sal (una cucharada sopera de sal fina en 1 litro de agua hervida y entibiada) en la zona afectada (3 veces al día, los 3 días previos a la toma de muestra)."
+            ]
+          },
+          {
+            "order": 3,
+            "id": 312,
+            "text": "Si el examen es en los pies (plantas, interdigitales, talón o uñas), concurrir al laboratorio el día de la toma de muestra con medias de algodón y zapatos cerrados, cuidando de no tener restos de talco."
+          }
+        ]
+      },
+      {
+        "id": 76,
+        "documentId": "abljjly7wj1h022rzha5tf8t",
+        "title": "RECOLECCIÓN DE ESPUTO",
+        "createdAt": "2025-03-29T18:32:42.542Z",
+        "updatedAt": "2025-04-11T14:32:07.330Z",
+        "publishedAt": "2025-04-11T14:32:07.338Z",
+        "text": null,
+        "notes": null,
+        "categoria": "OTROS",
+        "description": [
+          {
+            "order": 1,
+            "id": 313,
+            "text": "Solicitar frasco plástico estéril en farmacias."
+          },
+          {
+            "order": 2,
+            "id": 314,
+            "text": "Cepillarse los dientes y hacerse un enjuague bucal con una solución de bicarbonato de sodio."
+          },
+          {
+            "order": 3,
+            "id": 315,
+            "text": "Recolectar la primera expectoración de la mañana obtenida con tos profunda. Evitar la saliva."
+          },
+          {
+            "order": 4,
+            "id": 316,
+            "text": "Recoger el material directamente en el frasco estéril. Tapar bien."
+          },
+          {
+            "order": 5,
+            "id": 317,
+            "text": "Enviar muestra al laboratorio."
+          }
+        ]
+      },
+      {
+        "id": 77,
+        "documentId": "r65z7zri8ety612vpyrv04lw",
+        "title": "EXTRACCIÓN EN DIA ESPECIAL DEL CICLO (LH - FSH - D4 ANDROSTENEDIONA Y PROGESTERONA)",
+        "createdAt": "2025-03-29T18:35:39.636Z",
+        "updatedAt": "2025-04-11T14:32:21.243Z",
+        "publishedAt": "2025-04-11T14:32:21.252Z",
+        "text": null,
+        "notes": null,
+        "categoria": "SANGRE",
+        "description": [
+          {
+            "order": 1,
+            "id": 318,
+            "text": "Efectuar el análisis el día indicado por el médico."
+          },
+          {
+            "order": 2,
+            "id": 319,
+            "text": "Concurrir al laboratorio entre los días 3 y 5 del ciclo menstrual.  Para calcular la fecha correcta, considerar que el día 1 del ciclo menstrual es el primer día de la menstruación."
+          },
+          {
+            "order": 3,
+            "id": 320,
+            "text": "Si la paciente no menstrua, puede concurrir al laboratorio cualquier día."
+          },
+          {
+            "order": 4,
+            "id": 321,
+            "text": "No requiere ayuno previo."
+          },
+          {
+            "order": 5,
+            "id": 322,
+            "text": " Para la Progesterona se recomienda efectuar el análisis entre los días 19 y 21 del ciclo."
+          }
+        ]
+      },
+      {
+        "id": 78,
+        "documentId": "np3n24l90s9nkdm6wgbianv9",
+        "title": "ANÁLISIS DE SANGRE CON PROLACTINA",
+        "createdAt": "2025-03-29T18:37:43.613Z",
+        "updatedAt": "2025-04-11T14:32:32.125Z",
+        "publishedAt": "2025-04-11T14:32:32.135Z",
+        "text": null,
+        "notes": null,
+        "categoria": "SANGRE",
+        "description": [
+          {
+            "order": 1,
+            "id": 323,
+            "text": "El día previo a la extracción de sangre realizar abstinencia sexual, no hacer actividad física, evitar situaciones de estrés."
+          },
+          {
+            "order": 2,
+            "id": 324,
+            "text": "Concurrir al laboratorio con 8 horas de ayuno."
+          },
+          {
+            "order": 3,
+            "id": 325,
+            "text": "Permanecer 20 min en reposo en el laboratorio."
+          },
+          {
+            "order": 4,
+            "id": 326,
+            "text": "Se aconseja realizar la toma de muestra entre las 8 y 10 am."
+          },
+          {
+            "order": 5,
+            "id": 327,
+            "text": " Para las pacientes mujeres con ciclo regular, se recomienda concurrir desde el día 2 al 10 del ciclo menstrual, salvo indicación médica."
+          }
+        ]
+      },
+      {
+        "id": 80,
+        "documentId": "j6380x8d835jyuhs60w0dbdh",
+        "title": "ANÁLISIS DE SANGRE CON CORTISOL MATUTINO",
+        "createdAt": "2025-03-29T18:38:25.723Z",
+        "updatedAt": "2025-04-11T14:32:50.607Z",
+        "publishedAt": "2025-04-11T14:32:50.613Z",
+        "text": null,
+        "notes": "Es importante cumplir con el horario debido al ritmo circadiano del cortisol.",
+        "categoria": "SANGRE",
+        "description": [
+          {
+            "order": 1,
+            "id": 329,
+            "text": "El paciente deberá concurrir al laboratorio a las 7:30 am, en ayunas y con reposo previo. Se le realiza una extracción de sangre a las 8:00 am"
+          }
+        ]
+      },
+      {
+        "id": 81,
+        "documentId": "sgo2nokaw433qolzh478m8e2",
+        "title": "PREPARACIÓN PARA EXUDADO VAGINAL",
+        "createdAt": "2025-03-29T18:40:03.344Z",
+        "updatedAt": "2025-04-11T14:32:58.327Z",
+        "publishedAt": "2025-04-11T14:32:58.337Z",
+        "text": null,
+        "notes": null,
+        "categoria": "EXUDADOS",
+        "description": [
+          {
+            "order": 1,
+            "id": 330,
+            "text": "Tener 48 horas de abstinencia sexual."
+          },
+          {
+            "order": 2,
+            "id": 331,
+            "text": "Concurrir al laboratorio luego de 5 a 6 días finalizado periodo menstrual."
+          },
+          {
+            "order": 3,
+            "id": 332,
+            "text": "Higienizar la zona vaginal la noche anterior a la muestra. No higienizarse el día de la toma de la muestra."
+          },
+          {
+            "order": 4,
+            "id": 333,
+            "text": "No realizar duchas vaginales, ni lavados con antisépticos la noche previa a la toma de muestra."
+          },
+          {
+            "order": 5,
+            "id": 334,
+            "text": "No utilizar talco, cremas vaginales, óvulos u otro producto de actividad local 48 horas antes."
+          }
+        ]
+      },
+      {
+        "id": 82,
+        "documentId": "cc1k31j4xm5m1kianoeo0emh",
+        "title": "PREPARACIÓN PARA EXUDADO URETRAL",
+        "createdAt": "2025-03-29T18:40:52.125Z",
+        "updatedAt": "2025-04-11T14:33:04.248Z",
+        "publishedAt": "2025-04-11T14:33:04.257Z",
+        "text": null,
+        "notes": null,
+        "categoria": "EXUDADOS",
+        "description": [
+          {
+            "order": 1,
+            "id": 335,
+            "text": "Tener 48 hs de abstinencia sexual."
+          },
+          {
+            "order": 2,
+            "id": 336,
+            "text": "Concurrir con una retención urinaria de 4 a 6 horas."
+          },
+          {
+            "order": 3,
+            "id": 337,
+            "text": "Realizar higiene habitual."
+          }
+        ]
+      },
+      {
+        "id": 83,
+        "documentId": "ze3q8ruqtpk0fya86a1m22ty",
+        "title": "TOMA DE MUESTRA PARA ESPERMOCULTIVO",
+        "createdAt": "2025-03-29T18:43:21.565Z",
+        "updatedAt": "2025-04-11T14:33:10.641Z",
+        "publishedAt": "2025-04-11T14:33:10.648Z",
+        "text": null,
+        "notes": null,
+        "categoria": "OTROS",
+        "description": [
+          {
+            "order": 1,
+            "id": 338,
+            "text": "Tener 48 horas de abstinencia sexual."
+          },
+          {
+            "order": 2,
+            "id": 339,
+            "text": " Retención urinaria de 4 a 6 horas."
+          },
+          {
+            "order": 3,
+            "id": 340,
+            "text": "Por la mañana antes de orinar, realizar higiene en la zona genital con agua y jabón."
+          },
+          {
+            "order": 4,
+            "id": 341,
+            "text": "Recoger primer chorro de orina en frasco estéril y rotular."
+          },
+          {
+            "order": 5,
+            "id": 342,
+            "text": "Realizarse nuevamente higiene en la zona."
+          },
+          {
+            "order": 6,
+            "id": 343,
+            "text": "Estimularse y recoger el semen en otro frasco estéril."
+          },
+          {
+            "order": 7,
+            "id": 344,
+            "text": "Enviar muestras al laboratorio a la brevedad."
+          }
+        ]
+      },
+      {
+  "id": 85,
+  "documentId": "psa-antigeno-prostatico-2025",
+  "title": "ANTÍGENO PROSTÁTICO ESPECÍFICO - Total y/o libre (PSA)",
+  "createdAt": "2025-05-25T00:00:00.000Z",
+  "updatedAt": "2025-05-25T00:00:00.000Z",
+  "publishedAt": "2025-05-25T00:00:00.000Z",
+  "text": null,
+            "notes": [
+    {
+      "order": 1,
+      "id": 1,
+      "text": "Si toma medicación para tratamiento prostático, consulte a su médico si tomar o no antes de la extracción de sangre."
+    },
+        {
+      "order": 1,
+      "id": 1,
+      "text": "Detallar qué fármacos está tomando al momento de ingreso al laboratorio (específicamente si toma Finasteride)."
+    }
+  ],
+  "categoria": "SANGRE",
+  "description": [
+    {
+      "order": 1,
+      "id": 360,
+      "text": "Contar con 8 horas de ayuno."
+    },
+    {
+      "order": 2,
+      "id": 361,
+      "text": "Tener 72 horas de abstinencia sexual."
+    },
+    {
+      "order": 3,
+      "id": 362,
+      "text": "Si se realizó tacto rectal o ecografía transrectal, esperar 7 días."
+    },
+    {
+      "order": 4,
+      "id": 363,
+      "text": "En caso de tener prostatitis, esperar 6 a 8 semanas luego de la resolución de los síntomas (salvo indicación médica)."
+    },
+    {
+      "order": 5,
+      "id": 364,
+      "text": "Evitar las siguientes conductas:",
+      "subitems": [
+        "Actividad física intensa el día previo al estudio (ciclismo, hipismo o similares).",
+        "Estreñimiento o diarrea exagerados con 1 semana de anticipación."
+      ]
+    }
+  ]
+},
+      {
+        "id": 84,
+        "documentId": "serotonina-plasmatica-2025",
+        "title": "PREPARACIÓN PARA SEROTONINA PLASMÁTICA",
+        "createdAt": "2025-05-22T00:00:00.000Z",
+        "updatedAt": "2025-05-22T00:00:00.000Z",
+        "publishedAt": "2025-05-22T00:00:00.000Z",
+        "text": null,
+        "notes": null,
+        "categoria": "SANGRE",
+        "description": [
+          {
+            "order": 1,
+            "id": 350,
+            "text": "Durante 4 días previos a la toma de muestra:",
+            "subitems": [
+              "No debe ingerir palta, banana, berenjenas, ananá, ciruela y nueces (estos alimentos son ricos en serotonina y pueden dar lugar a resultados falsamente elevados)."
+            ]
+          },
+          {
+            "order": 2,
+            "id": 351,
+            "text": "Evitar, previa consulta a su médico, la ingesta de medicamentos:",
+            "subitems": [
+              "Antidepresivos e inhibidores de la MAO por al menos 7 días antes de la toma de muestra, ya que tienden a elevar el nivel de serotonina."
+            ]
+          }
+        ]
+      }
+    ]
+  }

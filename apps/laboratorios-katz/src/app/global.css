@@ -1,0 +1,106 @@
+/* Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles */
+@layer base {
+  body {
+    @apply font-sans text-katz-gray-dark bg-white;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-katz-primary font-bold;
+    line-height: 1.2;
+  }
+
+  h1 { @apply text-5xl md:text-7xl; }
+  h2 { @apply text-4xl md:text-5xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+}
+
+/* Custom animations */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Medical premium shadows */
+@layer utilities {
+  .shadow-medical {
+    box-shadow: 0 4px 20px rgba(15, 61, 68, 0.08);
+  }
+
+  .shadow-medical-hover {
+    box-shadow: 0 12px 40px rgba(15, 61, 68, 0.15);
+  }
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  body {
+    background: white;
+  }
+
+  header, footer, nav, button, .sticky, .fixed {
+    display: none !important;
+  }
+
+  .min-h-screen {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  main {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .lg\:col-span-4 {
+    display: none !important;
+  }
+
+  .lg\:col-span-8 {
+    width: 100% !important;
+    display: block !important;
+    position: static !important;
+  }
+
+  #printable-area {
+    display: block !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  * {
+    color: black !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
