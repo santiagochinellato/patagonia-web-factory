@@ -1,0 +1,33 @@
+{
+  "HomePage": {
+    "heroTitle": "Tu Base en la Patagonia",
+    "heroSubtitle": "Diseño, confort y comunidad en el corazón de Bariloche",
+    "cta": "Reservar Ahora"
+  },
+  "RoomCard": {
+    "startPrice": "Desde",
+    "night": "noche",
+    "bookBtn": "Ver Disponibilidad"
+  },
+  "LocaleSwitcher": {
+    "label": "Idioma"
+  },
+  "Navbar": {
+    "home": "Inicio",
+    "rooms": "Habitaciones",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "Amenities": {
+    "title": "Viviendo la Experiencia",
+    "wifi": "Wi-Fi Veloz",
+    "bar": "Bar & Social",
+    "tours": "Tours Locales",
+    "kitchen": "Cocina Equipada"
+  },
+  "Footer": {
+    "copyright": "© 2024 Hostel Vanguardia. Todos los derechos reservados.",
+    "address": "Av. Bustillo Km 4, Bariloche",
+    "followUs": "Seguinos"
+  }
+}
