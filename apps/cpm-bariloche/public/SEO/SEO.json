@@ -1,0 +1,46 @@
+{
+  "pageSlug": "medicina-general-bariloche",
+  "seo": {
+    "title": "Médico Clínico y Medicina General en Bariloche",
+    "description": "Atención médica integral para adultos y turistas en Bariloche. Consultas, chequeos y seguimiento. ¡Ver horarios de Demanda Espontánea!",
+    "keywords": ["médico clínico bariloche", "medicina general bariloche", "atención médica turista bariloche", "demanda espontánea bariloche"],
+    "robots": "index, follow"
+  },
+  "schema_jsonld": {
+    "@context": "https://schema.org",
+    "@type": "MedicalClinic",
+    "name": "Centro Pediátrico Melipal - Medicina General",
+    "url": "https://www.cpmbariloche.com.ar/especialidades/medicina-general-bariloche",
+    "image": "URL_IMAGEN_DEL_CONSULTORIO_CLINICA",
+    "telephone": "0294 444-1141",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. de los Pioneros 3928",
+      "addressLocality": "San Carlos de Bariloche",
+      "addressRegion": "Río Negro",
+      "postalCode": "R8402AMS",
+      "addressCountry": "AR"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "18:30"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Thursday",
+        "description": "Horario específico de Demanda Espontánea Pediatría",
+        "opens": "10:00",
+        "closes": "18:00"
+      }
+    ],
+    "department": {
+      "@type": "HospitalDepartment",
+      "name": "Medicina General / Clínica",
+      "description": "Atención primaria de salud para pacientes adultos."
+    },
+    "areaServed": "San Carlos de Bariloche"
+  }
+}

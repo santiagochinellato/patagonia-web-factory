@@ -20,6 +20,18 @@
     },
     {
       "path": "./apps/laboratorios-katz"
+    },
+    {
+      "path": "./apps/hostel-booking"
+    },
+    {
+      "path": "./libs/cpm-sanity"
+    },
+    {
+      "path": "./apps/cpm-bariloche-e2e"
+    },
+    {
+      "path": "./apps/cpm-bariloche"
     }
   ]
 }
