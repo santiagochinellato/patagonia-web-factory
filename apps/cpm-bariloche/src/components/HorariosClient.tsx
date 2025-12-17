@@ -207,7 +207,7 @@ export default function HorariosClient({
         {/* Vacunatorio Section */}
         <div
           id="vacunatorio"
-          className="bg-surface-light rounded-[3rem] p-8 md:p-12"
+          className="bg-surface-light rounded-[3rem] p-8 md:p-12 mt-4"
         >
           <div className="text-center max-w-2xl mx-auto mb-12">
             <h2 className="text-3xl font-heading font-black text-brand-dark mb-4">
