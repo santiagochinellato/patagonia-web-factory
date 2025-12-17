@@ -1,0 +1,500 @@
+{
+  "sitio": {
+    "nombre": "Centro Pediátrico Melipal",
+    "nombreCorto": "CPM Bariloche",
+    "tagline": "Centro Pediátrico Melipal",
+    "descripcion": "Centro de atención pediátrica y medicina general en Bariloche, con más de 20 años de trayectoria ofreciendo atención personalizada y de calidad."
+  },
+  "contacto": {
+    "direccion": {
+      "calle": "Av. de los Pioneros 3928",
+      "barrio": "Melipal",
+      "codigoPostal": "R8402AMS",
+      "ciudad": "San Carlos de Bariloche",
+      "provincia": "Río Negro",
+      "pais": "Argentina"
+    },
+    "telefonos": {
+      "fijo": "0294 444-1141",
+      "movil": ["+54 9 294 432-7185", "+54 9 11 2309-7399"]
+    },
+    "emails": {
+      "recepcion": "recepcion@cpmbariloche.com.ar",
+      "app": "app@cpmbariloche.com.ar"
+    },
+    "redesSociales": {
+      "facebook": "CPM-Bariloche-108178452584011",
+      "instagram": "cpmbariloche"
+    }
+  },
+  "paginas": {
+    "inicio": {
+      "hero": {
+        "titulo": "Centro Pediátrico Melipal",
+        "imagen": "Slider con imagen de bebé recibiendo atención médica",
+        "ctaPrincipal": {
+          "texto": "TURNOS",
+          "enlace": "Sistema DocTurno"
+        }
+      },
+      "seccionServicios": {
+        "titulo": "Servicios",
+        "cards": [
+          {
+            "titulo": "Atención a Niños y Adultos",
+            "descripcion": "Atención médica integral para todas las edades"
+          },
+          {
+            "titulo": "Vacunatorio",
+            "descripcion": "Servicio de vacunación con calendario completo"
+          },
+          {
+            "titulo": "Horarios",
+            "descripcion": "Consulta los horarios de atención de nuestros profesionales"
+          }
+        ]
+      },
+      "seccionEspecialidades": {
+        "titulo": "Especialidades",
+        "descripcion": "Estas son las especialidades y los profesionales en nuestro centro",
+        "listado": [
+          "Pediatría",
+          "Medicina General / Clínica",
+          "Neurología Infantil",
+          "Dermatología Infantil",
+          "Fonoaudiología",
+          "Oftalmología",
+          "Odontología",
+          "Nutricionista",
+          "Cirugía General",
+          "Ecografías",
+          "Vacunatorio y Enfermería",
+          "Medicina Tradicional China"
+        ]
+      },
+      "seccionComunicacion": {
+        "titulo": "Comunicación",
+        "canales": ["Teléfono", "WhatsApp", "E-mail"]
+      },
+      "seccionNovedades": {
+        "titulo": "Novedades",
+        "descripcion": "Últimas actualizaciones y noticias del centro"
+      }
+    },
+    "sobreElCpm": {
+      "historia": {
+        "titulo": "Nuestra Historia",
+        "fundacion": "Noviembre de 2002",
+        "fundadores": ["Dra. Rosales", "Dra. Giannini", "Dr. Schnaiderman"],
+        "concepto": "Consultorio del barrio con atención personalizada",
+        "filosofia": "Cara amable, buen trato, atención de calidad",
+        "evolucion": [
+          {
+            "anio": "2002",
+            "hito": "Inicio como consultorio con recepción"
+          },
+          {
+            "anio": "2005",
+            "hito": "Expansión a 4 consultorios y suma de pediatras"
+          },
+          {
+            "periodo": "Años posteriores",
+            "hito": "Incorporación de especialistas (Dr. Risso, Dra. Eisner, Dras. Bailac y Catoyra)"
+          },
+          {
+            "periodo": "Actualidad",
+            "hito": "Múltiples especialidades y servicios"
+          }
+        ],
+        "ubicaciones": [
+          {
+            "periodo": "Anteriormente",
+            "direccion": "Lonquimay"
+          },
+          {
+            "periodo": "Actualmente",
+            "direccion": "Av. de los Pioneros"
+          }
+        ],
+        "crecimiento": "Ha crecido orgánicamente acompañando el desarrollo de la ciudad, manteniendo el espíritu inicial pese a la expansión"
+      },
+      "vacunatorio": {
+        "titulo": "Vacunatorio",
+        "introduccion": "Las vacunas constituyen una de las principales estrategias de prevención de enfermedades en la niñez",
+        "comoFuncionan": {
+          "titulo": "¿Cómo trabajan las vacunas?",
+          "descripcion": "Generan una respuesta inmunológica similar a la enfermedad natural. El sistema inmunológico reconoce el agente y desarrolla defensas. Pueden causar fiebre y molestias iniciales."
+        },
+        "efectosAdversos": {
+          "titulo": "Efectos Adversos Esperados",
+          "listado": [
+            "Fiebre (24-48 horas)",
+            "Induración en zona de aplicación",
+            "Decaimiento y molestias generales"
+          ]
+        },
+        "contextoLegal": {
+          "planNacional": "Existen vacunas dentro del Plan Nacional de Inmunizaciones cubiertas por el Estado",
+          "vacunasOpcionales": "Existen vacunas fuera del Plan (no cubiertas, opcionales)",
+          "incorporacionesRecientes": "Argentina ha incorporado recientemente: Triple Viral, Hepatitis A (1ra dosis), Antigripal (6-24 meses)",
+          "proximamente": "Vacuna Conjugada para Neumococo"
+        },
+        "horarios": {
+          "lunesAViernes": "12:00 - 17:00",
+          "sabados": "10:00 - 12:00"
+        }
+      }
+    },
+    "horarios": {
+      "titulo": "Horarios de Atención",
+      "tabla": [
+        {
+          "profesional": "Dra. Claudia Rosales",
+          "especialidad": "Medicina General",
+          "lunes": "09:00-14:00",
+          "martes": null,
+          "miercoles": null,
+          "jueves": null,
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "profesional": "Dr. Fernando Risso",
+          "especialidad": "Pediatría",
+          "lunes": "14:30-18:30",
+          "martes": null,
+          "miercoles": null,
+          "jueves": null,
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "profesional": "Dra. Ana Eisner",
+          "especialidad": "Pediatría",
+          "lunes": null,
+          "martes": "09:00-12:00",
+          "miercoles": null,
+          "jueves": null,
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "profesional": "Dr. Diego Schnaiderman",
+          "especialidad": "Pediatría",
+          "lunes": null,
+          "martes": "15:00-18:30",
+          "miercoles": null,
+          "jueves": null,
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "profesional": "Dra. Mariana Bailac",
+          "especialidad": "Pediatría",
+          "lunes": null,
+          "martes": null,
+          "miercoles": "09:00-12:00",
+          "jueves": null,
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "profesional": "Dra. María Caprile",
+          "especialidad": "Odontología",
+          "lunes": null,
+          "martes": null,
+          "miercoles": "09:00-13:30",
+          "jueves": null,
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "profesional": "Dra. Haydeé Comar",
+          "especialidad": "Pediatría",
+          "lunes": null,
+          "martes": null,
+          "miercoles": null,
+          "jueves": "09:00-14:00",
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "servicio": "Demanda Espontánea Pediatría",
+          "lunes": null,
+          "martes": null,
+          "miercoles": null,
+          "jueves": "10:00-18:00",
+          "viernes": null,
+          "sabado": null
+        },
+        {
+          "profesional": "Dra. Gabriela Giannini",
+          "especialidad": "Pediatría",
+          "lunes": null,
+          "martes": null,
+          "miercoles": null,
+          "jueves": null,
+          "viernes": "14:30-18:30",
+          "sabado": null
+        },
+        {
+          "profesional": "Enf. Sofía Castilla",
+          "especialidad": "Vacunatorio",
+          "lunes": null,
+          "martes": null,
+          "miercoles": null,
+          "jueves": null,
+          "viernes": "13:00-18:00",
+          "sabado": null
+        }
+      ]
+    },
+    "staff": {
+      "titulo": "Nuestro Staff",
+      "directorMedico": {
+        "nombre": "Dr. Diego Schnaiderman",
+        "cargo": "Director Médico",
+        "nacimiento": {
+          "lugar": "Buenos Aires",
+          "anio": 1964
+        },
+        "formacion": [
+          {
+            "titulo": "Médico",
+            "institucion": "Universidad de Buenos Aires",
+            "anio": 1989
+          },
+          {
+            "titulo": "Especialista en Pediatría",
+            "institucion": "SAP (Sociedad Argentina de Pediatría)"
+          },
+          {
+            "titulo": "Recertificaciones",
+            "anios": [2011, 2014]
+          },
+          {
+            "titulo": "Maestría en Salud Pública",
+            "institucion": "Universidad del Comahue",
+            "periodo": "2008-2010"
+          }
+        ],
+        "experiencia": [
+          {
+            "cargo": "Residente/Jefe de Residentes",
+            "institucion": "Hospital Garrahan",
+            "periodo": "1990-1994"
+          },
+          {
+            "cargo": "Médico de Planta",
+            "institucion": "Hospital Zonal Bariloche",
+            "periodo": "1994-2004"
+          }
+        ],
+        "logros": [
+          "Publicaciones científicas",
+          "Premios en congresos",
+          "Roles en Sociedad Argentina de Pediatría"
+        ]
+      },
+      "profesionales": [
+        {
+          "nombre": "Dr. Fernando Risso",
+          "especialidad": "Pediatría"
+        },
+        {
+          "nombre": "Dra. María Ferrari",
+          "especialidad": "Pediatría"
+        },
+        {
+          "nombre": "Dra. Ana Eisner",
+          "especialidad": "Pediatría"
+        },
+        {
+          "nombre": "Dra. Claudia Rosales",
+          "especialidad": "Medicina General"
+        },
+        {
+          "nombre": "Dra. Gabriela Giannini",
+          "especialidad": "Pediatría"
+        },
+        {
+          "nombre": "Dra. Haydeé Comar",
+          "especialidad": "Pediatría"
+        },
+        {
+          "nombre": "Dra. Mariana Bailac",
+          "especialidad": "Pediatría"
+        },
+        {
+          "nombre": "Dra. María Caprile",
+          "especialidad": "Odontología"
+        }
+      ]
+    },
+    "novedades": {
+      "titulo": "Novedades",
+      "articulos": [
+        {
+          "titulo": "Nueva APP CPM",
+          "fecha": "22 JUL 2025",
+          "categoria": "Novedades",
+          "contenido": "APP disponible en Play Store y App Store. Funcionalidades: sacar turno, ver profesionales disponibles, enterarse de novedades. Desarrollada por Dr. Fernando Risso.",
+          "contacto": "app@cpmbariloche.com.ar",
+          "enlaces": ["Play Store", "App Store"]
+        },
+        {
+          "titulo": "VACUNACIÓN ANTIGRIPAL A DOMICILIO",
+          "fecha": "27 MAR 2025",
+          "categoria": "Novedades",
+          "contenido": "Campaña en colaboración con Santitas Nova. Servicio de vacunación a domicilio."
+        },
+        {
+          "titulo": "Vacunación Antigripal 2025",
+          "fecha": "5 MAR 2025",
+          "categoria": "Novedades",
+          "contenido": "Vacuna Tetravalente disponible. Campaña de inmunización anual."
+        },
+        {
+          "titulo": "Nuevo Celular de Contacto",
+          "fecha": "25 FEB 2025",
+          "categoria": "Novedades",
+          "contenido": "Relacionado con incidente de seguridad. Cambio de número telefónico."
+        },
+        {
+          "titulo": "HACKEARON EL CELULAR DE LA RECEPCION",
+          "fecha": "25 FEB 2025",
+          "categoria": "Novedades",
+          "contenido": "Incidente de seguridad cibernética. Compromiso de WhatsApp. Alerta a familias."
+        },
+        {
+          "titulo": "REFLEXIONES DE FIN DE AÑO 2024",
+          "fecha": "19 DIC 2024",
+          "categoria": "Novedades",
+          "contenido": "Reflexión institucional de fin de año."
+        },
+        {
+          "titulo": "Nueva Especialidad: Dermatología Infantil",
+          "fecha": "12 JUN 2024",
+          "categoria": "Novedades",
+          "contenido": "Nueva incorporación a staff (julio 2024)."
+        },
+        {
+          "titulo": "Campaña Vacunación Antigripal 2024",
+          "fecha": "5 MAR 2024",
+          "categoria": "Novedades"
+        },
+        {
+          "titulo": "Reflexiones de Fin de Año 2023",
+          "fecha": "19 DIC 2023",
+          "categoria": "Novedades"
+        },
+        {
+          "titulo": "IMPORTANTE: POR FAVOR LEER",
+          "fecha": "24 SEP 2023",
+          "categoria": "Novedades"
+        }
+      ],
+      "paginacion": {
+        "totalPaginas": 25,
+        "nota": "Indica histórico extenso de comunicaciones y campañas"
+      }
+    },
+    "contacto": {
+      "titulo": "Contacto",
+      "formulario": {
+        "campos": [
+          {
+            "nombre": "nombre",
+            "etiqueta": "Nombre",
+            "tipo": "text",
+            "requerido": true
+          },
+          {
+            "nombre": "apellidos",
+            "etiqueta": "Apellidos",
+            "tipo": "text",
+            "requerido": true
+          },
+          {
+            "nombre": "email",
+            "etiqueta": "Email",
+            "tipo": "email",
+            "requerido": true
+          },
+          {
+            "nombre": "comentario",
+            "etiqueta": "Comentario o mensaje",
+            "tipo": "textarea",
+            "requerido": true
+          }
+        ],
+        "botonEnviar": "Enviar"
+      }
+    }
+  },
+  "navegacion": {
+    "menuPrincipal": [
+      {
+        "texto": "INICIO",
+        "enlace": "/"
+      },
+      {
+        "texto": "NOVEDADES",
+        "enlace": "/novedades",
+        "tieneSubmenu": true
+      },
+      {
+        "texto": "SOBRE EL CPM",
+        "enlace": "/sobre-el-cpm"
+      },
+      {
+        "texto": "HORARIOS",
+        "enlace": "/horarios"
+      },
+      {
+        "texto": "STAFF",
+        "enlace": "/staff"
+      },
+      {
+        "texto": "CONTACTO",
+        "enlace": "/contacto"
+      }
+    ],
+    "ctaPrincipal": {
+      "texto": "TURNOS",
+      "enlace": "Sistema DocTurno",
+      "tipo": "externo"
+    }
+  },
+  "footer": {
+    "avisoMudanza": "¡Nos mudamos!",
+    "creditos": {
+      "diseno": "El Brvjo",
+      "hosting": "Web Hosting Bariloche"
+    }
+  },
+  "disenio": {
+    "paleta": {
+      "azulCorporativo": "#1E7BA4",
+      "verdeAccion": "#5cb85c",
+      "azulClaro": "#B8D8E8",
+      "gris": "Barras de navegación, footer",
+      "blanco": "Fondo general"
+    },
+    "elementosInteractivos": [
+      "Botón WhatsApp flotante (verde)",
+      "Carrusel de imágenes (home)",
+      "Cards servicios con enlaces",
+      "Links internos y externos"
+    ],
+    "integracionesExternas": {
+      "turnos": "DocTurno",
+      "app": {
+        "playStore": true,
+        "appStore": true
+      },
+      "redesSociales": ["Facebook", "Instagram"],
+      "mapas": "Google Maps"
+    }
+  }
+}

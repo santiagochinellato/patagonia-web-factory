@@ -1,23 +1,39 @@
-// const { createGlobPatternsForDependencies } = require('@nx/next/tailwind');
-
-// The above utility import will not work if you are using Next.js' --turbo.
-// Instead you will have to manually add the dependent paths to be included.
-// For example
-// ../libs/buttons/**/*.{ts,tsx,js,jsx,html}',                 <--- Adding a shared lib
-// !../libs/buttons/**/*.{stories,spec}.{ts,tsx,js,jsx,html}', <--- Skip adding spec/stories files from shared lib
-
-// If you are **not** using `--turbo` you can uncomment both lines 1 & 19.
-// A discussion of the issue can be found: https://github.com/nrwl/nx/issues/26510
+const { createGlobPatternsForDependencies } = require('@nx/next/tailwind');
+const { join } = require('path');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './{src,pages,components,app}/**/*.{ts,tsx,js,jsx,html}',
-    '!./{src,pages,components,app}/**/*.{stories,spec}.{ts,tsx,js,jsx,html}',
-    //     ...createGlobPatternsForDependencies(__dirname)
+    join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+    ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // Colores de Marca CPM (Rediseño)
+        'brand-pink': '#FC6C93',
+        'brand-blue': '#46C9F3',
+        
+        // Colores de UI Modernos
+        'surface-light': '#F8FAFC', // Gris muy claro (Slate 50) para fondos alternativos
+        'text-main': '#1F2937',     // Gris oscuro para lectura cómoda (no negro puro)
+        'text-muted': '#6B7280',    // Gris medio para subtítulos
+      },
+      fontFamily: {
+        // 'Nunito': Redondeada y amigable (para Títulos)
+        heading: ['Nunito', 'system-ui', 'sans-serif'],
+        // 'Inter': Limpia y legible (para Textos)
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      boxShadow: {
+        // Sombra difusa y suave estilo "Clean UI"
+        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+        'glow-pink': '0 4px 20px -5px rgba(252, 108, 147, 0.4)',
+      },
+      borderRadius: {
+        '4xl': '2.5rem', // Bordes extra curvos para secciones orgánicas
+      }
+    },
   },
   plugins: [],
 };
