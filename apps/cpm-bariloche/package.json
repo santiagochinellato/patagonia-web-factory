@@ -2,6 +2,9 @@
   "name": "@patagonia-web-factory/cpm-bariloche",
   "version": "0.0.1",
   "private": true,
+  "scripts": {
+    "vercel-build": "cd ../.. && npx nx run cpm-sanity:build && cd apps/cpm-bariloche && next build"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.26",
