@@ -14,6 +14,8 @@ const nextConfig = {
   },
   // Prevent build tools from being bundled
   serverExternalPackages: ['nx', '@nx/devkit'],
+  // Auto-transpile workspace libraries
+  transpilePackages: ['@patagonia-web-factory/cpm-sanity'],
   // Image optimization configuration
   images: {
     remotePatterns: [
