@@ -115,7 +115,7 @@ export default function HorariosClient({
               <div
                 key={item._id}
                 className={`
-                          border rounded-3xl p-6 md:p-4 grid grid-cols-1 md:grid-cols-12 gap-4 items-center transition-all hover:shadow-md
+                          border rounded-3xl p-4 md:p-4 grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-4 items-center transition-all hover:shadow-md
                           ${
                             isUrgency
                               ? 'bg-orange-50 border-orange-100 hover:shadow-orange-100'
@@ -124,10 +124,10 @@ export default function HorariosClient({
                       `}
               >
                 {/* Professional Info */}
-                <div className="col-span-4 flex items-center gap-4">
+                <div className="col-span-4 flex items-center gap-3 md:gap-4">
                   <div
                     className={`
-                              w-12 h-12 rounded-full flex items-center justify-center font-bold text-lg
+                              w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center font-bold text-base md:text-lg flex-shrink-0
                               ${
                                 isUrgency
                                   ? 'bg-action-coral text-white'
@@ -137,15 +137,15 @@ export default function HorariosClient({
                   >
                     {professionalName.charAt(0)}
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4
-                      className={`font-bold ${
+                      className={`font-bold text-sm md:text-base truncate ${
                         isUrgency ? 'text-action-coral' : 'text-brand-dark'
                       }`}
                     >
                       {professionalName}
                     </h4>
-                    <span className="text-xs uppercase font-bold tracking-wider text-gray-400">
+                    <span className="text-[10px] md:text-xs uppercase font-bold tracking-wider text-gray-400 block truncate">
                       {especialidad}
                     </span>
                   </div>
@@ -164,7 +164,7 @@ export default function HorariosClient({
                 ))}
 
                 {/* Mobile Days */}
-                <div className="md:hidden grid grid-cols-2 gap-2 mt-4 pt-4 border-t border-gray-100 w-full">
+                <div className="md:hidden grid grid-cols-1 gap-2 mt-3 pt-3 border-t border-gray-100 w-full">
                   {DAYS.map((day) => {
                     const hours = item[day.key];
                     if (!hours) return null;
@@ -172,17 +172,19 @@ export default function HorariosClient({
                     return (
                       <div
                         key={day.key}
-                        className="flex justify-between text-sm"
+                        className={`flex items-center justify-between text-sm py-1.5 px-3 rounded-xl transition-colors ${
+                          isToday ? 'bg-brand-pink/10' : ''
+                        }`}
                       >
                         <span
-                          className={`font-bold transition-colors ${
-                            isToday ? 'text-brand-pink' : 'text-gray-400'
+                          className={`font-bold transition-colors text-xs uppercase tracking-wide ${
+                            isToday ? 'text-brand-pink' : 'text-gray-500'
                           }`}
                         >
                           {day.label}
                         </span>
                         <span
-                          className={`font-bold transition-colors ${
+                          className={`font-bold transition-colors text-sm ${
                             isToday ? 'text-brand-pink' : 'text-brand-blue'
                           }`}
                         >

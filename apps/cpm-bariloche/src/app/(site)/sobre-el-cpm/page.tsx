@@ -48,20 +48,20 @@ export default async function SobreElCpmPage() {
           subtitle="Más de 20 años cuidando la salud de las familias de Bariloche con compromiso y calidez profesional."
         />
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start mb-16 md:mb-24">
           {/* Philosophy / Intro */}
-          <div className="flex flex-col gap-6">
-            <span className="text-brand-pink font-bold tracking-widest text-xs uppercase  block">
+          <div className="flex flex-col gap-4 md:gap-6 text-center lg:text-left">
+            <span className="text-brand-pink font-bold tracking-widest text-xs uppercase block">
               NUESTRA FILOSOFÍA
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading font-black text-brand-dark  leading-tight">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-heading font-black text-brand-dark leading-tight">
               Una mirada integral de la{' '}
               <span className="text-brand-blue">salud familiar</span>.
             </h2>
-            <p className="text-lg text-text-muted leading-relaxed ">
+            <p className="text-base md:text-lg text-text-muted leading-relaxed">
               {philosophyText}
             </p>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-3 md:gap-4 items-center lg:items-start">
               {[
                 'Atención centrada en el paciente',
                 'Equipo multidisciplinario',
@@ -69,29 +69,31 @@ export default async function SobreElCpmPage() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <CheckCircle className="text-green-500 w-5 h-5 flex-shrink-0" />
-                  <span className="font-bold text-gray-700">{item}</span>
+                  <span className="font-bold text-gray-700 text-sm md:text-base">
+                    {item}
+                  </span>
                 </div>
               ))}
             </div>
             <img
               src="/images/cpm-living.webp"
               alt="Recepción CPM"
-              className="w-full max-w-[500px]  ratio-16/9 rounded-2xl"
+              className="w-full max-w-[500px] mx-auto lg:mx-0 rounded-2xl shadow-lg mt-2 md:mt-4"
             />
           </div>
 
           {/* Timeline */}
-          <div className="relative border-l-2 border-slate-100 pl-8 ml-4 md:ml-0 space-y-12">
+          <div className="relative border-l-2 border-slate-100 pl-6 md:pl-8 ml-3 md:ml-4 lg:ml-0 space-y-8 md:space-y-12">
             {historyEvents.map((item: any, idx: number) => (
               <div key={idx} className="relative">
-                <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-brand-blue border-4 border-white shadow-md"></span>
-                <span className="block text-4xl font-black text-slate-200 mb-2">
+                <span className="absolute -left-[29px] md:-left-[41px] top-0 w-4 h-4 md:w-5 md:h-5 rounded-full bg-brand-blue border-2 md:border-4 border-white shadow-md"></span>
+                <span className="block text-3xl md:text-4xl font-black text-slate-200 mb-1 md:mb-2">
                   {item.year}
                 </span>
-                <h3 className="text-xl font-heading font-bold text-brand-dark mb-2">
+                <h3 className="text-lg md:text-xl font-heading font-bold text-brand-dark mb-1 md:mb-2">
                   {item.titulo}
                 </h3>
-                <p className="text-text-muted text-sm leading-relaxed">
+                <p className="text-text-muted text-sm md:text-base leading-relaxed">
                   {item.descripcion}
                 </p>
               </div>

@@ -154,14 +154,6 @@ export function Footer() {
             </Link>
           </div>
           <p className="opacity-50">Design by Patagonia Web Factory</p>
-          <div className="mt-4 md:mt-0 flex gap-4">
-            <span>
-              Diseño:{' '}
-              <a href="#" className="hover:text-white">
-                El Brvjo
-              </a>
-            </span>
-          </div>
         </div>
       </div>
     </footer>
