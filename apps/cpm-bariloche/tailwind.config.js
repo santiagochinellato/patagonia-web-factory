@@ -10,20 +10,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'brand-blue': '#003366', 
-        'brand-dark': '#002244', 
-        'brand-light': '#E6F0FF', // Background for organic sections
-        'action-coral': '#FF7F50', 
-        'action-success': '#4BB543', 
-        'gray-base': '#4A5568', 
-        'gray-soft': '#F7FAFC', // Background for general sections
+        // Colores de Marca CPM (Rediseño)
+        'brand-pink': '#FC6C93',
+        'brand-blue': '#46C9F3',
+        
+        // Colores de UI Modernos
+        'surface-light': '#F8FAFC', // Gris muy claro (Slate 50) para fondos alternativos
+        'text-main': '#1F2937',     // Gris oscuro para lectura cómoda (no negro puro)
+        'text-muted': '#6B7280',    // Gris medio para subtítulos
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Poppins', 'sans-serif'], // For Headings
+        // 'Nunito': Redondeada y amigable (para Títulos)
+        heading: ['Nunito', 'system-ui', 'sans-serif'],
+        // 'Inter': Limpia y legible (para Textos)
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
       boxShadow: {
-        'smooth': '0 20px 40px -10px rgba(0, 51, 102, 0.15)', 
+        // Sombra difusa y suave estilo "Clean UI"
+        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+        'glow-pink': '0 4px 20px -5px rgba(252, 108, 147, 0.4)',
+      },
+      borderRadius: {
+        '4xl': '2.5rem', // Bordes extra curvos para secciones orgánicas
       }
     },
   },

@@ -79,6 +79,75 @@ export const settings = defineType({
                 ]
              })
         ]
-    })
+    }),
+    defineField({
+      name: 'institucional',
+      title: 'Contenido Institucional',
+      type: 'object',
+      fields: [
+        defineField({
+          name: 'tituloHistoria',
+          title: 'Título Sección Historia',
+          type: 'string',
+          initialValue: 'Nuestra Historia'
+        }),
+        defineField({ name: 'fundacion', title: 'Fecha de Fundación', type: 'string' }),
+        defineField({ 
+            name: 'fundadores', 
+            title: 'Fundadores', 
+            type: 'array', 
+            of: [{type: 'string'}] 
+        }),
+        defineField({ 
+            name: 'historia', 
+            title: 'Hitos Históricos (Línea de Tiempo)', 
+            type: 'array', 
+            of: [
+              {
+                type: 'object',
+                fields: [
+                  defineField({ name: 'year', title: 'Año / Periodo', type: 'string' }),
+                  defineField({ name: 'descripcion', title: 'Descripción del Hito', type: 'text' }),
+                ],
+                preview: {
+                    select: { title: 'year', subtitle: 'descripcion' }
+                }
+              },
+            ], 
+        }),
+        defineField({
+          name: 'concepto',
+          title: 'Concepto',
+          type: 'text',
+        }),
+        defineField({
+          name: 'filosofia',
+          title: 'Filosofía',
+          type: 'text',
+        }),
+        defineField({
+            name: 'crecimiento',
+            title: 'Crecimiento',
+            type: 'text'
+        }),
+        defineField({
+          name: 'vacunatorio',
+          title: 'Vacunatorio',
+          type: 'object',
+          fields: [
+             defineField({ name: 'titulo', title: 'Título', type: 'string' }),
+             defineField({ name: 'introduccion', title: 'Introducción', type: 'text' }),
+             defineField({ name: 'horarios', title: 'Horarios', type: 'string' }),
+             defineField({ 
+                 name: 'info', 
+                 title: 'Información Detallada (Cómo funcionan, efectos, legales)', 
+                 type: 'array', 
+                 of: [{type: 'block'}] 
+            })
+          ]
+        }),
+      ],
+    }),
+
   ],
 });

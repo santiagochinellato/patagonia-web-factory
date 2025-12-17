@@ -1,119 +1,132 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useState } from 'react';
-import { Menu, X, Phone, MapPin } from 'lucide-react';
-
-const MENU_ITEMS = [
-  { label: 'SOBRE EL CPM', href: '/sobre-el-cpm' },
-  { label: 'HORARIOS', href: '/horarios' },
-  { label: 'STAFF', href: '/staff' },
-  { label: 'CONTACTO', href: '/contacto' },
-];
+import Image from 'next/image';
+import { Menu, X } from 'lucide-react';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <>
-      {/* Top Bar - Contact Info */}
-      <div className="bg-brand-blue text-white text-xs py-2 px-4 hidden md:block">
-        <div className="container mx-auto flex justify-between items-center">
-          <div className="flex gap-6">
-            <span className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity">
-              <MapPin size={14} className="text-action-coral" />
-              Av. de los Pioneros 3928, Bariloche
-            </span>
-            <span className="flex items-center gap-1 opacity-90 hover:opacity-100 transition-opacity">
-              <Phone size={14} className="text-action-coral" />
-              0294 444-1141
-            </span>
-          </div>
-          <div className="flex gap-4">
+    <nav
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white shadow-soft py-2' : 'bg-transparent py-4'
+      }`}
+    >
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/images/cpmLogoduetone.webp"
+              alt="CPM Bariloche Logo"
+              width={120}
+              height={40}
+              priority
+              className="w-[120px] h-auto"
+            />
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-6 xl:gap-8">
+            <Link
+              href="/"
+              className="text-text-main font-medium hover:text-brand-blue transition-colors font-body text-sm xl:text-base"
+            >
+              Inicio
+            </Link>
+            <Link
+              href="/sobre-el-cpm"
+              className="text-text-main font-medium hover:text-brand-blue transition-colors font-body text-sm xl:text-base"
+            >
+              Sobre CPM
+            </Link>
+            <Link
+              href="/horarios"
+              className="text-text-main font-medium hover:text-brand-blue transition-colors font-body text-sm xl:text-base"
+            >
+              Horarios
+            </Link>
+            <Link
+              href="/staff"
+              className="text-text-main font-medium hover:text-brand-blue transition-colors font-body text-sm xl:text-base"
+            >
+              Staff
+            </Link>
             <Link
               href="/novedades"
-              className="hover:text-action-coral transition-colors"
+              className="text-text-main font-medium hover:text-brand-blue transition-colors font-body text-sm xl:text-base"
             >
               Novedades
             </Link>
-          </div>
-        </div>
-      </div>
-
-      {/* Main Navbar */}
-      <nav className="bg-white shadow-md sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <Link href="/" className="flex flex-col leading-none group">
-              <span className="text-2xl font-black text-brand-blue tracking-tighter group-hover:text-brand-dark transition-colors">
-                CPM
-              </span>
-              <span className="text-sm font-bold text-gray-500 tracking-widest group-hover:text-action-coral transition-colors">
-                BARILOCHE
-              </span>
+            <Link
+              href="/contacto"
+              className="text-text-main font-medium hover:text-brand-blue transition-colors font-body text-sm xl:text-base"
+            >
+              Contacto
             </Link>
 
-            {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-8">
-              {MENU_ITEMS.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-bold text-gray-600 hover:text-brand-blue transition-colors uppercase tracking-wide"
-                >
-                  {item.label}
-                </Link>
-              ))}
-
-              <a
-                href="https://docturno.com" // Replace with actual link from JSON/Sanity later
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-action-coral text-white px-6 py-2.5 rounded-full font-bold text-sm shadow-md hover:bg-orange-600 hover:shadow-lg transition-all transform hover:-translate-y-0.5"
-              >
-                PEDIR TURNO
-              </a>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="lg:hidden text-brand-blue p-2"
-              aria-label="Toggle menu"
+            <a
+              href="https://docturno.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-pink text-white px-5 py-2.5 rounded-full font-bold text-sm shadow-glow-pink hover:bg-pink-500 hover:scale-105 active:scale-95 transition-all duration-300"
             >
-              {isOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+              SACAR TURNO
+            </a>
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden text-brand-blue"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {isOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
 
-        {/* Mobile Dropdown */}
+        {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden absolute top-20 left-0 w-full bg-white border-t border-gray-100 shadow-xl py-4 flex flex-col">
-            {MENU_ITEMS.map((item) => (
+          <div className="md:hidden absolute top-full left-0 w-full bg-white shadow-lg py-6 px-4 flex flex-col gap-4 animate-in slide-in-from-top-5">
+            {[
+              { name: 'Inicio', href: '/' },
+              { name: 'Sobre CPM', href: '/sobre-el-cpm' },
+              { name: 'Horarios', href: '/horarios' },
+              { name: 'Staff', href: '/staff' },
+              { name: 'Novedades', href: '/novedades' },
+              { name: 'Contacto', href: '/contacto' },
+            ].map((item) => (
               <Link
-                key={item.href}
+                key={item.name}
                 href={item.href}
-                className="px-6 py-3 text-gray-600 font-bold hover:bg-gray-50 hover:text-brand-blue"
+                className="text-lg font-medium text-text-main py-2 border-b border-gray-100"
                 onClick={() => setIsOpen(false)}
               >
-                {item.label}
+                {item.name}
               </Link>
             ))}
-            <div className="px-6 mt-4">
-              <a
-                href="https://docturno.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block w-full text-center bg-action-coral text-white py-3 rounded-lg font-bold shadow-md active:scale-95 transition-transform"
-                onClick={() => setIsOpen(false)}
-              >
-                PEDIR TURNO
-              </a>
-            </div>
+            <a
+              href="https://docturno.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full bg-brand-pink text-white px-6 py-3 rounded-full font-bold shadow-lg mt-2 text-center"
+              onClick={() => setIsOpen(false)}
+            >
+              SACAR TURNO
+            </a>
           </div>
         )}
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }

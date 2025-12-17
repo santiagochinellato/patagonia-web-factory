@@ -89,5 +89,12 @@ export const staffMember = defineType({
       type: 'array',
       of: [{ type: 'string' }],
     }),
+    defineField({
+      name: 'obrasSociales',
+      title: 'Obras Sociales que atiende',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'obraSocial' }] }],
+      description: 'Seleccionar las obras sociales que atiende este profesional.',
+    }),
   ],
 });

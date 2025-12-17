@@ -6,7 +6,7 @@
 
 ```bash
 cd patagonia-web-factory
-npx nx dev landing-template
+npx nx dev cpm-bariloche
 ```
 
 **Dev Server**: http://localhost:3000
@@ -74,11 +74,13 @@ npx nx graph
 ## 🌐 Compartir con Cliente (ngrok)
 
 ### Opción 1: Automático
+
 ```bash
 npm run share:katz
 ```
 
 ### Opción 2: Manual
+
 ```bash
 # Terminal 1: Inicia el servidor
 npm run dev:katz

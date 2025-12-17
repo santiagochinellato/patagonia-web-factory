@@ -1,136 +1,159 @@
 'use client';
 
 import Link from 'next/link';
+import { MapPin, Phone, Mail, Instagram, Facebook } from 'lucide-react';
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="bg-brand-blue text-white pt-16 pb-8">
+    <footer className="bg-surface-light border-t border-slate-100 pt-16 pb-8 text-text-muted">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand & Address */}
-          <div>
-            <div className="mb-6">
-              <span className="text-2xl font-black tracking-tighter block">
-                CPM
-              </span>
-              <span className="text-sm font-bold opacity-75 tracking-widest block">
-                BARILOCHE
-              </span>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          {/* Brand */}
+          <div className="col-span-1 md:col-span-1">
+            <div className="flex items-center gap-2 mb-4">
+              <div className="w-10 h-10 bg-brand-blue rounded-xl flex items-center justify-center text-white font-bold text-xl">
+                M
+              </div>
+              <div className="flex flex-col">
+                <span className="font-heading font-extrabold text-xl leading-none text-brand-blue">
+                  Melipal
+                </span>
+                <span className="text-[10px] font-bold tracking-widest text-text-muted uppercase">
+                  Consultorios
+                </span>
+              </div>
             </div>
-            <address className="not-italic text-sm text-blue-100 leading-relaxed">
-              <p>Av. de los Pioneros 3928</p>
-              <p>CP R8402AMS - Barrio Melipal</p>
-              <p>San Carlos de Bariloche, Río Negro</p>
-            </address>
+            <p className="text-sm mb-6 leading-relaxed">
+              Atención médica de excelencia con un enfoque humano y cercano para
+              toda la comunidad de Bariloche.
+            </p>
+            <div className="flex gap-4">
+              <a
+                href="#"
+                className="p-2 bg-white rounded-full text-brand-blue hover:text-brand-pink shadow-sm transition-colors"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-white rounded-full text-brand-blue hover:text-brand-pink shadow-sm transition-colors"
+              >
+                <Facebook size={20} />
+              </a>
+            </div>
           </div>
 
-          {/* Contact */}
+          {/* Contacto */}
           <div>
-            <h3 className="font-bold text-lg mb-4 text-action-coral">
+            <h3 className="font-heading font-bold text-lg text-brand-pink mb-6">
               Contacto
             </h3>
-            <ul className="space-y-3 text-sm text-blue-100">
-              <li>
-                <span className="block opacity-50 text-xs">Teléfono Fijo</span>
-                <a
-                  href="tel:02944441141"
-                  className="hover:text-white transition-colors"
-                >
-                  0294 444-1141
-                </a>
+            <ul className="space-y-4 text-sm font-body">
+              <li className="flex items-start gap-3">
+                <MapPin
+                  className="text-brand-blue flex-shrink-0 mt-1"
+                  size={18}
+                />
+                <span>
+                  Av. de los Pioneros 4960
+                  <br />
+                  San Carlos de Bariloche
+                </span>
               </li>
-              <li>
-                <span className="block opacity-50 text-xs">WhatsApp</span>
-                <a
-                  href="https://wa.me/5492944327185"
-                  className="hover:text-white transition-colors"
-                >
-                  +54 9 294 432-7185
-                </a>
+              <li className="flex items-center gap-3">
+                <Phone className="text-brand-blue flex-shrink-0" size={18} />
+                <span>+54 9 294 444-1234</span>
               </li>
-              <li>
-                <span className="block opacity-50 text-xs">Email</span>
+              <li className="flex items-center gap-3">
+                <Mail className="text-brand-blue flex-shrink-0" size={18} />
                 <a
-                  href="mailto:recepcion@cpmbariloche.com.ar"
-                  className="hover:text-white transition-colors"
+                  href="mailto:info@cpmbariloche.com"
+                  className="hover:text-brand-blue"
                 >
-                  recepcion@cpmbariloche.com.ar
+                  info@cpmbariloche.com
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Quick Links */}
+          {/* Links Rápidos */}
           <div>
-            <h3 className="font-bold text-lg mb-4 text-action-coral">Menú</h3>
-            <ul className="space-y-2 text-sm text-blue-100">
+            <h3 className="font-heading font-bold text-lg text-brand-pink mb-6">
+              Accesos Rápidos
+            </h3>
+            <ul className="space-y-3 text-sm font-body">
               <li>
                 <Link
                   href="/staff"
-                  className="hover:text-white hover:underline"
+                  className="hover:text-brand-blue transition-colors"
                 >
-                  Profesionales
+                  Nuestros Profesionales
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/horarios"
-                  className="hover:text-white hover:underline"
+                  href="/especialidades"
+                  className="hover:text-brand-blue transition-colors"
                 >
-                  Horarios de Atención
+                  Especialidades Médicas
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/vacunatorio"
-                  className="hover:text-white hover:underline"
+                  href="/obras-sociales"
+                  className="hover:text-brand-blue transition-colors"
                 >
-                  Vacunatorio
+                  Obras Sociales
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/novedades"
-                  className="hover:text-white hover:underline"
+                  href="/portal-paciente"
+                  className="hover:text-brand-blue transition-colors"
                 >
-                  Novedades
+                  Portal del Paciente
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Horarios Summary */}
+          {/* Horarios */}
           <div>
-            <h3 className="font-bold text-lg mb-4 text-action-coral">
+            <h3 className="font-heading font-bold text-lg text-brand-pink mb-6">
               Horarios
             </h3>
-            <div className="text-sm text-blue-100 space-y-2">
-              <p className="flex justify-between">
+            <ul className="space-y-3 text-sm font-body">
+              <li className="flex justify-between">
                 <span>Lunes a Viernes</span>
-                <span className="font-bold">08:00 - 20:00</span>
-              </p>
-              <p className="flex justify-between">
+                <span className="font-bold text-text-main">08:00 - 20:00</span>
+              </li>
+              <li className="flex justify-between">
                 <span>Sábados</span>
-                <span className="font-bold">09:00 - 13:00</span>
-              </p>
-              <div className="mt-4 pt-4 border-t border-blue-800">
-                <p className="text-xs text-action-coral font-bold uppercase tracking-wide">
-                  Demanda Espontánea
-                </p>
-                <p>Consultar días disponibles</p>
-              </div>
-            </div>
+                <span className="font-bold text-text-main">09:00 - 13:00</span>
+              </li>
+              <li className="mt-4 pt-4 border-t border-slate-200">
+                <span className="block text-brand-blue font-bold mb-1">
+                  Urgencias
+                </span>
+                <span className="text-xs">
+                  Atención por demanda espontánea disponible en horario hábil.
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-blue-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-blue-300">
-          <p>
-            &copy; {currentYear} Centro Pediátrico Melipal. Todos los derechos
-            reservados.
-          </p>
+        <div className="border-t border-slate-200 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+          <p>© {new Date().getFullYear()} Consultorios Médicos Melipal.</p>
+          <div className="flex gap-6">
+            <Link href="/privacidad" className="hover:text-brand-blue">
+              Política de Privacidad
+            </Link>
+            <Link href="/legales" className="hover:text-brand-blue">
+              Legales
+            </Link>
+          </div>
+          <p className="opacity-50">Design by Patagonia Web Factory</p>
           <div className="mt-4 md:mt-0 flex gap-4">
             <span>
               Diseño:{' '}
