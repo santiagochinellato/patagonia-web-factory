@@ -32,6 +32,12 @@
     },
     {
       "path": "./apps/cpm-bariloche"
+    },
+    {
+      "path": "./apps/interpracsys-web-e2e"
+    },
+    {
+      "path": "./apps/interpracsys-web"
     }
   ]
 }
