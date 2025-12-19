@@ -3,6 +3,9 @@ import { Hero } from './_components/Hero';
 import { FeatureGrid } from './_components/FeatureGrid';
 import { ConnectivitySection } from './_components/ConnectivitySection';
 import { TrustSection } from './_components/TrustSection';
+import { ContactSection } from './_components/ContactSection';
+import { FloatingCTA } from './_components/FloatingCTA';
+import { Footer } from './_components/Footer';
 
 export default function Index() {
   return (
@@ -10,8 +13,11 @@ export default function Index() {
       <Navbar />
       <Hero />
       <FeatureGrid />
-      <TrustSection />
       <ConnectivitySection />
+      <TrustSection />
+      <ContactSection />
+      <Footer />
+      <FloatingCTA />
     </main>
   );
 }

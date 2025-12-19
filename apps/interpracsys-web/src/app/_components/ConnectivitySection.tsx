@@ -82,14 +82,14 @@ export const ConnectivitySection = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-16 items-center lg:items-start text-center lg:text-left">
           {/* Left Column: Content */}
-          <div className="w-full lg:w-1/2">
+          <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start">
             <motion.span
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="inline-block px-3 py-1 rounded bg-[#00AEEF]/20 text-[#00AEEF] text-xs font-bold tracking-wider mb-6 border border-[#00AEEF]/20"
+              className="inline-block px-3 py-1 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] text-xs font-bold tracking-wider mb-6 border border-[#00AEEF]/20"
             >
               CONECTIVIDAD TOTAL
             </motion.span>
@@ -119,7 +119,7 @@ export const ConnectivitySection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl"
+              className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
             >
               Sabemos que la tecnología médica evoluciona rápido. Por eso,
               Interpracsys está diseñado para ser universalmente compatible. Nos

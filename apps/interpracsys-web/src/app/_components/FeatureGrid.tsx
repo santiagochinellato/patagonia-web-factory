@@ -46,7 +46,10 @@ const cards = [
 
 export const FeatureGrid = () => {
   return (
-    <section className="py-24 w-full bg-slate-50 relative overflow-hidden">
+    <section
+      id="features"
+      className="py-24 w-full bg-slate-50 relative overflow-hidden"
+    >
       {/* Decorative Background Blobs */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-[120px] transform-gpu translate-z-0" />
@@ -119,9 +122,9 @@ export const FeatureGrid = () => {
                   <span className="text-xs font-semibold text-white/70 italic">
                     "{card.micro}"
                   </span>
-                  <button className="text-sm font-bold text-white flex items-center gap-2 group-hover:translate-x-1 transition-all">
+                  {/* <button className="text-sm font-bold text-white flex items-center gap-2 group-hover:translate-x-1 transition-all">
                     Explorar <ArrowRight size={16} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </motion.div>

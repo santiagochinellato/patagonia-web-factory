@@ -6,7 +6,7 @@ import Image from 'next/image';
 export const Hero = () => {
   return (
     <section className="w-full min-h-screen pt-32 pb-20 overflow-hidden flex flex-col md:flex-row items-center justify-between bg-white max-w-7xl mx-auto px-6 gap-10">
-      <div className="w-full md:w-[60%] flex flex-col items-start z-10">
+      <div className="w-full md:w-[60%] flex flex-col items-center md:items-start z-10 text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,7 +21,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-          className="text-5xl md:text-6xl font-bold font-heading text-slate-900 tracking-tight leading-[1.1] mb-6 text-left"
+          className="text-4xl md:text-6xl font-bold font-heading text-slate-900 tracking-tight leading-tight mb-6 break-words"
         >
           <span className="block mb-2">Precisión Clínica para</span>
           <span className="text-transparent bg-clip-text bg-brand-gradient inline-block relative">
@@ -39,7 +39,7 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="text-lg md:text-xl text-slate-500 max-w-lg mb-10 leading-relaxed text-left"
+          className="text-lg md:text-xl text-slate-500 max-w-lg mb-10 leading-relaxed"
         >
           InterPracsys transforma la gestión de su laboratorio con estabilidad,
           trazabilidad total y un diseño pensado para la máxima eficiencia
@@ -50,16 +50,17 @@ export const Hero = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex flex-col sm:flex-row items-center justify-start gap-4 w-full"
+          className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 w-full"
         >
           <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gradient text-white font-bold shadow-lg shadow-brand-cyan/20 hover:shadow-levitate-hover hover:-translate-y-1 transition-all duration-300 text-lg group">
-            <span className="flex items-center gap-2">
-              Comenzar Ahora
+            <span className="flex items-center justify-center gap-2">
+              SOLICITAR DEMO
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
+                aria-hidden="true"
               >
                 <path
                   strokeLinecap="round"
@@ -83,7 +84,7 @@ export const Hero = () => {
         transition={{ duration: 1, delay: 0.2 }}
         className="w-full md:w-[40%] h-[400px] md:h-[calc(100vh-200px)] relative flex items-center justify-center pointer-events-none perspective-1000"
       >
-        <div className="relative w-full h-full max-w-[450px] transition-all duration-700">
+        <div className="relative h-full w-auto aspect-[2540/4889] max-w-[450px] transition-all duration-700">
           <Image
             src="/argentina.svg"
             alt="Mapa de Argentina"
@@ -152,12 +153,12 @@ export const Hero = () => {
 const pins = [
   { id: 'jujuy', label: 'Jujuy', x: 40, y: 3 },
   { id: 'salta', label: 'Salta', x: 44, y: 11 },
-  { id: 'tucuman', label: 'Tucumán', x: 43, y: 16 },
+  { id: 'tucuman', label: 'Tucumán', x: 41, y: 16 },
   { id: 'san-juan', label: 'San Juan', x: 29, y: 28 },
-  { id: 'santa-fe', label: 'Santa Fe', x: 60, y: 31 },
-  { id: 'buenos-aires', label: 'Buenos Aires', x: 70, y: 40 },
+  { id: 'santa-fe', label: 'Santa Fe', x: 62, y: 31 },
+  { id: 'buenos-aires', label: 'Buenos Aires', x: 70, y: 45 },
   { id: 'neuquen', label: 'Neuquén', x: 23, y: 50 },
   { id: 'rio-negro', label: 'Río Negro', x: 35, y: 56 },
-  { id: 'tierra-del-fuego', label: 'Tierra del Fuego', x: 34, y: 98 },
+  { id: 'tierra-del-fuego', label: 'Tierra del Fuego', x: 30, y: 98 },
   { id: 'la-pampa', label: 'La Pampa', x: 43, y: 46 },
 ];

@@ -65,10 +65,10 @@ export const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Toggle */}
           <button
-            className="md:hidden text-slate-600 hover:text-brand-navy"
+            className="md:hidden text-slate-600 hover:text-brand-navy p-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Alternar menú de navegación"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
+import { PawPrint, Leaf, FlaskConical, Bot, Zap } from 'lucide-react';
 
 const stats = [
   {
@@ -48,19 +49,32 @@ const logos = [
 ];
 
 // Duplicate logos to ensure we fill the screen
-const allLogos = [...logos, ...logos, ...logos, ...logos];
+const allLogos = [
+  ...logos,
+  ...logos,
+  ...logos,
+  ...logos,
+  ...logos,
+  ...logos,
+  ...logos,
+  ...logos,
+  ...logos,
+  ...logos,
+];
 
 export const TrustSection = () => {
   return (
     <section
       id="trust"
-      className="min-h-screen w-full bg-slate-50 relative overflow-hidden flex flex-col items-center justify-start py-10"
+      className="min-h-screen w-full bg-slate-50 relative overflow-hidden flex flex-col items-center justify-start py-10 pb-32"
     >
       {/* Background Logo Grid */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-white/30 z-10" />{' '}
-        {/* Reduced wash to make logos visible */}
-        <div className="grid grid-cols-4 md:grid-cols-8 gap-8 p-4 pt-10 grayscale pointer-events-none">
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        {/* White wash only for desktop grid */}
+        <div className="hidden md:block absolute inset-0 bg-white/30 z-10" />
+
+        {/* Desktop Grid */}
+        <div className="hidden md:grid grid-cols-4 md:grid-cols-8 gap-8 p-4 pt-10 grayscale pointer-events-none">
           {allLogos.map((logo, index) => (
             <div
               key={index}
@@ -75,25 +89,26 @@ export const TrustSection = () => {
             </div>
           ))}
         </div>
-        {/* Gradient overlays for smooth edges */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white via-35% to-transparent z-10" />
+
+        {/* Desktop Gradient: Solid white top for text readability */}
+        <div className="hidden md:block absolute inset-0 bg-gradient-to-b from-white via-white via-35% to-transparent z-10" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-20 w-full flex flex-col items-center pt-12 md:pt-20">
-        <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-7xl lg:mx-auto px-6 relative z-20 w-full flex flex-col items-center pt-12 md:pt-20">
+        <div className="max-w-4xl lg:mx-auto text-center">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-200 text-brand-navy text-xs font-bold tracking-wider mb-4 shadow-sm"
           >
-           CONFANZA Y PRESTIGIO
+            CONFANZA Y PRESTIGIO
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-4xl md:text-6xl font-bold font-heading text-slate-900 tracking-tight pb-6 leading-tight"
+            className="text-3xl md:text-6xl font-bold font-heading text-slate-900 tracking-tight pb-6 leading-tight break-words px-4 md:px-0"
           >
             La Red de Diagnóstico más importante del país elige{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-navy to-brand-cyan">
@@ -110,6 +125,10 @@ export const TrustSection = () => {
           >
             Nuestra experiencia y clientes validan nuestra trayectoria
           </motion.p>
+
+          <div className="md:hidden w-full mb-12 relative z-20">
+            <MobileLogoCarousel logos={logos} direction="left" />
+          </div>
         </div>
 
         {/* Floating Stats Card */}
@@ -136,7 +155,107 @@ export const TrustSection = () => {
             ))}
           </div>
         </motion.div>
+        {/* Expanded Ecosystem Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
+          className="bg-white/60 backdrop-blur-xl rounded-[2rem] shadow-xl border border-white/50 p-8 w-full max-w-5xl mt-8 mx-auto"
+        >
+          <div className="flex flex-col gap-8">
+            <h3 className="text-center text-2xl font-bold text-slate-800 font-heading">
+              Soluciones Especializadas para Todo Tipo de Laboratorio
+            </h3>
+
+            {/* Specialized Types Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="flex flex-col items-center text-center gap-3 p-4 rounded-xl bg-white/40 border border-white/30 hover:bg-white/60 transition-colors">
+                <div className="p-3 rounded-full bg-brand-cyan/10 text-brand-navy">
+                  <PawPrint size={32} />
+                </div>
+                <h4 className="font-bold text-slate-700">Veterinaria</h4>
+                <p className="text-sm text-slate-500 max-w-[200px]">
+                  Gestión optimizada para pacientes no humanos.
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center gap-3 p-4 rounded-xl bg-white/40 border border-white/30 hover:bg-white/60 transition-colors">
+                <div className="p-3 rounded-full bg-brand-cyan/10 text-brand-navy">
+                  <FlaskConical size={32} />
+                </div>
+                <h4 className="font-bold text-slate-700">Bromatología</h4>
+                <p className="text-sm text-slate-500 max-w-[200px]">
+                  Control de calidad y seguridad alimentaria.
+                </p>
+              </div>
+              <div className="flex flex-col items-center text-center gap-3 p-4 rounded-xl bg-white/40 border border-white/30 hover:bg-white/60 transition-colors">
+                <div className="p-3 rounded-full bg-brand-cyan/10 text-brand-navy">
+                  <Leaf size={32} />
+                </div>
+                <h4 className="font-bold text-slate-700">Ambiental</h4>
+                <p className="text-sm text-slate-500 max-w-[200px]">
+                  Análisis de aguas, suelos y efluentes.
+                </p>
+              </div>
+            </div>
+
+            {/* Automation Badges */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 pt-4 border-t border-slate-200/50">
+              <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-brand-navy/5 border border-brand-navy/10">
+                <Bot size={20} className="text-brand-cyan" />
+                <span className="text-sm font-semibold text-brand-navy">
+                  Chatbot WhatsApp Integrado
+                </span>
+              </div>
+              <div className="flex items-center gap-3 px-5 py-2 rounded-full bg-brand-navy/5 border border-brand-navy/10">
+                <Zap size={20} className="text-brand-cyan" />
+                <span className="text-sm font-semibold text-brand-navy">
+                  Automatización de Procesos
+                </span>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
+  );
+};
+
+const MobileLogoCarousel = ({
+  logos,
+  direction = 'left',
+}: {
+  logos: string[];
+  direction?: 'left' | 'right';
+}) => {
+  return (
+    <div className="flex overflow-hidden w-full max-w-[100vw] mask-linear-fade relative">
+      <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-slate-50 to-transparent z-10" />
+      <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-slate-50 to-transparent z-10" />
+      <motion.div
+        initial={{ x: direction === 'left' ? 0 : '-50%' }}
+        animate={{ x: direction === 'left' ? '-50%' : 0 }}
+        transition={{
+          repeat: Infinity,
+          ease: 'linear',
+          duration: 60,
+        }}
+        className="flex gap-8 min-w-max"
+      >
+        {[...logos, ...logos, ...logos, ...logos].map((logo, index) => (
+          <div
+            key={index}
+            className="relative w-24 h-16 shrink-0 opacity-80 grayscale hover:grayscale-0 transition-all"
+          >
+            <Image
+              src={`/logosClientes/${logo}`}
+              alt="Cliente InterPracsys"
+              fill
+              className="object-contain"
+            />
+          </div>
+        ))}
+      </motion.div>
+    </div>
   );
 };
