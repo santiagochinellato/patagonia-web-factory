@@ -158,13 +158,27 @@ const SocialLink = ({
 }: {
   href: string;
   icon: React.ReactNode;
-}) => (
-  <a
-    href={href}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-brand-navy hover:border-brand-navy/30 hover:bg-brand-navy/5 transition-all duration-300"
-  >
-    {icon}
-  </a>
-);
+}) => {
+  // Extract platform name from href for aria-label (simple heuristic)
+  const platform = href.includes('instagram')
+    ? 'Instagram'
+    : href.includes('linkedin')
+    ? 'LinkedIn'
+    : href.includes('facebook')
+    ? 'Facebook'
+    : href.includes('twitter')
+    ? 'Twitter'
+    : 'Social Media';
+
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Visitar nuestro perfil en ${platform}`}
+      className="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-500 hover:text-brand-navy hover:border-brand-navy/30 hover:bg-brand-navy/5 transition-all duration-300"
+    >
+      {icon}
+    </a>
+  );
+};

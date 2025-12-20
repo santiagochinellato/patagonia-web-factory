@@ -28,6 +28,13 @@ export interface IPSettings {
     developerName?: string;
     developerUrl?: string;
   };
+  seo: {
+    metaTitle?: string;
+    metaDescription?: string;
+    metaKeywords?: string[];
+    openGraphImage?: SanityImage;
+    favicon?: SanityImage;
+  };
 }
 
 export interface IPLandingPage {

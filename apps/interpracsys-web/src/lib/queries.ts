@@ -4,7 +4,8 @@ export const SETTINGS_QUERY = groq`
   *[_type == "ip_settings"][0] {
     general,
     navigation,
-    footer
+    footer,
+    seo
   }
 `;
 

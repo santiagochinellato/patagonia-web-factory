@@ -97,5 +97,17 @@ export const ip_settings = defineType({
         defineField({ name: 'developerUrl', title: 'URL Desarrollador', type: 'url' }),
       ],
     }),
+    defineField({
+      name: 'seo',
+      title: 'SEO & Metadatos',
+      type: 'object',
+      fields: [
+        defineField({ name: 'metaTitle', title: 'Meta Título (Browser Tab)', type: 'string', validation: Rule => Rule.max(60).warning('Idealmente menos de 60 caracteres') }),
+        defineField({ name: 'metaDescription', title: 'Meta Descripción', type: 'text', rows: 3, validation: Rule => Rule.max(160).warning('Idealmente menos de 160 caracteres') }),
+        defineField({ name: 'metaKeywords', title: 'Palabras Clave (Keywords)', type: 'array', of: [{ type: 'string' }] }),
+        defineField({ name: 'openGraphImage', title: 'Imagen OpenGraph (Facebook/LinkedIn)', type: 'image', options: { hotspot: true } }),
+        defineField({ name: 'favicon', title: 'Favicon / Icono (32x32)', type: 'image' }),
+      ]
+    })
   ],
 });

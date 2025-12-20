@@ -51,9 +51,9 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
             <Image
               src={logoSrc}
               alt={settings?.general?.siteName || 'InterPracsys Laboratorios'}
-              width={200}
+              width={250}
               height={40}
-              style={{ height: 'auto', maxHeight: '40px', width: 'auto' }}
+              style={{ height: 'auto', maxHeight: '80px', width: 'auto' }}
               className="object-contain"
             />
           </Link>

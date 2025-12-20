@@ -183,7 +183,7 @@ const ContactItem = ({
       {icon}
     </div>
     <div>
-      <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-0.5">
+      <p className="text-xs font-bold text-slate-600 uppercase tracking-wider mb-0.5">
         {label}
       </p>
       <p className="text-lg font-medium text-slate-800 group-hover:text-brand-navy transition-colors">
