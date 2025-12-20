@@ -7,7 +7,8 @@
     "build:katz": "nx build laboratorios-katz",
     "start:katz": "nx start laboratorios-katz",
     "share:katz": "bash scripts/share-with-ngrok.sh",
-    "share:katz:lt": "tsx dev/tunnel-lt.ts"
+    "share:katz:lt": "tsx dev/tunnel-lt.ts",
+    "vercel-build": "npx nx build interpracsys-web --prod"
   },
   "private": true,
   "dependencies": {
