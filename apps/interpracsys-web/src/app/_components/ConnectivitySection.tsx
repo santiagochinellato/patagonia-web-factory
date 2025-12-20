@@ -1,26 +1,21 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Network, RefreshCw, ShieldCheck, ArrowRight } from 'lucide-react';
+import { Network, RefreshCw, ShieldCheck } from 'lucide-react';
 import Image from 'next/image';
 import React from 'react';
+import { IPLandingPage } from '../../types/sanity';
+import { urlFor } from '../../lib/sanity';
 
-const LogoGrid = () => {
-  const logos = [
-    { name: 'Stago', src: '/logosMachines/stago.webp' },
-    { name: 'Sysmex', src: '/logosMachines/Sysmex_company_logo.svg.webp' },
-    { name: 'Mindray', src: '/logosMachines/mindray.webp' },
-    { name: 'Gematec', src: '/logosMachines/gematec.webp' },
-    { name: 'Metrolab', src: '/logosMachines/metrolab.webp' },
-    { name: 'Diconex', src: '/logosMachines/diconex.webp' },
-    {
-      name: 'Beckman Coulter',
-      src: '/logosMachines/Beckman_Coulter_Logo.svg.webp',
-    },
-    { name: 'Abbott', src: '/logosMachines/abbor.webp' },
-    { name: 'Roche', src: '/logosMachines/roche.webp' },
-  ];
-
+const LogoGrid = ({
+  logos,
+  calloutText,
+  protocolsNote,
+}: {
+  logos: { name: string; src: string }[];
+  calloutText?: string;
+  protocolsNote?: string;
+}) => {
   return (
     <div className="w-full mt-16">
       <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center opacity-80 mix-blend-screen">
@@ -55,19 +50,41 @@ const LogoGrid = () => {
             <span className="relative inline-flex rounded-full h-3 w-3 bg-brand-cyan"></span>
           </span>
           <span className="text-white text-sm font-medium">
-            ¿No ves tu marca? La integramos en tiempo récord
+            {calloutText || '¿No ves tu marca? La integramos en tiempo récord'}
           </span>
         </div>
         <p className="text-white/40 text-xs md:text-sm text-center md:text-right font-mono">
-          Protocolos Soportados: Comunicación fluida y segura bajo estándares
-          ASTM y HL7.
+          {protocolsNote ||
+            'Protocolos Soportados: Comunicación fluida y segura bajo estándares ASTM y HL7.'}
         </p>
       </motion.div>
     </div>
   );
 };
 
-export const ConnectivitySection = () => {
+export const ConnectivitySection = ({
+  data,
+}: {
+  data?: IPLandingPage['connectivity'];
+}) => {
+  const logos = data?.machineLogos?.map((logo) => ({
+    name: logo.name,
+    src: logo.image ? urlFor(logo.image).url() : '',
+  })) || [
+    { name: 'Stago', src: '/logosMachines/stago.webp' },
+    { name: 'Sysmex', src: '/logosMachines/Sysmex_company_logo.svg.webp' },
+    { name: 'Mindray', src: '/logosMachines/mindray.webp' },
+    { name: 'Gematec', src: '/logosMachines/gematec.webp' },
+    { name: 'Metrolab', src: '/logosMachines/metrolab.webp' },
+    { name: 'Diconex', src: '/logosMachines/diconex.webp' },
+    {
+      name: 'Beckman Coulter',
+      src: '/logosMachines/Beckman_Coulter_Logo.svg.webp',
+    },
+    { name: 'Abbott', src: '/logosMachines/abbor.webp' },
+    { name: 'Roche', src: '/logosMachines/roche.webp' },
+  ];
+
   return (
     <section
       id="integrations"
@@ -91,7 +108,7 @@ export const ConnectivitySection = () => {
               viewport={{ once: true }}
               className="inline-block px-3 py-1 rounded-full bg-[#00AEEF]/20 text-[#00AEEF] text-xs font-bold tracking-wider mb-6 border border-[#00AEEF]/20"
             >
-              CONECTIVIDAD TOTAL
+              {data?.badge || 'CONECTIVIDAD TOTAL'}
             </motion.span>
 
             <motion.h2
@@ -100,8 +117,10 @@ export const ConnectivitySection = () => {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-bold font-heading mb-6 leading-tight"
             >
-              Conectividad <br />
-              <span className="text-[#00AEEF]">Sin Límites</span>
+              {data?.title || 'Conectividad'} <br />
+              <span className="text-[#00AEEF]">
+                {data?.subtitle || 'Sin Límites'}
+              </span>
             </motion.h2>
 
             <motion.h3
@@ -111,7 +130,8 @@ export const ConnectivitySection = () => {
               transition={{ delay: 0.1 }}
               className="text-xl md:text-2xl text-white/90 font-medium mb-6"
             >
-              Tu laboratorio, integrado y automatizado de punta a punta.
+              {data?.subtitle2 ||
+                'Tu laboratorio, integrado y automatizado de punta a punta.'}
             </motion.h3>
 
             <motion.p
@@ -121,39 +141,64 @@ export const ConnectivitySection = () => {
               transition={{ delay: 0.2 }}
               className="text-white/70 text-lg leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Sabemos que la tecnología médica evoluciona rápido. Por eso,
-              Interpracsys está diseñado para ser universalmente compatible. Nos
-              conectamos con todos los autoanalizadores del mercado actual y, lo
-              más importante: si incorporás tecnología nueva, nosotros la
-              integramos.
+              {data?.description ||
+                'Sabemos que la tecnología médica evoluciona rápido. Por eso, Interpracsys está diseñado para ser universalmente compatible. Nos conectamos con todos los autoanalizadores del mercado actual y, lo más importante: si incorporás tecnología nueva, nosotros la integramos.'}
             </motion.p>
           </div>
 
           {/* Right Column: Features */}
           <div className="w-full lg:w-1/2 flex flex-col gap-6">
-            <FeatureItem
-              icon={<Network size={24} className="text-white" />}
-              title="Integración Universal"
-              text="Ya sea química clínica, hematología, inmunología o gases en sangre; nos comunicamos con todas las marcas líderes."
-              delay={0.3}
-            />
-            <FeatureItem
-              icon={<RefreshCw size={24} className="text-white" />}
-              title="Actualización Constante"
-              text="Nuestro equipo de desarrollo añade nuevos protocolos mensualmente. Tu inversión en software nunca queda obsoleta frente a una máquina nueva."
-              delay={0.4}
-            />
-            <FeatureItem
-              icon={<ShieldCheck size={24} className="text-white" />}
-              title="Cero Error de Trascripción"
-              text="La comunicación es bidireccional. La orden de trabajo va del sistema a la máquina, y el resultado vuelve al sistema. Sin intermediarios ni errores humanos."
-              delay={0.5}
-            />
+            {/* Note: Icons are hardcoded because they are components, but text comes from Sanity */}
+            {/* If data.features is present, map it, otherwise show defaults */}
+            {data?.features && data.features.length > 0 ? (
+              data.features.map((feature, i) => (
+                <FeatureItem
+                  key={i}
+                  icon={
+                    i === 0 ? (
+                      <Network size={24} className="text-white" />
+                    ) : i === 1 ? (
+                      <RefreshCw size={24} className="text-white" />
+                    ) : (
+                      <ShieldCheck size={24} className="text-white" />
+                    )
+                  }
+                  title={feature.title}
+                  text={feature.text}
+                  delay={0.3 + i * 0.1}
+                />
+              ))
+            ) : (
+              <>
+                <FeatureItem
+                  icon={<Network size={24} className="text-white" />}
+                  title="Integración Universal"
+                  text="Ya sea química clínica, hematología, inmunología o gases en sangre; nos comunicamos con todas las marcas líderes."
+                  delay={0.3}
+                />
+                <FeatureItem
+                  icon={<RefreshCw size={24} className="text-white" />}
+                  title="Actualización Constante"
+                  text="Nuestro equipo de desarrollo añade nuevos protocolos mensualmente. Tu inversión en software nunca queda obsoleta frente a una máquina nueva."
+                  delay={0.4}
+                />
+                <FeatureItem
+                  icon={<ShieldCheck size={24} className="text-white" />}
+                  title="Cero Error de Trascripción"
+                  text="La comunicación es bidireccional. La orden de trabajo va del sistema a la máquina, y el resultado vuelve al sistema. Sin intermediarios ni errores humanos."
+                  delay={0.5}
+                />
+              </>
+            )}
           </div>
         </div>
 
         {/* Logos Section */}
-        <LogoGrid />
+        <LogoGrid
+          logos={logos}
+          calloutText={data?.calloutText}
+          protocolsNote={data?.protocolsNote}
+        />
       </div>
     </section>
   );

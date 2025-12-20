@@ -1,16 +1,50 @@
 'use client';
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
 import Image from 'next/image';
-export const Footer = () => {
+import { IPSettings } from '../../types/sanity';
+import { urlFor } from '../../lib/sanity';
+
+export const Footer = ({ settings }: { settings?: IPSettings }) => {
   const currentYear = new Date().getFullYear();
 
-  const footerLinks = [
-    { name: 'Soluciones', href: '#features' },
-    { name: 'Integraciones', href: '#integrations' },
-    { name: 'Clientes', href: '#trust' },
-    { name: 'Soporte', href: '#support' },
+  const footerLinks = settings?.navigation?.links || [
+    { label: 'Soluciones', href: '#features' },
+    { label: 'Integraciones', href: '#integrations' },
+    { label: 'Clientes', href: '#trust' },
+    { label: 'Soporte', href: '#support' },
   ];
+
+  const logoSrc = settings?.general?.logo
+    ? urlFor(settings.general.logo).url()
+    : '/logo.webp';
+  const description =
+    settings?.footer?.description ||
+    'Transformando la gestión de laboratorios con tecnología de vanguardia, conectividad total y soporte experto.';
+  const contactInfo = settings?.footer?.contactInfo;
+  const social = settings?.footer?.social || [
+    { platform: 'Instagram', url: 'https://instagram.com/interpracsys' },
+    { platform: 'LinkedIn', url: 'https://linkedin.com/company/interpracsys' },
+  ];
+  const legalLinks = settings?.footer?.legalLinks || [
+    { label: 'Política de Privacidad', url: '#' },
+    { label: 'Términos de Servicio', url: '#' },
+  ];
+
+  const getSocialIcon = (platform: string) => {
+    switch (platform.toLowerCase()) {
+      case 'instagram':
+        return <Instagram size={20} />;
+      case 'linkedin':
+        return <Linkedin size={20} />;
+      case 'facebook':
+        return <Facebook size={20} />;
+      case 'twitter':
+        return <Twitter size={20} />;
+      default:
+        return <Linkedin size={20} />; // Fallback
+    }
+  };
 
   return (
     <footer className="bg-slate-50 border-t border-slate-200 pt-16 pb-8">
@@ -20,41 +54,40 @@ export const Footer = () => {
           <div className="col-span-1 md:col-span-1 flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
               <Image
-                src="/logo.webp"
-                alt="InterPracsys Laboratorios"
+                src={logoSrc}
+                alt={settings?.general?.siteName || 'InterPracsys Laboratorios'}
                 width={200}
                 height={40}
                 style={{ height: 'auto' }}
               />
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-xs">
-              Transformando la gestión de laboratorios con tecnología de
-              vanguardia, conectividad total y soporte experto.
+              {description}
             </p>
             <div className="flex items-center gap-4">
-              <SocialLink
-                href="https://instagram.com/interpracsys"
-                icon={<Instagram size={20} />}
-              />
-              <SocialLink
-                href="https://linkedin.com/company/interpracsys"
-                icon={<Linkedin size={20} />}
-              />
-              {/* Add more if needed */}
+              {social.map((s) => (
+                <SocialLink
+                  key={s.platform}
+                  href={s.url}
+                  icon={getSocialIcon(s.platform)}
+                />
+              ))}
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="col-span-1">
-            <h4 className="font-bold text-slate-900 mb-6">Explorar</h4>
+            <h4 className="font-bold text-slate-900 mb-6">
+              {settings?.footer?.exploreTitle || 'Explorar'}
+            </h4>
             <ul className="flex flex-col gap-3">
               {footerLinks.map((link) => (
-                <li key={link.name}>
+                <li key={link.label}>
                   <Link
                     href={link.href}
                     className="text-slate-600 hover:text-brand-navy text-sm font-medium transition-colors"
                   >
-                    {link.name}
+                    {link.label}
                   </Link>
                 </li>
               ))}
@@ -63,51 +96,54 @@ export const Footer = () => {
 
           {/* Legal / Contact */}
           <div className="col-span-1">
-            <h4 className="font-bold text-slate-900 mb-6">Legales</h4>
+            <h4 className="font-bold text-slate-900 mb-6">
+              {settings?.footer?.legalTitle || 'Legales'}
+            </h4>
             <ul className="flex flex-col gap-3">
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-600 hover:text-brand-navy text-sm font-medium transition-colors"
-                >
-                  Política de Privacidad
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-slate-600 hover:text-brand-navy text-sm font-medium transition-colors"
-                >
-                  Términos de Servicio
-                </Link>
-              </li>
+              {legalLinks.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.url}
+                    className="text-slate-600 hover:text-brand-navy text-sm font-medium transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           {/* Contact Info Short */}
           <div className="col-span-1">
-            <h4 className="font-bold text-slate-900 mb-6">Contacto</h4>
+            <h4 className="font-bold text-slate-900 mb-6">
+              {settings?.footer?.contactTitle || 'Contacto'}
+            </h4>
             <div className="flex flex-col gap-3 text-sm text-slate-600 items-center md:items-start">
-              <p>Buenos Aires, Argentina</p>
-              <p>contacto@interpracsys.com</p>
-              <p>+54 9 11 1234-5678</p>
+              <p>{contactInfo?.address || 'Buenos Aires, Argentina'}</p>
+              <p>{contactInfo?.email || 'contacto@interpracsys.com'}</p>
+              <p>{contactInfo?.phone || '+54 9 11 1234-5678'}</p>
             </div>
           </div>
         </div>
 
         <div className="pt-8 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p className="text-slate-500 text-sm">
-            © {currentYear} InterPracsys. Todos los derechos reservados.
+            © {currentYear}{' '}
+            {settings?.footer?.copyrightText ||
+              'InterPracsys. Todos los derechos reservados.'}
           </p>
           <div className="flex items-center gap-1.5 text-sm text-slate-500">
-            <span>Creado por</span>
+            <span>{settings?.footer?.developedByText || 'Creado por'}</span>
             <a
-              href="https://portfolio-santiago-chinellato.vercel.app/"
+              href={
+                settings?.footer?.developerUrl ||
+                'https://portfolio-santiago-chinellato.vercel.app/'
+              }
               target="_blank"
               rel="noopener noreferrer"
               className="text-brand-navy font-bold hover:text-brand-cyan transition-colors flex items-center gap-1"
             >
-              Santiago Chinellato
+              {settings?.footer?.developerName || 'Santiago Chinellato'}
             </a>
           </div>
         </div>

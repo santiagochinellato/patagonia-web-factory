@@ -1,10 +1,16 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { Mail, Phone, Instagram, Send, X } from 'lucide-react'; // Using Phone for WhatsApp representation usually or specific icon if available
-import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, Instagram, Send } from 'lucide-react';
+import { IPSettings, IPLandingPage } from '../../types/sanity';
 
-export const ContactSection = () => {
+export const ContactSection = ({
+  contactInfo,
+  data,
+}: {
+  contactInfo?: IPSettings['footer']['contactInfo'];
+  data?: IPLandingPage['contactSection'];
+}) => {
   return (
     <section
       id="support"
@@ -20,7 +26,7 @@ export const ContactSection = () => {
               viewport={{ once: true }}
               className="inline-block px-3 py-1 rounded-full bg-brand-navy/10 text-brand-navy text-xs font-bold tracking-wider mb-6 border border-brand-navy/20"
             >
-              HABLEMOS
+              {data?.badge || 'HABLEMOS'}
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -28,9 +34,9 @@ export const ContactSection = () => {
               viewport={{ once: true }}
               className="text-4xl md:text-5xl font-bold font-heading text-slate-900 mb-8"
             >
-              Estamos para{' '}
+              {data?.titlePart1 || 'Estamos para'}{' '}
               <span className="text-transparent bg-clip-text bg-brand-gradient">
-                Potenciarte
+                {data?.titleHighlight || 'Potenciarte'}
               </span>
               .
             </motion.h2>
@@ -41,22 +47,22 @@ export const ContactSection = () => {
               transition={{ delay: 0.1 }}
               className="text-lg text-slate-600 mb-12 max-w-lg leading-relaxed"
             >
-              Solicita tu demo hoy mismo o contáctanos para resolver cualquier
-              duda. Nuestro equipo de expertos está listo para acompañarte.
+              {data?.description ||
+                'Solicita tu demo hoy mismo o contáctanos para resolver cualquier duda. Nuestro equipo de expertos está listo para acompañarte.'}
             </motion.p>
 
             <div className="flex flex-col gap-4 items-start w-full">
               <ContactItem
                 icon={<Phone size={24} aria-hidden="true" />}
-                label="WhatsApp Ventas"
-                value="+54 9 11 1234-5678"
-                href="https://wa.me/5491112345678"
+                label={data?.phoneLabel || 'Teléfono / WhatsApp'}
+                value={contactInfo?.phone || '+54 9 11 1234-5678'}
+                href={`tel:${contactInfo?.phone || '+5491112345678'}`}
                 delay={0.2}
-                ariaLabel="Contactar por WhatsApp"
+                ariaLabel="Contactar por teléfono"
               />
               <ContactItem
                 icon={<Instagram size={24} aria-hidden="true" />}
-                label="Síguenos"
+                label={data?.followUsLabel || 'Síguenos'}
                 value="@interpracsys"
                 href="https://instagram.com/interpracsys"
                 delay={0.3}
@@ -64,9 +70,11 @@ export const ContactSection = () => {
               />
               <ContactItem
                 icon={<Mail size={24} aria-hidden="true" />}
-                label="Email"
-                value="contacto@interpracsys.com"
-                href="mailto:contacto@interpracsys.com"
+                label={data?.emailLabel || 'Email'}
+                value={contactInfo?.email || 'contacto@interpracsys.com'}
+                href={`mailto:${
+                  contactInfo?.email || 'contacto@interpracsys.com'
+                }`}
                 delay={0.4}
                 ariaLabel="Enviar un correo electrónico"
               />
@@ -88,21 +96,23 @@ export const ContactSection = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <InputGroup
-                    label="Nombre"
-                    placeholder="Tu nombre"
+                    label={data?.formNameLabel || 'Nombre'}
+                    placeholder={data?.formNamePlaceholder || 'Tu nombre'}
                     id="name"
                     autoComplete="name"
                   />
                   <InputGroup
-                    label="Laboratorio"
-                    placeholder="Nombre del centro"
+                    label={data?.formOrgLabel || 'Laboratorio'}
+                    placeholder={
+                      data?.formOrgPlaceholder || 'Nombre del centro'
+                    }
                     id="lab"
                     autoComplete="organization"
                   />
                 </div>
                 <InputGroup
-                  label="Email"
-                  placeholder="tu@email.com"
+                  label={data?.formEmailLabel || 'Email'}
+                  placeholder={data?.formEmailPlaceholder || 'tu@email.com'}
                   type="email"
                   id="email"
                   autoComplete="email"
@@ -112,13 +122,16 @@ export const ContactSection = () => {
                     htmlFor="message"
                     className="text-sm font-bold text-slate-700"
                   >
-                    Mensaje
+                    {data?.formMessageLabel || 'Mensaje'}
                   </label>
                   <textarea
                     id="message"
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-2 focus:ring-brand-cyan/20 outline-none transition-all resize-none text-slate-700"
-                    placeholder="¿En qué podemos ayudarte?"
+                    placeholder={
+                      data?.formMessagePlaceholder ||
+                      '¿En qué podemos ayudarte?'
+                    }
                     aria-label="Mensaje"
                   />
                 </div>
@@ -127,7 +140,7 @@ export const ContactSection = () => {
                   className="w-full py-4 rounded-xl bg-brand-gradient text-white font-bold shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mt-2 focus:ring-4 focus:ring-brand-cyan/30 focus:outline-none"
                   aria-label="Enviar consulta"
                 >
-                  <span>Enviar Consulta</span>
+                  <span>{data?.formButtonText || 'Enviar Consulta'}</span>
                   <Send size={20} aria-hidden="true" />
                 </button>
               </form>

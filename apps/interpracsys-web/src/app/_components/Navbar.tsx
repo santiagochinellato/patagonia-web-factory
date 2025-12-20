@@ -5,8 +5,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { IPSettings } from '../../types/sanity';
+import { urlFor } from '../../lib/sanity';
 
-export const Navbar = () => {
+export const Navbar = ({ settings }: { settings?: IPSettings }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -18,12 +20,21 @@ export const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
+  const navLinks = settings?.navigation?.links?.map((link) => ({
+    name: link.label,
+    href: link.href,
+  })) || [
     { name: 'Soluciones', href: '#features' },
     { name: 'Integraciones', href: '#integrations' },
     { name: 'Clientes', href: '#trust' },
     { name: 'Soporte', href: '#support' },
   ];
+
+  const logoSrc = settings?.general?.logo
+    ? urlFor(settings.general.logo).url()
+    : '/logo.webp';
+  const ctaText = settings?.navigation?.cta?.text || 'Solicitar Demo';
+  const ctaLink = settings?.navigation?.cta?.link || '#';
 
   return (
     <>
@@ -38,11 +49,12 @@ export const Navbar = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
-              src="/logo.webp"
-              alt="InterPracsys Laboratorios"
+              src={logoSrc}
+              alt={settings?.general?.siteName || 'InterPracsys Laboratorios'}
               width={200}
               height={40}
-              style={{ height: 'auto' }}
+              style={{ height: 'auto', maxHeight: '40px', width: 'auto' }}
+              className="object-contain"
             />
           </Link>
 
@@ -61,9 +73,11 @@ export const Navbar = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <button className="px-6 py-2.5 rounded-full bg-brand-gradient text-white text-sm font-semibold shadow-lg hover:shadow-levitate-hover hover:-translate-y-0.5 transition-all duration-300">
-              Solicitar Demo
-            </button>
+            <Link href={ctaLink}>
+              <button className="px-6 py-2.5 rounded-full bg-brand-gradient text-white text-sm font-semibold shadow-lg hover:shadow-levitate-hover hover:-translate-y-0.5 transition-all duration-300">
+                {ctaText}
+              </button>
+            </Link>
           </div>
 
           <button
@@ -95,9 +109,11 @@ export const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <button className="mt-4 px-8 py-3 rounded-full bg-brand-gradient text-white font-semibold shadow-lg">
-              Solicitar Demo
-            </button>
+            <Link href={ctaLink} onClick={() => setIsMobileMenuOpen(false)}>
+              <button className="mt-4 px-8 py-3 rounded-full bg-brand-gradient text-white font-semibold shadow-lg">
+                {ctaText}
+              </button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

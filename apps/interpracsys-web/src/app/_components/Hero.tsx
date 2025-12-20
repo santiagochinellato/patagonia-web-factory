@@ -2,8 +2,22 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { IPLandingPage } from '../../types/sanity';
 
-export const Hero = () => {
+export const Hero = ({ data }: { data?: IPLandingPage['hero'] }) => {
+  const pins = data?.mapPins || [
+    { label: 'Jujuy', x: 40, y: 3 },
+    { label: 'Salta', x: 44, y: 11 },
+    { label: 'Tucumán', x: 41, y: 16 },
+    { label: 'San Juan', x: 29, y: 28 },
+    { label: 'Santa Fe', x: 62, y: 31 },
+    { label: 'Buenos Aires', x: 70, y: 45 },
+    { label: 'Neuquén', x: 23, y: 50 },
+    { label: 'Río Negro', x: 35, y: 56 },
+    { label: 'Tierra del Fuego', x: 30, y: 98 },
+    { label: 'La Pampa', x: 43, y: 46 },
+  ];
+
   return (
     <section className="w-full min-h-screen pt-32 pb-20 overflow-hidden flex flex-col md:flex-row items-center justify-between bg-white max-w-7xl mx-auto px-6 gap-10">
       <div className="w-full md:w-[60%] flex flex-col items-center md:items-start z-10 text-center md:text-left">
@@ -13,7 +27,7 @@ export const Hero = () => {
           transition={{ duration: 0.6 }}
         >
           <span className="inline-block px-4 py-1.5 rounded-full bg-brand-blue50 text-brand-navy text-xs font-bold tracking-wider mb-6 border border-brand-navy/10">
-            LÍDERES EN LIS ARGENTINA
+            {data?.badge || 'LÍDERES EN LIS ARGENTINA'}
           </span>
         </motion.div>
 
@@ -23,9 +37,11 @@ export const Hero = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
           className="text-4xl md:text-6xl font-bold font-heading text-slate-900 tracking-tight leading-tight mb-6 break-words"
         >
-          <span className="block mb-2">Precisión Clínica para</span>
+          <span className="block mb-2">
+            {data?.titlePrefix || 'Precisión Clínica para'}
+          </span>
           <span className="text-transparent bg-clip-text bg-brand-gradient inline-block relative">
-            Laboratorios Modernos
+            {data?.titleHighlight || 'Laboratorios Modernos'}
             <motion.span
               initial={{ scaleX: 0 }}
               animate={{ scaleX: 1 }}
@@ -41,9 +57,8 @@ export const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg md:text-xl text-slate-500 max-w-lg mb-10 leading-relaxed"
         >
-          InterPracsys transforma la gestión de su laboratorio con estabilidad,
-          trazabilidad total y un diseño pensado para la máxima eficiencia
-          operativa.
+          {data?.subtitle ||
+            'InterPracsys transforma la gestión de su laboratorio con estabilidad, trazabilidad total y un diseño pensado para la máxima eficiencia operativa.'}
         </motion.p>
 
         <motion.div
@@ -54,7 +69,7 @@ export const Hero = () => {
         >
           <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gradient text-white font-bold shadow-lg shadow-brand-cyan/20 hover:shadow-levitate-hover hover:-translate-y-1 transition-all duration-300 text-lg group">
             <span className="flex items-center justify-center gap-2">
-              SOLICITAR DEMO
+              {data?.primaryButton || 'SOLICITAR DEMO'}
               <svg
                 className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                 fill="none"
@@ -72,7 +87,7 @@ export const Hero = () => {
             </span>
           </button>
           <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-50 text-slate-700 font-semibold border border-slate-200 hover:bg-white hover:border-brand-cyan/30 hover:text-brand-navy transition-all duration-300">
-            Ver Características
+            {data?.secondaryButton || 'Ver Características'}
           </button>
         </motion.div>
       </div>
@@ -108,7 +123,7 @@ export const Hero = () => {
           <div className="absolute inset-0 w-full h-full">
             {pins.map((pin, index) => (
               <div
-                key={pin.id}
+                key={index}
                 className="absolute"
                 style={{
                   left: `${pin.x}%`,
@@ -133,14 +148,6 @@ export const Hero = () => {
                 <div className="relative w-3 h-3 rounded-full bg-brand-gradient shadow-[0_0_15px_rgba(0,174,239,0.8)] flex items-center justify-center z-10 animate-pulse">
                   <div className="w-1.5 h-1.5 rounded-full bg-white" />
                 </div>
-
-                {/* Label (Commented out) */}
-                {/* <div
-                  className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap text-[11px] font-bold text-brand-navy bg-white/95 px-3 py-1 rounded-lg shadow-levitate border border-brand-cyan/20 opacity-0 animate-[fadeIn_0.5s_ease-out_forwards]"
-                  style={{ animationDelay: `${index * 0.1 + 1}s` }}
-                >
-                  {pin.label}
-                </div> */}
               </div>
             ))}
           </div>
@@ -149,16 +156,3 @@ export const Hero = () => {
     </section>
   );
 };
-
-const pins = [
-  { id: 'jujuy', label: 'Jujuy', x: 40, y: 3 },
-  { id: 'salta', label: 'Salta', x: 44, y: 11 },
-  { id: 'tucuman', label: 'Tucumán', x: 41, y: 16 },
-  { id: 'san-juan', label: 'San Juan', x: 29, y: 28 },
-  { id: 'santa-fe', label: 'Santa Fe', x: 62, y: 31 },
-  { id: 'buenos-aires', label: 'Buenos Aires', x: 70, y: 45 },
-  { id: 'neuquen', label: 'Neuquén', x: 23, y: 50 },
-  { id: 'rio-negro', label: 'Río Negro', x: 35, y: 56 },
-  { id: 'tierra-del-fuego', label: 'Tierra del Fuego', x: 30, y: 98 },
-  { id: 'la-pampa', label: 'La Pampa', x: 43, y: 46 },
-];

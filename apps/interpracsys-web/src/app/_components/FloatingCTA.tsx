@@ -3,9 +3,11 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronUp } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { IPSettings } from '../../types/sanity';
 
-export const FloatingCTA = () => {
+export const FloatingCTA = ({ settings }: { settings?: IPSettings }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const ctaText = settings?.navigation?.cta?.text || 'Solicitar Demo';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,9 +37,9 @@ export const FloatingCTA = () => {
           whileTap={{ scale: 0.95 }}
           onClick={scrollToContact}
           className="fixed bottom-8 right-8 z-50 px-6 py-3 rounded-full bg-brand-gradient text-white font-bold shadow-2xl shadow-brand-navy/30 flex items-center gap-2 border border-white/20 backdrop-blur-md hover:scale-105 transition-transform"
-          aria-label="Solicitar Demo"
+          aria-label={ctaText}
         >
-          <span>Solicitar Demo</span>
+          <span>{ctaText}</span>
           <ChevronUp size={20} className="animate-bounce" />
         </motion.button>
       )}
