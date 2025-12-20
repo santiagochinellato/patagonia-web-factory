@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -33,16 +34,16 @@ export const Navbar = () => {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 my-2 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
-            {/* Abstract Logo Representation */}
-            <div className="w-8 h-8 rounded-lg bg-brand-gradient flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:shadow-levitate-hover transition-all duration-300">
-              I
-            </div>
-            <span className="font-heading font-bold text-xl text-slate-900 tracking-tight">
-              InterPracsys
-            </span>
+            <Image
+              src="/logo.webp"
+              alt="InterPracsys Laboratorios"
+              width={200}
+              height={40}
+              style={{ height: 'auto' }}
+            />
           </Link>
 
           {/* Desktop Links */}

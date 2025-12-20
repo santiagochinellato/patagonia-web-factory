@@ -1,8 +1,7 @@
 'use client';
-
 import Link from 'next/link';
 import { Facebook, Instagram, Linkedin, Twitter, Heart } from 'lucide-react';
-
+import Image from 'next/image';
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
@@ -20,12 +19,13 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1 flex flex-col items-center md:items-start">
             <Link href="/" className="flex items-center gap-2 mb-4 group">
-              <div className="w-8 h-8 rounded-lg bg-brand-gradient flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:shadow-levitate-hover transition-all duration-300">
-                I
-              </div>
-              <span className="font-heading font-bold text-xl text-slate-900 tracking-tight">
-                InterPracsys
-              </span>
+              <Image
+                src="/logo.webp"
+                alt="InterPracsys Laboratorios"
+                width={200}
+                height={40}
+                style={{ height: 'auto' }}
+              />
             </Link>
             <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-xs">
               Transformando la gestión de laboratorios con tecnología de
