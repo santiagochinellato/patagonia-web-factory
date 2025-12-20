@@ -21,13 +21,13 @@
     },
     "types": ["jest", "node"],
     "outDir": "dist",
-    "rootDir": "src",
     "tsBuildInfoFile": "dist/tsconfig.tsbuildinfo"
   },
   "include": [
     "../../apps/interpracsys-web/.next/types/**/*.ts",
     "../../dist/apps/interpracsys-web/.next/types/**/*.ts",
     "next-env.d.ts",
+    "sanity.config.ts",
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.ts",
