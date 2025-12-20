@@ -29,7 +29,7 @@
     "../../apps/interpracsys-web/.next/types/**/*.ts",
     "../../dist/apps/interpracsys-web/.next/types/**/*.ts",
     "next-env.d.ts",
-    "sanity.config.ts",
+    "next-env.d.ts",
     "src/**/*.js",
     "src/**/*.jsx",
     "src/**/*.ts",
