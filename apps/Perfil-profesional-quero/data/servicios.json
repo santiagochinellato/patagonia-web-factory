@@ -1,0 +1,111 @@
+{
+  "servicios": {
+    "descripcionGeneral": "Integro ciencia, liderazgo y gestión estratégica para ofrecer soluciones profesionales de alto impacto",
+    "areas": [
+      {
+        "id": "coaching-liderazgo",
+        "titulo": "Coaching & Liderazgo Sistémico",
+        "subtitulo": "Desarrollo humano y organizacional",
+        "descripcion": "Coach Ontológico Profesional y de Equipos con enfoque sistémico. Facilitador en Configuraciones Sistémicas para resolución de conflictos, gestión de equipos y desarrollo de liderazgo.",
+        "icono": "leadership",
+        "color": "#1E3A8A",
+        "serviciosEspecificos": [
+          "Coaching Ontológico Profesional",
+          "Coaching de Equipos con Enfoque Sistémico",
+          "Facilitación en Configuraciones Sistémicas",
+          "Resolución de conflictos organizacionales",
+          "Desarrollo de liderazgo",
+          "Gestión del cambio organizacional"
+        ],
+        "credenciales": [
+          "Avalado por AACOP (Asociación Argentina de Coaching Ontológico Profesional)",
+          "Formación continua 2015-2025"
+        ],
+        "beneficios": [
+          "Transformación de dinámicas de equipo",
+          "Mejora en la comunicación organizacional",
+          "Desarrollo de competencias de liderazgo",
+          "Resolución efectiva de conflictos"
+        ]
+      },
+      {
+        "id": "consultoria-agro-vet",
+        "titulo": "Consultoría Agropecuaria & Veterinaria",
+        "subtitulo": "Asesoramiento técnico-comercial especializado",
+        "descripcion": "Director Técnico con experiencia en empresas líderes del sector. Especialización en nutrición animal, aditivos naturales, salud intestinal avícola y desarrollo de productos innovadores.",
+        "icono": "agriculture",
+        "color": "#065F46",
+        "serviciosEspecificos": [
+          "Asesoramiento técnico-comercial",
+          "Desarrollo de productos veterinarios",
+          "Nutrición animal y aditivos naturales",
+          "Salud intestinal en avicultura",
+          "Gestión de micotoxinas",
+          "Investigación aplicada en Cannabis sativa para producción animal",
+          "Preparación de dossiers regulatorios"
+        ],
+        "experienciaEmpresas": [
+          {
+            "empresa": "BENTOLIFE S.A.",
+            "cargo": "Socio Fundador - Asesor Técnico Veterinario",
+            "periodo": "2021 - Actualidad",
+            "actividades": "Asesoramiento técnico-comercial en mineral bentonita para nutrimentos y sanidad animal. Gestión de documentación y exportación."
+          },
+          {
+            "empresa": "MINERVET S.A.",
+            "cargo": "Director Técnico",
+            "periodo": "2018 - 2021",
+            "actividades": "Asesoramiento en salud intestinal avícola, aditivos naturales, micotoxinas. Desarrollo de ensayos experimentales y capacitación técnica."
+          },
+          {
+            "empresa": "Centro Médico Veterinario Máximo Paz",
+            "cargo": "Director Veterinario / Propietario",
+            "periodo": "2021 - 2023",
+            "actividades": "Gestión clínica, diagnóstico y venta de productos farmacéuticos veterinarios."
+          }
+        ],
+        "beneficios": [
+          "Optimización de procesos productivos",
+          "Mejora en rendimientos y salud animal",
+          "Innovación en productos naturales",
+          "Cumplimiento regulatorio internacional"
+        ]
+      },
+      {
+        "id": "investigacion-estrategica",
+        "titulo": "Investigación Científica & Docencia",
+        "subtitulo": "Dirección de proyectos y transferencia de conocimiento",
+        "descripcion": "Director de Proyecto de Investigación en IAVAS/CONICET. Profesor Universitario con más de 10 años de experiencia. Especialización en ecotoxicología, genética veterinaria y salud ambiental.",
+        "icono": "research",
+        "color": "#7C2D12",
+        "serviciosEspecificos": [
+          "Dirección de proyectos de investigación",
+          "Diseño y ejecución de estudios científicos",
+          "Publicación en revistas internacionales indexadas",
+          "Docencia universitaria de grado y posgrado",
+          "Dirección de tesis de grado",
+          "Evaluación de proyectos científicos",
+          "Revisión por pares en revistas internacionales"
+        ],
+        "posicionActual": {
+          "cargo": "Director de Proyecto de Investigación Científica",
+          "institucion": "Instituto Nacional de Investigaciones en Veterinaria, Ambiente y Salud (IAVAS/CONICET) - Universidad Juan Agustín Maza",
+          "periodo": "2023 - Actualidad",
+          "proyecto": "Evaluación de un aditivo dietario formulado a base de Cannabis sativa sobre el rendimiento productivo y la salud intestinal en la producción avícola"
+        },
+        "cargoDocente": {
+          "cargo": "Profesor Adjunto / Coordinador de Prácticas Profesionales",
+          "area": "Clínica de Pequeños Animales",
+          "institucion": "Facultad de Ciencias Veterinarias y Ambientales - Universidad Juan Agustín Maza",
+          "periodo": "2014 - Actualidad"
+        },
+        "beneficios": [
+          "Innovación basada en evidencia científica",
+          "Transferencia tecnológica aplicada",
+          "Formación de recursos humanos especializados",
+          "Publicaciones de impacto internacional"
+        ]
+      }
+    ]
+  }
+}

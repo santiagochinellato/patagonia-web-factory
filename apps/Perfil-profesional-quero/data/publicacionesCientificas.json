@@ -1,0 +1,119 @@
+{
+  "publicacionesCientificas": {
+    "resumen": {
+      "total": 12,
+      "revistasIndexadas": 12,
+      "factorImpacto": "Alto impacto en áreas de toxicología ambiental, veterinaria y ecología"
+    },
+    "articulos": [
+      {
+        "autores": "Quero AAM, Poletta GL, Gorla NBM",
+        "titulo": "Effect on plasma cholinesterase levels and biomarkers of genotoxicity in hatchling quails from eggs treated with Chlorpyrifos during incubation",
+        "revista": "Ecotoxicology",
+        "volumen": "34(9)",
+        "paginas": "1815-1824",
+        "anio": 2025,
+        "doi": "10.1007/s10646-025-02956-y",
+        "categoria": "Toxicología Ambiental"
+      },
+      {
+        "autores": "Quero AAM, Zarco A, Ordovini D, Méndez SE, Gorla NBM",
+        "titulo": "Hematological profiles of wild birds in the central Monte Desert, Argentina: first records",
+        "revista": "Veterinaria Mexico OA",
+        "volumen": "12",
+        "anio": 2025,
+        "doi": "10.22201/fmvz.24486760e.2025.1400",
+        "categoria": "Veterinaria - Fauna Silvestre"
+      },
+      {
+        "autores": "Quero AAM, Pedrosa A, Gorla NBM",
+        "titulo": "Liver and kidney damage in quail embryos hatched from eggs sprayed once with chlorpyrifos during artificial incubation",
+        "revista": "Veterinary Research Communications",
+        "anio": 2024,
+        "doi": "10.1007/s11259-024-10298-z",
+        "categoria": "Toxicología Veterinaria"
+      },
+      {
+        "autores": "Méndez SE, Quero AAM, Gorla NMB",
+        "titulo": "Erythrocyte micronucleus cytome assay in Passer domesticus and environmental remote sensing for inferring the quality of wild, rural and urban areas",
+        "revista": "Environmental Monitoring and Assessment",
+        "anio": 2022,
+        "doi": "10.1007/s10661-022-10488-9",
+        "categoria": "Monitoreo Ambiental"
+      },
+      {
+        "autores": "Quero AAM, Zarco A, Landa FB, Gorla NBM",
+        "titulo": "Plasma cholinesterase activities in wild birds from undisturbed woodlands in the central Monte desert",
+        "revista": "Environmental Toxicology and Chemistry",
+        "anio": 2019,
+        "doi": "10.1002/etc.4458",
+        "categoria": "Toxicología Ambiental"
+      },
+      {
+        "autores": "Quero AAM, Muñoz I, Ferré DM, Gorla NBM",
+        "titulo": "Frecuencia de micronúcleos con coloración secuencial Giemsa-Naranja de acridina en gato doméstico (Feliz domesticus)",
+        "revista": "Revista de Investigaciones Veterinarias de Perú",
+        "anio": 2018,
+        "doi": "10.15381/rivep.v29i3.14769",
+        "categoria": "Genética Veterinaria"
+      },
+      {
+        "autores": "Ferré DM, Quero AAM, Hernández AF, Hynes V, Tornello MJ, Lüders C, Gorla NBM",
+        "titulo": "Potential risks of dietary exposure to chlorpyrifos and cypermethrin from their use in fruit/vegetable crops and beef cattle productions",
+        "revista": "Environmental Monitoring and Assessment",
+        "volumen": "190(5)",
+        "anio": 2018,
+        "doi": "10.1007/s10661-018-6647-x",
+        "categoria": "Salud Pública Ambiental"
+      },
+      {
+        "autores": "Ferré DM, Quero AAM, Hynes V, Sandeña ELR, Lentini VR, Tornello MJ, Carracedo RT, Gorla NBM",
+        "titulo": "Ensayo de micronúcleos citoma bucal en trabajadores de fincas frutícolas que han aplicado plaguicidas alrededor de quince años",
+        "revista": "Revista Internacional de Contaminación Ambiental - UNAM",
+        "volumen": "34(1)",
+        "paginas": "23-33",
+        "anio": 2018,
+        "doi": "10.20937/RICA.2018.34.01.02",
+        "categoria": "Salud Ocupacional"
+      },
+      {
+        "autores": "Saldeña EL, Hynes V, Ferré DM, Quero AAM, Nauilly V, Gorla NBM",
+        "titulo": "Evento de intoxicación de perros de zona urbana mediante cebos contaminados con aldicarb",
+        "revista": "Revista de Investigaciones Veterinarias de Perú",
+        "volumen": "28(3)",
+        "paginas": "514-521",
+        "anio": 2018,
+        "doi": "10.15381/rivep.v28i3.12849",
+        "categoria": "Toxicología Veterinaria"
+      },
+      {
+        "autores": "Quero AAM, Ferré DM, Zarco A, Cuervo PF, Gorla NBM",
+        "titulo": "Erythrocyte micronucleus cytome assay of 17 wild bird species from the Central Monte Desert, Argentina",
+        "revista": "Environmental Science and Pollution Research",
+        "volumen": "23",
+        "paginas": "25224-25231",
+        "anio": 2016,
+        "doi": "10.1007/s11356-016-7638-5",
+        "categoria": "Ecología y Genética"
+      },
+      {
+        "autores": "Cuervo P, Quero AAM, Gorla NBM",
+        "titulo": "Conocimiento Citogenético de las Aves de Argentina",
+        "revista": "Ornitología Neotropical",
+        "volumen": "22(4)",
+        "paginas": "517-537",
+        "anio": 2011,
+        "categoria": "Ornitología y Citogenética"
+      },
+      {
+        "autores": "Martin L, Quero AAM, Ferré DM, Albarracín L, Hynes V, Larripa IB, Gorla NB",
+        "titulo": "Un caso de hermafroditismo verdadero 78, XX en una perra Weimaraner",
+        "revista": "Archivos Medicina Veterinaria",
+        "volumen": "43",
+        "paginas": "299-303",
+        "anio": 2011,
+        "categoria": "Genética Veterinaria Clínica"
+      }
+    ]
+  }
+}

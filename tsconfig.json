@@ -38,6 +38,12 @@
     },
     {
       "path": "./apps/interpracsys-web"
+    },
+    {
+      "path": "./apps/Perfil-profesional-quero-e2e"
+    },
+    {
+      "path": "./apps/Perfil-profesional-quero"
     }
   ]
 }

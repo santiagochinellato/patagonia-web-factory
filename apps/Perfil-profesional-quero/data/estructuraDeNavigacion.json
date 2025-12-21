@@ -1,0 +1,99 @@
+{
+  "navegacion": {
+    "menu": [
+      {
+        "id": "inicio",
+        "label": "Inicio",
+        "href": "#hero",
+        "orden": 1
+      },
+      {
+        "id": "sobre-mi",
+        "label": "Sobre Mí",
+        "href": "#sobre-mi",
+        "orden": 2
+      },
+      {
+        "id": "servicios",
+        "label": "Servicios",
+        "href": "#servicios",
+        "orden": 3
+      },
+      {
+        "id": "trayectoria",
+        "label": "Trayectoria",
+        "href": "#trayectoria",
+        "orden": 4
+      },
+      {
+        "id": "publicaciones",
+        "label": "Publicaciones",
+        "href": "#publicaciones",
+        "orden": 5
+      },
+      {
+        "id": "contacto",
+        "label": "Contacto",
+        "href": "#contacto",
+        "orden": 6
+      }
+    ],
+    "footer": {
+      "columnas": [
+        {
+          "titulo": "Servicios",
+          "enlaces": [
+            {
+              "texto": "Coaching & Liderazgo",
+              "href": "#coaching-liderazgo"
+            },
+            {
+              "texto": "Consultoría Agropecuaria",
+              "href": "#consultoria-agro-vet"
+            },
+            {
+              "texto": "Investigación Científica",
+              "href": "#investigacion-estrategica"
+            }
+          ]
+        },
+        {
+          "titulo": "Recursos",
+          "enlaces": [
+            {
+              "texto": "Publicaciones Científicas",
+              "href": "#publicaciones"
+            },
+            {
+              "texto": "Artículos de Divulgación",
+              "href": "#divulgacion"
+            },
+            {
+              "texto": "Descargar CV",
+              "href": "/downloads/CV_Martin_Quero_2025.pdf"
+            }
+          ]
+        },
+        {
+          "titulo": "Contacto",
+          "enlaces": [
+            {
+              "texto": "+54 9 261 558 1683",
+              "href": "tel:+5492615581683"
+            },
+            {
+              "texto": "aamartinquero@gmail.com",
+              "href": "mailto:aamartinquero@gmail.com"
+            },
+            {
+              "texto": "LinkedIn",
+              "href": "https://www.linkedin.com/in/martin-quero-a7b9b61a3/"
+            }
+          ]
+        }
+      ],
+      "copyright": "© 2025 Dr. Martín Quero. Todos los derechos reservados.",
+      "avisoLegal": "Sitio web profesional | Veterinario Mat. XXX"
+    }
+  }
+}

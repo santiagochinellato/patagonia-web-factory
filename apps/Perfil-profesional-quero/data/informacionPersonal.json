@@ -1,0 +1,29 @@
+{
+  "datosPersonales": {
+    "nombreCompleto": "Arnoldo Angel Martín Quero",
+    "nombrePreferido": "Martín Quero",
+    "tituloPrincipal": "Veterinario (Ph.D.)",
+    "subtitulos": [
+      "Coach Ontológico Profesional y de Equipos",
+      "Facilitador en Configuraciones Sistémicas",
+      "Director de Investigación Científica"
+    ],
+    "dni": "33.578.655",
+    "fechaNacimiento": "23/04/1988",
+    "edad": 37,
+    "nacionalidad": "Argentina",
+    "ubicacion": {
+      "ciudad": "San Carlos de Bariloche",
+      "provincia": "Rio Negro",
+      "pais": "Argentina",
+      "direccionAnterior": "Javier Morales 2158, Godoy Cruz, Mendoza, Argentina",
+      "codigoPostal": "5501"
+    },
+    "contacto": {
+      "telefono": "+54 9 261 558 1683",
+      "emailPrincipal": "aamartinquero@gmail.com",
+      "emailUniversitario": "mquero@profesores.umaza.edu.ar",
+      "linkedin": "in/martin-quero-a7b9b61a3/"
+    }
+  }
+}

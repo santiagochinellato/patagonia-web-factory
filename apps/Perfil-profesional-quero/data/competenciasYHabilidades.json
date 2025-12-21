@@ -1,0 +1,136 @@
+{
+  "competencias": {
+    "tecnicas": [
+      {
+        "area": "Investigación Científica",
+        "habilidades": [
+          "Diseño experimental",
+          "Análisis estadístico multivariado",
+          "Técnicas de laboratorio (PCR, extracción ADN, citogenética)",
+          "Redacción de papers científicos",
+          "Gestión de proyectos de investigación",
+          "Bioestadística"
+        ],
+        "nivel": "Experto"
+      },
+      {
+        "area": "Coaching y Liderazgo",
+        "habilidades": [
+          "Coaching ontológico profesional",
+          "Coaching de equipos",
+          "Facilitación en configuraciones sistémicas",
+          "Resolución de conflictos",
+          "Gestión del cambio",
+          "Desarrollo organizacional"
+        ],
+        "nivel": "Certificado - Avanzado"
+      },
+      {
+        "area": "Veterinaria y Producción Animal",
+        "habilidades": [
+          "Nutrición animal",
+          "Salud intestinal avícola",
+          "Toxicología veterinaria",
+          "Diagnóstico clínico",
+          "Genética veterinaria",
+          "Ecotoxicología"
+        ],
+        "nivel": "Experto"
+      },
+      {
+        "area": "Gestión Académica",
+        "habilidades": [
+          "Dirección de carrera universitaria",
+          "Coordinación de áreas de investigación",
+          "Gestión curricular",
+          "Dirección de tesis",
+          "Evaluación de proyectos"
+        ],
+        "nivel": "Avanzado"
+      },
+      {
+        "area": "Gestión Comercial",
+        "habilidades": [
+          "Asesoramiento técnico-comercial",
+          "Desarrollo de productos",
+          "Gestión de clientes internacionales",
+          "Preparación de dossiers regulatorios",
+          "Capacitación técnica"
+        ],
+        "nivel": "Avanzado"
+      }
+    ],
+    "blandas": [
+      {
+        "habilidad": "Liderazgo",
+        "descripcion": "Experiencia dirigiendo equipos de investigación, docentes y comerciales",
+        "evidencia": "11 tesis dirigidas, gestión de áreas universitarias, dirección técnica de empresas"
+      },
+      {
+        "habilidad": "Comunicación",
+        "descripcion": "58 presentaciones en congresos, docencia universitaria, capacitación a clientes",
+        "evidencia": "Expositor frecuente en eventos científicos nacionales e internacionales"
+      },
+      {
+        "habilidad": "Trabajo en Equipo",
+        "descripcion": "Colaboración en proyectos multidisciplinarios de investigación",
+        "evidencia": "10 proyectos de investigación colaborativos"
+      },
+      {
+        "habilidad": "Adaptabilidad",
+        "descripcion": "Transición efectiva entre roles académicos, científicos y empresariales",
+        "evidencia": "Múltiples roles simultáneos en diferentes sectores"
+      },
+      {
+        "habilidad": "Pensamiento Sistémico",
+        "descripcion": "Capacidad para ver conexiones y patrones en sistemas complejos",
+        "evidencia": "Formación en configuraciones sistémicas y enfoque holístico"
+      },
+      {
+        "habilidad": "Resolución de Problemas",
+        "descripcion": "Enfoque científico aplicado a desafíos organizacionales y técnicos",
+        "evidencia": "Desarrollo de soluciones innovadoras en investigación y consultoría"
+      }
+    ],
+    "idiomas": [
+      {
+        "idioma": "Español",
+        "nivel": "Nativo",
+        "oral": "Nativo",
+        "escrito": "Nativo"
+      },
+      {
+        "idioma": "Inglés",
+        "nivel": "Intermedio",
+        "oral": "Intermedio",
+        "escrito": "Intermedio",
+        "aplicacion": "Lectura de papers científicos, redacción de artículos"
+      }
+    ],
+    "herramientasDigitales": [
+      "Software estadístico (R, SPSS)",
+      "Microsoft Office (avanzado)",
+      "Gestión de referencias bibliográficas (EndNote, Mendeley)",
+      "Plataformas LMS educativas"
+    ],
+    "certificacionesAdicionales": [
+      {
+        "certificacion": "Gestión colaborativa de conflictos",
+        "institucion": "Escuela de gobierno y capacitación legislativa de la Legislatura de Mendoza",
+        "anio": 2018
+      },
+      {
+        "certificacion": "Mediación",
+        "institucion": "Cámara Argentina de Comercio y Servicios",
+        "anio": 2018
+      }
+    ],
+    "licencias": [
+      {
+        "tipo": "Licencia de conducir",
+        "categoria": "B1",
+        "pais": "Argentina"
+      }
+    ]
+  }
+}

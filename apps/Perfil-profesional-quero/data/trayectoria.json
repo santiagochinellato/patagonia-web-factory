@@ -1,0 +1,76 @@
+{
+  "trayectoriaNumeros": {
+    "titulo": "Impacto Científico y Profesional",
+    "subtitulo": "Más de 15 años construyendo conocimiento y liderando equipos",
+    "metricas": [
+      {
+        "numero": 12,
+        "label": "Publicaciones Científicas",
+        "descripcion": "En revistas internacionales indexadas",
+        "icono": "publications",
+        "animacion": "countUp",
+        "destacado": true
+      },
+      {
+        "numero": 58,
+        "label": "Presentaciones en Congresos",
+        "descripcion": "Nacionales e internacionales",
+        "icono": "presentations",
+        "animacion": "countUp",
+        "destacado": true
+      },
+      {
+        "numero": 11,
+        "label": "Direcciones de Tesis",
+        "descripcion": "Tesis de grado finalizadas con calificación 10",
+        "icono": "thesis",
+        "animacion": "countUp",
+        "destacado": true
+      },
+      {
+        "numero": 8,
+        "label": "Premios Científicos",
+        "descripcion": "En reuniones científicas y académicas",
+        "icono": "awards",
+        "animacion": "countUp",
+        "destacado": true
+      },
+      {
+        "numero": 10,
+        "label": "Proyectos de Investigación",
+        "descripcion": "Como investigador principal o ayudante",
+        "icono": "projects",
+        "animacion": "countUp"
+      },
+      {
+        "numero": 12,
+        "label": "Cursos de Posgrado",
+        "descripcion": "Aprobados con calificaciones sobresalientes",
+        "icono": "courses",
+        "animacion": "countUp"
+      },
+      {
+        "numero": 8,
+        "label": "Publicaciones de Divulgación",
+        "descripcion": "En revistas profesionales del sector",
+        "icono": "articles",
+        "animacion": "countUp"
+      },
+      {
+        "numero": 2,
+        "label": "Capítulos de Libros",
+        "descripcion": "Publicados en editoriales académicas",
+        "icono": "books",
+        "animacion": "countUp"
+      }
+    ],
+    "experienciaDocente": {
+      "anios": 11,
+      "descripcion": "años de docencia universitaria ininterrumpida"
+    },
+    "experienciaGestion": {
+      "anios": 9,
+      "descripcion": "años en cargos de gestión universitaria y empresarial"
+    }
+  }
+}

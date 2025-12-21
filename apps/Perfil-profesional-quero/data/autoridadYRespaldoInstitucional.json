@@ -1,0 +1,71 @@
+{
+  "autoridadInstitucional": {
+    "titulo": "Respaldo Institucional",
+    "subtitulo": "Avalado por las principales instituciones científicas y académicas",
+"instituciones": [
+{
+"nombre": "CONICET",
+"nombreCompleto": "Consejo Nacional de Investigaciones Científicas y Técnicas",
+"tipo": "Investigación",
+"logo": "conicet-logo.png",
+"descripcion": "Máximo organismo de ciencia y tecnología de Argentina",
+"vinculo": "Becario Posdoctoral y Director de Proyecto"
+},
+{
+"nombre": "Universidad Juan Agustín Maza",
+"tipo": "Académico",
+"logo": "umaza-logo.png",
+"descripcion": "Universidad privada de Mendoza",
+"vinculo": "Profesor desde 2014, ex Director de Carrera y Coordinador de Investigación"
+},
+{
+"nombre": "Universidad Nacional del Litoral",
+"tipo": "Académico",
+"logo": "unl-logo.png",
+"descripcion": "Universidad pública argentina",
+"vinculo": "Doctor en Ciencias Veterinarias (Ph.D.) 2023"
+},
+{
+"nombre": "IAVAS",
+"nombreCompleto": "Instituto Nacional de Investigaciones en Veterinaria, Ambiente y Salud",
+"tipo": "Investigación",
+"logo": "iavas-logo.png",
+"descripcion": "Instituto asociado a CONICET",
+"vinculo": "Director de Proyecto de Investigación"
+},
+{
+"nombre": "AACOP",
+"nombreCompleto": "Asociación Argentina de Coaching Ontológico Profesional",
+"tipo": "Profesional",
+"logo": "aacop-logo.png",
+"descripcion": "Asociación profesional de coaching en Argentina",
+"vinculo": "Coach Ontológico certificado y avalado"
+},
+{
+"nombre": "SETAC",
+"nombreCompleto": "Society of Environmental Toxicology and Chemistry",
+"tipo": "Científico",
+"logo": "setac-logo.png",
+"descripcion": "Sociedad internacional de toxicología ambiental",
+"vinculo": "Miembro activo y premiado"
+}
+],
+"membresias": [
+{
+"organizacion": "Sociedad Argentina de Genética",
+"tipo": "Membresía activa",
+"desde": 2011
+},
+{
+"organizacion": "Sociedad de Biología de Cuyo",
+"tipo": "Membresía activa",
+"desde": 2010
+},
+{
+"organizacion": "SETAC Argentina",
+"tipo": "Membresía activa",
+"desde": 2014
+}
+]
+}
+}

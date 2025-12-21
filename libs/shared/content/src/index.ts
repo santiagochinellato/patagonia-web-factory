@@ -1,2 +1,2 @@
-export * from './lib/queries';
-export * from './lib/types';
+export * from './lib/queries.js';
+export * from './lib/types.js';

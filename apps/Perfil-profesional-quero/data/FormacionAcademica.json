@@ -1,0 +1,62 @@
+{
+  "formacionAcademica": {
+    "educacionFormal": [
+      {
+        "nivel": "Doctorado",
+        "titulo": "Doctor en Ciencias Veterinarias (Ph.D.)",
+        "institucion": "Universidad Nacional del Litoral",
+        "facultad": "Facultad de Ciencias Veterinarias",
+        "periodo": "2016 - 2023",
+        "notaFinal": "10 (Sobresaliente)",
+        "destacado": true,
+        "icono": "doctorate"
+      },
+      {
+        "nivel": "Grado",
+        "titulo": "Veterinario",
+        "institucion": "Universidad Juan Agustín Maza",
+        "facultad": "Facultad de Ciencias Veterinarias y Ambientales",
+        "periodo": "2006 - 2013",
+        "promedioAcademico": "8.00",
+        "distincion": "Diploma de honor",
+        "destacado": true,
+        "icono": "veterinary"
+      },
+      {
+        "nivel": "Secundario",
+        "titulo": "Bachillerato en Ambiente y Salud",
+        "institucion": "Escuela Técnica Ecológica Ambientalista PS-119",
+        "periodo": "2001 - 2005",
+        "distincion": "Medalla de honor / Abanderado",
+        "destacado": true,
+        "icono": "school"
+      }
+    ],
+    "titulacionesComplementarias": [
+      {
+        "titulo": "Coach de Equipos con Enfoque Sistémico",
+        "institucion": "IDS // Escuela de Coaching Ontológico Argentino (ECOA)",
+        "periodo": "2025",
+        "avaladoPor": "AACOP",
+        "destacado": true,
+        "icono": "team-coaching"
+      },
+      {
+        "titulo": "Coach Ontológico Profesional",
+        "institucion": "Fundación Universitas // Fundación Empowerment",
+        "periodo": "2015 - 2017",
+        "avaladoPor": "AACOP",
+        "destacado": true,
+        "icono": "coaching"
+      },
+      {
+        "titulo": "Facilitador en Constelaciones Familiares (Configuraciones Sistémicas)",
+        "institucion": "Centro Latinoamericano de Constelaciones Familiares",
+        "periodo": "2022 - 2025",
+        "destacado": true,
+        "icono": "systemic"
+      }
+    ]
+  }
+}
+

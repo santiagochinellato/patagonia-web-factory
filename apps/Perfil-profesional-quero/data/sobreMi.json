@@ -1,0 +1,26 @@
+{
+  "sobreMi": {
+    "titulo": "Perfil Profesional",
+    "descripcion": "Me considero una persona con perfil profesional veterinario dirigido a la investigación científica, transferencia de conocimientos y la gestión comercial. Me identifico como una persona proactiva, adaptable, motivada por el crecimiento y la concreción de metas.",
+    "valoresClave": [
+      {
+        "valor": "Responsabilidad",
+        "descripcion": "Compromiso con la excelencia en cada proyecto que emprendo"
+      },
+      {
+        "valor": "Empatía",
+        "descripcion": "Aptitudes desarrolladas para las relaciones interpersonales y el trabajo en equipo"
+      },
+      {
+        "valor": "Proactividad",
+        "descripcion": "Orientación a la acción y al logro de resultados concretos"
+      },
+      {
+        "valor": "Aprendizaje continuo",
+        "descripcion": "Habilidad en la búsqueda de información, análisis y transferencia de conocimientos"
+      }
+    ],
+    "motivacion": "Me motivan los ambientes de trabajo desafiantes, que impliquen el desarrollo de estrategias y acciones. Promuevo y propicio el bienestar laboral propio y de quienes me acompañan, las acciones constructivas, grupales y participativas.",
+    "experienciaGestion": "Experiencia comprobada en la gestión de equipos de trabajo, la formulación y revisión de proyectos científicos y comerciales."
+  }
+}

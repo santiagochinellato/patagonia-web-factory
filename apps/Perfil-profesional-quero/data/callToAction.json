@@ -1,0 +1,101 @@
+{
+  "callToAction": {
+    "principal": {
+      "titulo": "¿Listo para transformar tu equipo u organización?",
+      "subtitulo": "Conversemos sobre cómo la ciencia y el coaching sistémico pueden impulsar tus proyectos",
+      "botonPrincipal": {
+        "texto": "Agendar Consultoría",
+        "tipo": "whatsapp",
+        "link": "https://wa.me/5492615581683",
+        "mensaje": "Hola Martín, me gustaría conocer más sobre tus servicios de consultoría."
+      },
+      "botonSecundario": {
+        "texto": "Descargar CV Completo",
+        "tipo": "download",
+        "archivo": "CV_Martin_Quero_2025.pdf"
+      }
+    },
+    "secundario": {
+      "titulo": "¿Tienes un proyecto de investigación o necesitas asesoramiento técnico?",
+      "boton": {
+        "texto": "Enviar Email",
+        "link": "mailto:aamartinquero@gmail.com"
+      }
+    },
+    "formularioContacto": {
+      "activo": true,
+      "campos": [
+        {
+          "nombre": "nombre",
+          "tipo": "text",
+          "label": "Nombre completo",
+          "requerido": true
+        },
+        {
+          "nombre": "email",
+          "tipo": "email",
+          "label": "Email",
+          "requerido": true
+        },
+        {
+          "nombre": "telefono",
+          "tipo": "tel",
+          "label": "Teléfono",
+          "requerido": false
+        },
+        {
+          "nombre": "servicio",
+          "tipo": "select",
+          "label": "Servicio de interés",
+          "opciones": [
+            "Coaching & Liderazgo",
+            "Consultoría Agropecuaria",
+            "Investigación Científica",
+            "Docencia/Capacitación",
+            "Otro"
+          ],
+          "requerido": true
+        },
+        {
+          "nombre": "mensaje",
+          "tipo": "textarea",
+          "label": "Cuéntame sobre tu proyecto",
+          "requerido": true
+        }
+      ]
+    }
+  },
+  "informacionContacto": {
+    "telefono": {
+      "numero": "+54 9 261 558 1683",
+      "whatsapp": true,
+      "horarioAtencion": "Lunes a Viernes, 9:00 - 18:00 (GMT-3)"
+    },
+    "emails": [
+      {
+        "email": "aamartinquero@gmail.com",
+        "tipo": "Principal",
+        "uso": "Consultas generales y comerciales"
+      },
+      {
+        "email": "mquero@profesores.umaza.edu.ar",
+        "tipo": "Académico",
+        "uso": "Temas académicos y de investigación"
+      }
+    ],
+    "redesSociales": [
+      {
+        "red": "LinkedIn",
+        "url": "https://www.linkedin.com/in/martin-quero-a7b9b61a3/",
+        "usuario": "martin-quero"
+      }
+    ],
+    "ubicacion": {
+      "ciudad": "San Carlos de Bariloche",
+      "provincia": "Rio Negro",
+      "pais": "Argentina",
+      "disponibilidadRemoto": true,
+      "disponibilidadViajes": true
+    }
+  }
+}

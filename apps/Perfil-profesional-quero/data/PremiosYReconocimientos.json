@@ -1,0 +1,83 @@
+{
+  "premiosReconocimientos": {
+    "total": 8,
+    "premios": [
+      {
+        "premio": "Mejor póster en Mutagénesis, Carcinogénesis y Teratogénesis Ambiental",
+        "evento": "L Congreso de la Sociedad Argentina de Genética",
+        "anio": 2022,
+        "destacado": true
+      },
+      {
+        "premio": "Mejor Poster en Epidemiología y Salud Pública",
+        "evento": "Jornadas Internacionales de Veterinaria",
+        "lugar": "Mar del Plata, Argentina",
+        "anio": 2022,
+        "destacado": true
+      },
+      {
+        "premio": "Mejor Póster de Investigación Científica",
+        "evento": "VII Congreso Argentino de la Sociedad de Toxicología y Química Ambiental",
+        "anio": 2018,
+        "destacado": true
+      },
+      {
+        "premio": "Mejor Póster de Investigación en Área de Salud",
+        "evento": "VII Jornadas de Investigación UMAZA",
+        "anio": 2015
+      },
+      {
+        "premio": "Mejor Poster de Investigación - Segundo Premio",
+        "evento": "V Jornadas Institucionales de Investigación, Universidad Juan Agustín Maza",
+        "anio": 2013
+      },
+      {
+        "premio": "Diploma de Honor",
+        "descripcion": "Mérito académico - Segundo Mejor Promedio de Egresados",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales, Universidad Juan Agustín Maza",
+        "anio": 2014,
+        "tipo": "Académico",
+        "destacado": true
+      },
+      {
+        "premio": "Primer Escolta Bandera Nacional",
+        "descripcion": "Mérito académico - Segundo Mejor Promedio",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales, Universidad Juan Agustín Maza",
+        "anio": 2010,
+        "tipo": "Académico"
+      },
+      {
+        "premio": "Primer Escolta Bandera Nacional",
+        "descripcion": "Mérito académico - Segundo Mejor Promedio",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales, Universidad Juan Agustín Maza",
+        "anio": 2009,
+        "tipo": "Académico"
+      }
+    ],
+    "becas": [
+      {
+        "beca": "Beca Posdoctoral CONICET",
+        "proyecto": "Evaluación de un aditivo dietario formulado a base de Cannabis sativa sobre el rendimiento productivo y la salud intestinal en la producción avícola",
+        "periodo": "2024 - 2027",
+        "director": "Dr. Rubén Bottini",
+        "codirector": "Dr. Gerónimo Galvani",
+        "destacado": true
+      },
+      {
+        "beca": "Beca Doctoral CONICET",
+        "proyecto": "Las aves silvestres como bioindicadores de salud ambiental en el monte nativo y zonas agrícolas de Mendoza, Argentina",
+        "periodo": "2015 - 2020",
+        "directora": "Dra. Nora Gorla",
+        "destacado": true
+      },
+      {
+        "beca": "Beca a la Excelencia UMaza",
+        "descripcion": "Media beca para estudios de carrera de grado (Veterinaria) por promedio académico",
+        "periodo": "2006 - 2011"
+      }
+    ]
+  }
+}
+
+
+

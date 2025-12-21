@@ -1,0 +1,170 @@
+{
+  "experienciaLaboral": {
+    "posicionesActuales": [
+      {
+        "cargo": "Director de Proyecto de Investigación Científica",
+        "institucion": "Instituto Nacional de Investigaciones en Veterinaria, Ambiente y Salud (IAVAS/CONICET) - Universidad Juan Agustín Maza",
+        "periodo": "2023 - Actualidad",
+        "descripcion": "Dirección del proyecto: 'Evaluación de un aditivo dietario formulado a base de Cannabis sativa sobre el rendimiento productivo y la salud intestinal en la producción avícola'",
+        "responsabilidades": [
+          "Diseño y ejecución de protocolos experimentales",
+          "Gestión de equipo de investigación",
+          "Publicación de resultados científicos",
+          "Transferencia tecnológica al sector productivo"
+        ],
+        "referencia": {
+          "nombre": "Lic. Guillermo Gallardo",
+          "cargo": "Director Área C y T",
+          "telefono": "+54 261 4056200 int. 215"
+        }
+      },
+      {
+        "cargo": "Profesor Adjunto / Coordinador de Prácticas Profesionales Orientadas",
+        "area": "Clínica de Pequeños Animales",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales - Universidad Juan Agustín Maza",
+        "periodo": "2021 - Actualidad",
+        "responsabilidades": [
+          "Coordinación de prácticas clínicas de estudiantes",
+          "Supervisión de casos clínicos",
+          "Desarrollo de competencias profesionales",
+          "Evaluación del desempeño estudiantil"
+        ],
+        "referencia": {
+          "nombre": "Vet. Esp. Paula Gerlo",
+          "cargo": "Decana",
+          "telefono": "+54 261 4056200 int. 238"
+        }
+      },
+      {
+        "cargo": "Profesor Adjunto",
+        "catedra": "Genética Veterinaria",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales - Universidad Juan Agustín Maza",
+        "periodo": "2014 - Actualidad",
+        "responsabilidades": [
+          "Dictado de clases teóricas y prácticas",
+          "Coordinación del sistema de tutorías",
+          "Desarrollo de material didáctico",
+          "Evaluación continua de estudiantes"
+        ],
+        "referencia": {
+          "nombre": "Dra. Nora Gorla",
+          "cargo": "Titular",
+          "telefono": "+54 261 4056200 int. 262"
+        }
+      },
+      {
+        "cargo": "Socio Fundador - Asesor Técnico Veterinario",
+        "empresa": "BENTOLIFE S.A.",
+        "periodo": "2021 - Actualidad",
+        "tipo": "Privado",
+        "sector": "Agropecuario",
+        "responsabilidades": [
+          "Asesoramiento técnico-comercial a clientes",
+          "Desarrollo de aplicaciones de bentonita en nutrición animal",
+          "Gestión de documentación de productos",
+          "Gestión de exportaciones",
+          "Relación con proveedores y clientes"
+        ]
+      }
+    ],
+    "posicionesAnteriores": [
+      {
+        "cargo": "Coordinador de Investigación Científica",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales - Área de Ciencia y Técnica - Universidad Juan Agustín Maza",
+        "periodo": "2020 - 2024",
+        "motivoCierre": "Incorporación a CONICET como becario posdoctoral",
+        "responsabilidades": [
+          "Coordinación del área de investigación de la facultad",
+          "Gestión de proyectos de investigación",
+          "Evaluación de propuestas científicas",
+          "Seguimiento de becarios e investigadores"
+        ],
+        "referencia": {
+          "nombre": "Lic. Lizzet Vejling",
+          "cargo": "Directora Área C y T",
+          "telefono": "+54 261 4056200 int. 215"
+        }
+      },
+      {
+        "cargo": "Director Técnico",
+        "empresa": "MINERVET S.A.",
+        "periodo": "2018 - 2021",
+        "tipo": "Privado",
+        "sector": "Nutrición Animal",
+        "motivoCierre": "Cambio de provincia de residencia",
+        "responsabilidades": [
+          "Asesoramiento técnico en salud intestinal avícola",
+          "Desarrollo y supervisión de ensayos experimentales",
+          "Capacitación de clientes y personal técnico",
+          "Búsqueda de clientes y acciones comerciales",
+          "Participación en eventos internacionales",
+          "Preparación y revisión de dossiers regulatorios"
+        ],
+        "logros": [
+          "Expansión de cartera de clientes en Latinoamérica",
+          "Desarrollo de protocolos experimentales validados",
+          "Alta de productos ante autoridades gubernamentales"
+        ],
+        "referencia": {
+          "nombre": "Lic. Santiago Yapura",
+          "cargo": "Gerente General",
+          "telefono": "+54 261 3355303"
+        }
+      },
+      {
+        "cargo": "Director Veterinario / Propietario",
+        "empresa": "Centro Médico Veterinario Máximo Paz",
+        "periodo": "2021 - 2023",
+        "tipo": "Privado",
+        "sector": "Veterinaria Clínica",
+        "responsabilidades": [
+          "Gestión de clientes",
+          "Diagnóstico clínico",
+          "Venta de productos farmacéuticos veterinarios",
+          "Venta de nutrimentos para animales",
+          "Gestión con proveedores"
+        ]
+      },
+      {
+        "cargo": "Director de Carrera de Grado",
+        "carrera": "Licenciatura en Ciencias Ambientales",
+        "institucion": "Facultad de Veterinaria y Ciencias Ambientales - Universidad Juan Agustín Maza",
+        "periodo": "2016 - 2020",
+        "motivoCierre": "Finalización de ciclo de gestión",
+        "responsabilidades": [
+          "Dirección académica de la carrera",
+          "Gestión curricular",
+          "Coordinación de cuerpo docente",
+          "Vinculación con el medio"
+        ],
+        "referencia": {
+          "nombre": "Vet. Guillermo Giambastiani",
+          "cargo": "Decano",
+          "telefono": "+54 261 4056200 int. 238"
+        }
+      },
+      {
+        "cargo": "Profesor Adjunto",
+        "catedra": "Ecotoxicología",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales - Universidad Juan Agustín Maza",
+        "periodo": "2015 - 2020",
+        "responsabilidades": [
+          "Ejecución de trabajos prácticos",
+          "Desarrollo de guías de estudio",
+          "Evaluación de estudiantes"
+        ]
+      },
+      {
+        "cargo": "Asistente de Coordinación en Investigación",
+        "institucion": "Facultad de Ciencias Veterinarias y Ambientales / Área Ciencia y Técnica - Universidad Juan Agustín Maza",
+        "periodo": "2014 - 2019",
+        "motivoCierre": "Ascenso a Coordinador",
+        "responsabilidades": [
+          "Apoyo en gestión de proyectos",
+          "Seguimiento administrativo",
+          "Organización de eventos científicos"
+        ]
+      }
+    ]
+  }
+}

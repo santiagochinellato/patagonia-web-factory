@@ -6,6 +6,7 @@ import { obraSocial } from './lib/schemas/obraSocial.js';
 import { homeSection } from './lib/schemas/homeSection.js';
 import { ip_settings } from './lib/schemas/interpracsys/ip_settings.js';
 import { ip_landing_page } from './lib/schemas/interpracsys/ip_landing_page.js';
+import { professional_profile } from './lib/schemas/perfil-profesional-quero/professional_profile.js';
 
 export const schemaTypes = [
   homeSection, 
@@ -15,7 +16,8 @@ export const schemaTypes = [
   novedad, 
   obraSocial,
   ip_settings,
-  ip_landing_page
+  ip_landing_page,
+  professional_profile
 ];
 
 export { 
@@ -26,5 +28,8 @@ export {
   novedad, 
   obraSocial,
   ip_settings,
-  ip_landing_page
+  ip_landing_page,
+  professional_profile
 };
+
+export * from './lib/types/professional-profile.types.js';

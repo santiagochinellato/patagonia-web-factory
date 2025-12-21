@@ -168,10 +168,6 @@ export function InstitutionalSection({
                 muted
                 loop
                 playsInline
-                autoPlay
-                muted
-                loop
-                playsInline
               >
                 <source src={videoSrc} type="video/mp4" />
                 Your browser does not support the video tag.

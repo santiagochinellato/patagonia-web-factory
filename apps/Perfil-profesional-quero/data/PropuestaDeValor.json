@@ -1,0 +1,16 @@
+{
+  "heroSection": {
+    "tagline": "Ciencia aplicada al liderazgo y la consultoría sistémica",
+    "descripcionCorta": "Veterinario (Ph.D.) especializado en coaching ontológico, investigación científica y gestión estratégica de equipos.",
+    "descripcionExtendida": "Profesional con perfil científico-empresarial que integra investigación de vanguardia, liderazgo sistémico y consultoría técnica. Experiencia comprobada en dirección de proyectos CONICET, gestión universitaria y asesoramiento técnico-comercial en el sector agropecuario.",
+    "fotoPerfil": {
+      "principal": "foto_puente_profesional.jpg",
+      "alt": "Dr. Martín Quero - Consultor y Científico"
+    },
+    "cta": {
+      "textoBoton": "Agendar Consultoría",
+      "whatsappLink": "https://wa.me/5492615581683",
+      "mensajePredeterminado": "Hola Martín, me gustaría conocer más sobre tus servicios de consultoría."
+    }
+  }
+}
