@@ -34,27 +34,31 @@ export const ContactSection = ({
     setMessage('');
 
     try {
-      // TODO: Connect this to your PHP endpoint
-      // Example: const response = await fetch('/contact.php', { method: 'POST', body: formData });
+      const formData = new FormData(e.currentTarget);
+      const response = await fetch('/contacto.php', {
+        method: 'POST',
+        body: formData,
+      });
 
-      // Simulating a request for now so UI feedback can be verified
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const result = await response.json().catch(() => ({
+        success: false,
+        message: 'Error al procesar la respuesta del servidor',
+      }));
 
-      // Assuming success for demonstration.
-      // Replace with: if (response.ok) ...
-      const success = true;
-
-      if (success) {
+      if (response.ok && result.success) {
         setStatus('success');
-        setMessage('Consulta enviada exitosamente.');
+        setMessage(result.message || 'Consulta enviada exitosamente.');
         (e.target as HTMLFormElement).reset();
       } else {
-        throw new Error('Error al enviar el formulario');
+        throw new Error(result.message || 'Error al enviar el formulario');
       }
     } catch (error) {
+      console.error(error);
       setStatus('error');
       setMessage(
-        'Hubo un error al enviar tu consulta. Por favor intenta nuevamente.'
+        error instanceof Error
+          ? error.message
+          : 'Hubo un error al enviar tu consulta. Por favor intenta nuevamente.'
       );
     }
   };
