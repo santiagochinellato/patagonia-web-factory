@@ -11,8 +11,7 @@ import {
   XCircle,
 } from 'lucide-react';
 import { IPSettings, IPLandingPage } from '../../types/sanity';
-import { useActionState } from 'react';
-import { sendEmail } from '../_actions/send-email';
+import React from 'react';
 
 export const ContactSection = ({
   contactInfo,
@@ -22,7 +21,45 @@ export const ContactSection = ({
   data?: IPLandingPage['contactSection'];
 }) => {
   const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
-  const [state, formAction, isPending] = useActionState(sendEmail, null);
+
+  // State for client-side form handling
+  const [status, setStatus] = React.useState<
+    'idle' | 'submitting' | 'success' | 'error'
+  >('idle');
+  const [message, setMessage] = React.useState('');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('submitting');
+    setMessage('');
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      // TODO: Connect this to your PHP endpoint
+      // Example: const response = await fetch('/contact.php', { method: 'POST', body: formData });
+
+      // Simulating a request for now so UI feedback can be verified
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Assuming success for demonstration.
+      // Replace with: if (response.ok) ...
+      const success = true;
+
+      if (success) {
+        setStatus('success');
+        setMessage('Consulta enviada exitosamente.');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error('Error al enviar el formulario');
+      }
+    } catch (error) {
+      setStatus('error');
+      setMessage(
+        'Hubo un error al enviar tu consulta. Por favor intenta nuevamente.'
+      );
+    }
+  };
 
   return (
     <section
@@ -151,7 +188,7 @@ export const ContactSection = ({
               className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-slate-100"
             >
               <form
-                action={formAction}
+                onSubmit={handleSubmit}
                 className="flex flex-col gap-6"
                 aria-label="Formulario de contacto"
               >
@@ -162,6 +199,7 @@ export const ContactSection = ({
                     id="name"
                     name="name"
                     autoComplete="name"
+                    required
                   />
                   <InputGroup
                     label={data?.formOrgLabel || 'Laboratorio'}
@@ -180,6 +218,7 @@ export const ContactSection = ({
                   id="email"
                   name="email"
                   autoComplete="email"
+                  required
                 />
                 <div className="flex flex-col gap-2">
                   <label
@@ -198,15 +237,16 @@ export const ContactSection = ({
                       '¿En qué podemos ayudarte?'
                     }
                     aria-label="Mensaje"
+                    required
                   />
                 </div>
                 <button
                   type="submit"
-                  disabled={isPending}
+                  disabled={status === 'submitting'}
                   className="w-full py-4 rounded-xl bg-brand-gradient text-white font-bold shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mt-2 focus:ring-4 focus:ring-brand-cyan/30 focus:outline-none disabled:opacity-70 disabled:cursor-not-allowed"
                   aria-label="Enviar consulta"
                 >
-                  {isPending ? (
+                  {status === 'submitting' ? (
                     <>
                       <span>Enviando...</span>
                       <Loader2 size={20} className="animate-spin" />
@@ -218,22 +258,22 @@ export const ContactSection = ({
                     </>
                   )}
                 </button>
-                {state && (
+                {status !== 'idle' && status !== 'submitting' && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className={`p-4 rounded-xl flex items-center gap-3 text-sm font-medium ${
-                      state.success
+                      status === 'success'
                         ? 'bg-green-50 text-green-700'
                         : 'bg-red-50 text-red-700'
                     }`}
                   >
-                    {state.success ? (
+                    {status === 'success' ? (
                       <CheckCircle2 size={20} />
                     ) : (
                       <XCircle size={20} />
                     )}
-                    {state.message}
+                    {message}
                   </motion.div>
                 )}
               </form>
@@ -300,6 +340,7 @@ const InputGroup = ({
   id: string;
   name?: string;
   autoComplete?: string;
+  required?: boolean;
 }) => (
   <div className="flex flex-col gap-2">
     <label htmlFor={id} className="text-sm font-bold text-slate-700">
@@ -312,6 +353,7 @@ const InputGroup = ({
       autoComplete={autoComplete}
       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-2 focus:ring-brand-cyan/20 outline-none transition-all text-slate-700"
       placeholder={placeholder}
+      required={required}
     />
   </div>
 );
