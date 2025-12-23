@@ -37,7 +37,7 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
   const ctaText = settings?.navigation?.cta?.text || 'Solicitar Demo';
 
   const supportPhone =
-    settings?.footer?.contactInfo?.supportPhone || '+5493815570606';
+    settings?.footer?.contactInfo?.supportPhone || '+5492942612020';
   const contactPhone = settings?.footer?.contactInfo?.phone || '+5493815570606';
 
   const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
