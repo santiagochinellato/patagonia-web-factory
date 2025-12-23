@@ -12,7 +12,9 @@ const nextConfig = {
   nx: {},
   serverExternalPackages: ['jsdom', 'isomorphic-dompurify'],
   transpilePackages: ['@patagonia-web-factory/cpm-sanity'],
+  output: 'export',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
