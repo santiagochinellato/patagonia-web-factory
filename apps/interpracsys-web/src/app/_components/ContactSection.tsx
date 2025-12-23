@@ -20,7 +20,7 @@ export const ContactSection = ({
   contactInfo?: IPSettings['footer']['contactInfo'];
   data?: IPLandingPage['contactSection'];
 }) => {
-  const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
+  // const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
 
   // State for client-side form handling
   const [status, setStatus] = React.useState<
