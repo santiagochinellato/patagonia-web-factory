@@ -19,11 +19,13 @@ export const FloatingCTA = ({ settings }: { settings?: IPSettings }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('support');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  const contactPhone =
+    settings?.footer?.contactInfo?.supportPhone || '+5493815570606';
+  const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
+  const contactLink = `https://wa.me/${sanitizePhone(contactPhone)}`;
+
+  const handleClick = () => {
+    window.open(contactLink, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -35,7 +37,7 @@ export const FloatingCTA = ({ settings }: { settings?: IPSettings }) => {
           exit={{ opacity: 0, y: 100, scale: 0.8 }}
           whileHover={{ scale: 1.05, y: -5 }}
           whileTap={{ scale: 0.95 }}
-          onClick={scrollToContact}
+          onClick={handleClick}
           className="fixed bottom-8 right-8 z-50 px-6 py-3 rounded-full bg-brand-gradient text-white font-bold shadow-2xl shadow-brand-navy/30 flex items-center gap-2 border border-white/20 backdrop-blur-md hover:scale-105 transition-transform"
           aria-label={ctaText}
         >

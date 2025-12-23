@@ -73,8 +73,10 @@ export const ip_settings = defineType({
             type: 'object',
             fields: [
                 defineField({ name: 'address', title: 'Dirección', type: 'string' }),
-                defineField({ name: 'email', title: 'Email', type: 'string' }),
-                defineField({ name: 'phone', title: 'Teléfono', type: 'string' }),
+                defineField({ name: 'email', title: 'Email (General)', type: 'string' }),
+                defineField({ name: 'phone', title: 'Teléfono (General)', type: 'string' }),
+                defineField({ name: 'supportEmail', title: 'Email Soporte', type: 'string' }),
+                defineField({ name: 'supportPhone', title: 'Teléfono Soporte', type: 'string' }),
             ]
         }),
         defineField({

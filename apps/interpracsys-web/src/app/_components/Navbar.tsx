@@ -24,17 +24,26 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
     name: link.label,
     href: link.href,
   })) || [
+    { name: 'Inicio', href: '#hero' },
     { name: 'Soluciones', href: '#features' },
-    { name: 'Integraciones', href: '#integrations' },
+    { name: 'Conectividad', href: '#integrations' },
     { name: 'Clientes', href: '#trust' },
-    { name: 'Soporte', href: '#support' },
+    { name: 'Contacto', href: '#support' },
   ];
 
   const logoSrc = settings?.general?.logo
     ? urlFor(settings.general.logo).url()
     : '/logo.webp';
   const ctaText = settings?.navigation?.cta?.text || 'Solicitar Demo';
-  const ctaLink = settings?.navigation?.cta?.link || '#';
+
+  const supportPhone =
+    settings?.footer?.contactInfo?.supportPhone || '+5493815570606';
+  const contactPhone = settings?.footer?.contactInfo?.phone || '+5493815570606';
+
+  const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
+
+  const supportLink = `https://wa.me/${sanitizePhone(supportPhone)}`;
+  const contactLink = `https://wa.me/${sanitizePhone(contactPhone)}`;
 
   return (
     <>
@@ -71,9 +80,14 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
             ))}
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <Link href={ctaLink}>
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center gap-4">
+            <Link href={supportLink} target="_blank" rel="noopener noreferrer">
+              <button className="px-6 py-2.5 rounded-full bg-emerald-500 text-white text-sm font-semibold shadow-lg hover:bg-emerald-600 hover:-translate-y-0.5 transition-all duration-300">
+                Servicio Técnico
+              </button>
+            </Link>
+            <Link href={contactLink} target="_blank" rel="noopener noreferrer">
               <button className="px-6 py-2.5 rounded-full bg-brand-gradient text-white text-sm font-semibold shadow-lg hover:shadow-levitate-hover hover:-translate-y-0.5 transition-all duration-300">
                 {ctaText}
               </button>
@@ -109,11 +123,30 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
                 {link.name}
               </Link>
             ))}
-            <Link href={ctaLink} onClick={() => setIsMobileMenuOpen(false)}>
-              <button className="mt-4 px-8 py-3 rounded-full bg-brand-gradient text-white font-semibold shadow-lg">
-                {ctaText}
-              </button>
-            </Link>
+            <div className="flex flex-col gap-3 w-full px-8">
+              <Link
+                href={supportLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full"
+              >
+                <button className="w-full px-8 py-3 rounded-full bg-emerald-500 text-white font-semibold shadow-lg hover:bg-emerald-600 transition-colors">
+                  Servicio Técnico
+                </button>
+              </Link>
+              <Link
+                href={contactLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full"
+              >
+                <button className="w-full px-8 py-3 rounded-full bg-brand-gradient text-white font-semibold shadow-lg">
+                  {ctaText}
+                </button>
+              </Link>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

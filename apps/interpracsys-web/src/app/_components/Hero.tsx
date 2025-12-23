@@ -2,9 +2,19 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { IPLandingPage } from '../../types/sanity';
+import { IPSettings, IPLandingPage } from '../../types/sanity';
 
-export const Hero = ({ data }: { data?: IPLandingPage['hero'] }) => {
+export const Hero = ({
+  data,
+  contactInfo,
+}: {
+  data?: IPLandingPage['hero'];
+  contactInfo?: IPSettings['footer']['contactInfo'];
+}) => {
+  const contactPhone = contactInfo?.supportPhone || '+5493815570606';
+  const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
+  const contactLink = `https://wa.me/${sanitizePhone(contactPhone)}`;
+
   const pins = data?.mapPins || [
     { label: 'Jujuy', x: 40, y: 3 },
     { label: 'Salta', x: 44, y: 11 },
@@ -19,7 +29,10 @@ export const Hero = ({ data }: { data?: IPLandingPage['hero'] }) => {
   ];
 
   return (
-    <section className="w-full min-h-screen pt-32 pb-20 overflow-hidden flex flex-col md:flex-row items-center justify-between bg-white max-w-7xl mx-auto px-6 gap-10">
+    <section
+      id="hero"
+      className="w-full min-h-screen pt-32 pb-20 overflow-hidden flex flex-col md:flex-row items-center justify-between bg-white max-w-7xl mx-auto px-6 gap-10"
+    >
       <div className="w-full md:w-[60%] flex flex-col items-center md:items-start z-10 text-center md:text-left">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,25 +80,32 @@ export const Hero = ({ data }: { data?: IPLandingPage['hero'] }) => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 w-full"
         >
-          <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-brand-gradient text-white font-bold shadow-lg shadow-brand-cyan/20 hover:shadow-levitate-hover hover:-translate-y-1 transition-all duration-300 text-lg group">
-            <span className="flex items-center justify-center gap-2">
-              {data?.primaryButton || 'SOLICITAR DEMO'}
-              <svg
-                className="w-5 h-5 group-hover:translate-x-1 transition-transform"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                ></path>
-              </svg>
-            </span>
-          </button>
+          <a
+            href={contactLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <button className="w-full px-8 py-4 rounded-full bg-brand-gradient text-white font-bold shadow-lg shadow-brand-cyan/20 hover:shadow-levitate-hover hover:-translate-y-1 transition-all duration-300 text-lg group">
+              <span className="flex items-center justify-center gap-2">
+                {data?.primaryButton || 'SOLICITAR DEMO'}
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </a>
           <button className="w-full sm:w-auto px-8 py-4 rounded-full bg-slate-50 text-slate-700 font-semibold border border-slate-200 hover:bg-white hover:border-brand-cyan/30 hover:text-brand-navy transition-all duration-300">
             {data?.secondaryButton || 'Ver Características'}
           </button>

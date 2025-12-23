@@ -21,7 +21,13 @@ export interface IPSettings {
     legalTitle?: string;
     contactTitle?: string;
     social: { platform: string; url: string }[];
-    contactInfo: { address: string; email: string; phone: string };
+    contactInfo: {
+      address: string;
+      email: string;
+      phone: string;
+      supportEmail?: string;
+      supportPhone?: string;
+    };
     legalLinks: { label: string; url: string }[];
     copyrightText?: string;
     developedByText?: string;

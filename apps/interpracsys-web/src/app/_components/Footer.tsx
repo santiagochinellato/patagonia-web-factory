@@ -9,10 +9,11 @@ export const Footer = ({ settings }: { settings?: IPSettings }) => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = settings?.navigation?.links || [
+    { label: 'Inicio', href: '#hero' },
     { label: 'Soluciones', href: '#features' },
-    { label: 'Integraciones', href: '#integrations' },
+    { label: 'Conectividad', href: '#integrations' },
     { label: 'Clientes', href: '#trust' },
-    { label: 'Soporte', href: '#support' },
+    { label: 'Contacto', href: '#support' },
   ];
 
   const logoSrc = settings?.general?.logo
@@ -119,9 +120,9 @@ export const Footer = ({ settings }: { settings?: IPSettings }) => {
               {settings?.footer?.contactTitle || 'Contacto'}
             </h4>
             <div className="flex flex-col gap-3 text-sm text-slate-600 items-center md:items-start">
-              <p>{contactInfo?.address || 'Buenos Aires, Argentina'}</p>
+              <p>{contactInfo?.address || 'Bariloche, Argentina'}</p>
               <p>{contactInfo?.email || 'contacto@interpracsys.com'}</p>
-              <p>{contactInfo?.phone || '+54 9 11 1234-5678'}</p>
+              <p>{contactInfo?.phone || '+54 9 294 2612020'}</p>
             </div>
           </div>
         </div>

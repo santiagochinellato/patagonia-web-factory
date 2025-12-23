@@ -11,6 +11,7 @@ const nextConfig = {
   // See: https://nx.dev/recipes/next/next-config-setup
   nx: {},
   serverExternalPackages: ['jsdom', 'isomorphic-dompurify'],
+  transpilePackages: ['@patagonia-web-factory/cpm-sanity'],
   images: {
     remotePatterns: [
       {

@@ -1,8 +1,18 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Mail, Phone, Instagram, Send } from 'lucide-react';
+import {
+  Mail,
+  Phone,
+  Instagram,
+  Send,
+  Loader2,
+  CheckCircle2,
+  XCircle,
+} from 'lucide-react';
 import { IPSettings, IPLandingPage } from '../../types/sanity';
+import { useActionState } from 'react';
+import { sendEmail } from '../_actions/send-email';
 
 export const ContactSection = ({
   contactInfo,
@@ -11,6 +21,9 @@ export const ContactSection = ({
   contactInfo?: IPSettings['footer']['contactInfo'];
   data?: IPLandingPage['contactSection'];
 }) => {
+  const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
+  const [state, formAction, isPending] = useActionState(sendEmail, null);
+
   return (
     <section
       id="support"
@@ -51,33 +64,80 @@ export const ContactSection = ({
                 'Solicita tu demo hoy mismo o contáctanos para resolver cualquier duda. Nuestro equipo de expertos está listo para acompañarte.'}
             </motion.p>
 
-            <div className="flex flex-col gap-4 items-start w-full">
-              <ContactItem
-                icon={<Phone size={24} aria-hidden="true" />}
-                label={data?.phoneLabel || 'Teléfono / WhatsApp'}
-                value={contactInfo?.phone || '+54 9 11 1234-5678'}
-                href={`tel:${contactInfo?.phone || '+5491112345678'}`}
-                delay={0.2}
-                ariaLabel="Contactar por teléfono"
-              />
-              <ContactItem
-                icon={<Instagram size={24} aria-hidden="true" />}
-                label={data?.followUsLabel || 'Síguenos'}
-                value="@interpracsys"
-                href="https://instagram.com/interpracsys"
-                delay={0.3}
-                ariaLabel="Síguenos en Instagram"
-              />
-              <ContactItem
-                icon={<Mail size={24} aria-hidden="true" />}
-                label={data?.emailLabel || 'Email'}
-                value={contactInfo?.email || 'contacto@interpracsys.com'}
-                href={`mailto:${
-                  contactInfo?.email || 'contacto@interpracsys.com'
-                }`}
-                delay={0.4}
-                ariaLabel="Enviar un correo electrónico"
-              />
+            <div className="flex flex-col gap-8 w-full">
+              {/* Soporte Técnico */}
+              <div>
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">
+                  Soporte Técnico
+                </h3>
+                <div className="flex flex-col gap-4">
+                  <ContactItem
+                    icon={<Mail size={24} aria-hidden="true" />}
+                    label={data?.emailLabel || 'Email'}
+                    value={
+                      contactInfo?.supportEmail || 'soporte@interpracsys.com'
+                    }
+                    href={`mailto:${
+                      contactInfo?.supportEmail || 'soporte@interpracsys.com'
+                    }`}
+                    delay={0.2}
+                    ariaLabel="Enviar correo a soporte"
+                  />
+                  <ContactItem
+                    icon={<Phone size={24} aria-hidden="true" />}
+                    label={data?.phoneLabel || 'Teléfono / WhatsApp'}
+                    value={contactInfo?.supportPhone || '+54 9 3815570606'}
+                    href={`https://wa.me/${sanitizePhone(
+                      contactInfo?.supportPhone || '+5493815570606'
+                    )}`}
+                    delay={0.3}
+                    ariaLabel="Llamar a soporte técnico"
+                  />
+                </div>
+              </div>
+
+              {/* Contacto General */}
+              <div>
+                <h3 className="text-sm font-bold text-slate-500 uppercase tracking-wider mb-4">
+                  Contacto
+                </h3>
+                <div className="flex flex-col gap-4">
+                  <ContactItem
+                    icon={<Mail size={24} aria-hidden="true" />}
+                    label={data?.emailLabel || 'Email'}
+                    value={contactInfo?.email || 'info@interpracsys.com'}
+                    href={`mailto:${
+                      contactInfo?.email || 'info@interpracsys.com'
+                    }`}
+                    delay={0.4}
+                    ariaLabel="Enviar correo a contacto general"
+                  />
+                  <ContactItem
+                    icon={<Phone size={24} aria-hidden="true" />}
+                    label={data?.phoneLabel || 'Teléfono / WhatsApp'}
+                    value={contactInfo?.phone || '+54 9 2942612020'}
+                    href={`https://wa.me/${sanitizePhone(
+                      contactInfo?.phone || '+5492942612020'
+                    )}`}
+                    delay={0.5}
+                    ariaLabel="Llamar a contacto general"
+                  />
+                </div>
+              </div>
+
+              {/* Redes Sociales */}
+              <div>
+                <div className="flex flex-col gap-4">
+                  <ContactItem
+                    icon={<Instagram size={24} aria-hidden="true" />}
+                    label={data?.followUsLabel || 'Síguenos'}
+                    value="@interpracsys"
+                    href="https://instagram.com/interpracsys"
+                    delay={0.6}
+                    ariaLabel="Síguenos en Instagram"
+                  />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -91,6 +151,7 @@ export const ContactSection = ({
               className="bg-white rounded-3xl p-8 md:p-10 shadow-xl border border-slate-100"
             >
               <form
+                action={formAction}
                 className="flex flex-col gap-6"
                 aria-label="Formulario de contacto"
               >
@@ -99,6 +160,7 @@ export const ContactSection = ({
                     label={data?.formNameLabel || 'Nombre'}
                     placeholder={data?.formNamePlaceholder || 'Tu nombre'}
                     id="name"
+                    name="name"
                     autoComplete="name"
                   />
                   <InputGroup
@@ -107,6 +169,7 @@ export const ContactSection = ({
                       data?.formOrgPlaceholder || 'Nombre del centro'
                     }
                     id="lab"
+                    name="lab"
                     autoComplete="organization"
                   />
                 </div>
@@ -115,6 +178,7 @@ export const ContactSection = ({
                   placeholder={data?.formEmailPlaceholder || 'tu@email.com'}
                   type="email"
                   id="email"
+                  name="email"
                   autoComplete="email"
                 />
                 <div className="flex flex-col gap-2">
@@ -126,6 +190,7 @@ export const ContactSection = ({
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-2 focus:ring-brand-cyan/20 outline-none transition-all resize-none text-slate-700"
                     placeholder={
@@ -137,12 +202,40 @@ export const ContactSection = ({
                 </div>
                 <button
                   type="submit"
-                  className="w-full py-4 rounded-xl bg-brand-gradient text-white font-bold shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mt-2 focus:ring-4 focus:ring-brand-cyan/30 focus:outline-none"
+                  disabled={isPending}
+                  className="w-full py-4 rounded-xl bg-brand-gradient text-white font-bold shadow-lg shadow-brand-navy/20 hover:shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 mt-2 focus:ring-4 focus:ring-brand-cyan/30 focus:outline-none disabled:opacity-70 disabled:cursor-not-allowed"
                   aria-label="Enviar consulta"
                 >
-                  <span>{data?.formButtonText || 'Enviar Consulta'}</span>
-                  <Send size={20} aria-hidden="true" />
+                  {isPending ? (
+                    <>
+                      <span>Enviando...</span>
+                      <Loader2 size={20} className="animate-spin" />
+                    </>
+                  ) : (
+                    <>
+                      <span>{data?.formButtonText || 'Enviar Consulta'}</span>
+                      <Send size={20} aria-hidden="true" />
+                    </>
+                  )}
                 </button>
+                {state && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className={`p-4 rounded-xl flex items-center gap-3 text-sm font-medium ${
+                      state.success
+                        ? 'bg-green-50 text-green-700'
+                        : 'bg-red-50 text-red-700'
+                    }`}
+                  >
+                    {state.success ? (
+                      <CheckCircle2 size={20} />
+                    ) : (
+                      <XCircle size={20} />
+                    )}
+                    {state.message}
+                  </motion.div>
+                )}
               </form>
             </motion.div>
           </div>
@@ -198,12 +291,14 @@ const InputGroup = ({
   placeholder,
   type = 'text',
   id,
+  name,
   autoComplete,
 }: {
   label: string;
   placeholder: string;
   type?: string;
   id: string;
+  name?: string;
   autoComplete?: string;
 }) => (
   <div className="flex flex-col gap-2">
@@ -213,6 +308,7 @@ const InputGroup = ({
     <input
       type={type}
       id={id}
+      name={name || id}
       autoComplete={autoComplete}
       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 focus:border-brand-cyan focus:ring-2 focus:ring-brand-cyan/20 outline-none transition-all text-slate-700"
       placeholder={placeholder}

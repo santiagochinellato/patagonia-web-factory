@@ -20,7 +20,10 @@ export default async function Index() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar settings={settings} />
-      <Hero data={landingPage?.hero} />
+      <Hero
+        data={landingPage?.hero}
+        contactInfo={settings?.footer?.contactInfo}
+      />
       <FeatureGrid data={landingPage?.features} />
       <ConnectivitySection data={landingPage?.connectivity} />
       <TrustSection

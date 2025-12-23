@@ -179,9 +179,15 @@ export const TrustSection = ({
             </h3>
 
             {/* Specialized Types Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {(
                 solutions?.cards || [
+                  {
+                    title: 'Clínicos',
+                    description:
+                      'Para laboratorios de analisis clínicos humanos',
+                    icon: 'users',
+                  },
                   {
                     title: 'Veterinaria',
                     description:
