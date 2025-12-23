@@ -33,8 +33,6 @@ export const ContactSection = ({
     setStatus('submitting');
     setMessage('');
 
-    const formData = new FormData(e.currentTarget);
-
     try {
       // TODO: Connect this to your PHP endpoint
       // Example: const response = await fetch('/contact.php', { method: 'POST', body: formData });
