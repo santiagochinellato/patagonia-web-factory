@@ -82,7 +82,11 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Link href={supportLink} target="_blank" rel="noopener noreferrer">
+            <Link
+              href="http://wa.me/5492942612020"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button className="px-6 py-2.5 rounded-full bg-emerald-500 text-white text-sm font-semibold shadow-lg hover:bg-emerald-600 hover:-translate-y-0.5 transition-all duration-300">
                 Servicio Técnico
               </button>

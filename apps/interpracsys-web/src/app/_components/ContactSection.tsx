@@ -333,6 +333,7 @@ const InputGroup = ({
   id,
   name,
   autoComplete,
+  required,
 }: {
   label: string;
   placeholder: string;
