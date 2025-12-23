@@ -123,9 +123,9 @@ export const ContactSection = ({
                   <ContactItem
                     icon={<Phone size={24} aria-hidden="true" />}
                     label={data?.phoneLabel || 'Teléfono / WhatsApp'}
-                    value={contactInfo?.supportPhone || '+54 9 3815570606'}
+                    value={contactInfo?.supportPhone || '+54 9 2942612020'}
                     href={`https://wa.me/${sanitizePhone(
-                      contactInfo?.supportPhone || '+5493815570606'
+                      contactInfo?.supportPhone || '+5492942612020'
                     )}`}
                     delay={0.3}
                     ariaLabel="Llamar a soporte técnico"
@@ -152,9 +152,9 @@ export const ContactSection = ({
                   <ContactItem
                     icon={<Phone size={24} aria-hidden="true" />}
                     label={data?.phoneLabel || 'Teléfono / WhatsApp'}
-                    value={contactInfo?.phone || '+54 9 2942612020'}
+                    value={contactInfo?.phone || '+54 9 3815570606'}
                     href={`https://wa.me/${sanitizePhone(
-                      contactInfo?.phone || '+5492942612020'
+                      contactInfo?.phone || '+5493815570606'
                     )}`}
                     delay={0.5}
                     ariaLabel="Llamar a contacto general"

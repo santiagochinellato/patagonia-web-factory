@@ -19,8 +19,7 @@ export const FloatingCTA = ({ settings }: { settings?: IPSettings }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const contactPhone =
-    settings?.footer?.contactInfo?.supportPhone || '+5493815570606';
+  const contactPhone = '+5493815570606';
   const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
   const contactLink = `https://wa.me/${sanitizePhone(contactPhone)}`;
 

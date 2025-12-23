@@ -36,9 +36,11 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
     : '/logo.webp';
   const ctaText = settings?.navigation?.cta?.text || 'Solicitar Demo';
 
-  const supportPhone =
-    settings?.footer?.contactInfo?.supportPhone || '+5492942612020';
-  const contactPhone = settings?.footer?.contactInfo?.phone || '+5493815570606';
+  // FIXME: Revert to dynamic values once Sanity cache issues are resolved
+  // const supportPhone = settings?.footer?.contactInfo?.supportPhone || '+5492942612020';
+  // const contactPhone = settings?.footer?.contactInfo?.phone || '+5493815570606';
+  const supportPhone = '+5492942612020';
+  const contactPhone = '+5493815570606';
 
   const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
 
@@ -82,11 +84,7 @@ export const Navbar = ({ settings }: { settings?: IPSettings }) => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-4">
-            <Link
-              href="http://wa.me/5492942612020"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link href={supportLink} target="_blank" rel="noopener noreferrer">
               <button className="px-6 py-2.5 rounded-full bg-emerald-500 text-white text-sm font-semibold shadow-lg hover:bg-emerald-600 hover:-translate-y-0.5 transition-all duration-300">
                 Servicio Técnico
               </button>

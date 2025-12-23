@@ -11,7 +11,7 @@ export const Hero = ({
   data?: IPLandingPage['hero'];
   contactInfo?: IPSettings['footer']['contactInfo'];
 }) => {
-  const contactPhone = contactInfo?.supportPhone || '+5493815570606';
+  const contactPhone = '+5493815570606';
   const sanitizePhone = (phone: string) => phone.replace(/\D/g, '');
   const contactLink = `https://wa.me/${sanitizePhone(contactPhone)}`;
 

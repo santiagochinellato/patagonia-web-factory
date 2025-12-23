@@ -41,9 +41,9 @@ async function migrateContactInfo() {
         contactInfo: {
           ...settings.contactInfo, // Keep address if it exists
           email: 'info@interpracsys.com',
-          phone: '+54 9 2942612020',
+          phone: '+54 9 3815570606',
           supportEmail: 'soporte@interpracsys.com',
-          supportPhone: '+54 9 3815570606',
+          supportPhone: '+54 9 2942612020',
         }
       })
       .commit();

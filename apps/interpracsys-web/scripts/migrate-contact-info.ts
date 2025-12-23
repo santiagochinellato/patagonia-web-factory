@@ -37,9 +37,12 @@ async function migrateContactInfo() {
     // Check if fields are already set to avoid overwriting user changes
     const patchData: any = {};
     if (!settings.footer?.contactInfo?.email) patchData['footer.contactInfo.email'] = 'info@interpracsys.com';
-    if (!settings.footer?.contactInfo?.phone) patchData['footer.contactInfo.phone'] = '+54 9 2942612020';
+    
+    // Force update phone numbers
+    patchData['footer.contactInfo.phone'] = '+54 9 3815570606';
+    patchData['footer.contactInfo.supportPhone'] = '+54 9 2942612020';
+
     if (!settings.footer?.contactInfo?.supportEmail) patchData['footer.contactInfo.supportEmail'] = 'soporte@interpracsys.com';
-    if (!settings.footer?.contactInfo?.supportPhone) patchData['footer.contactInfo.supportPhone'] = '+54 9 3815570606';
     if (!settings.footer?.contactInfo?.address) patchData['footer.contactInfo.address'] = 'Bariloche, Argentina';
 
     if (Object.keys(patchData).length === 0) {
